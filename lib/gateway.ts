@@ -9,6 +9,7 @@ export interface Customer {
   name: string
   tickets: number
   lastContact: string
+  hasZendeskOrg?: boolean
   openTickets?: TicketSummary[]
 }
 

@@ -13,44 +13,47 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
   const [error, setError] = useState('')
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
 
-  // Static data from Google Sheet (Ticket Tracker - updated 2026-02-12)
-  const loadSheetData = () => {
+  const loadData = () => {
     setLoading(true)
     
-    // REAL data from customers.json and Google Sheet (Feb 12, 2026)
-    const sheetData: Customer[] = [
-      { name: 'Screen Magic', tickets: 5, lastContact: '2/9' },
-      { name: 'Mango Voice', tickets: 5, lastContact: '1/16' },
-      { name: 'Redo', tickets: 5, lastContact: '2/7' },
-      { name: 'Simplii', tickets: 5, lastContact: '1/18' },
-      { name: 'Callloom', tickets: 3, lastContact: '2/10' },
-      { name: 'RetellAI', tickets: 3, lastContact: '2/2' },
-      { name: '42Chat', tickets: 2, lastContact: '12/18' },
-      { name: 'iFaxApp', tickets: 1, lastContact: '1/28' },
-      { name: 'Chiirp', tickets: 1, lastContact: '3/24/25' },
-      { name: 'CareCo', tickets: 0, lastContact: 'N/A' },
-      { name: 'General Atomics', tickets: 0, lastContact: 'N/A' },
-      { name: 'GetScaled', tickets: 0, lastContact: 'N/A' },
-      { name: 'Grupo Bimbo', tickets: 0, lastContact: 'N/A' },
-      { name: 'IVR Technologies', tickets: 0, lastContact: 'N/A' },
-      { name: 'Jobble', tickets: 0, lastContact: 'N/A' },
-      { name: 'Palate Connect', tickets: 0, lastContact: 'N/A' },
+    // REAL data from Zendesk org searches (Feb 12, 2026 10:42 PM)
+    // Only showing tickets for customers with verified Zendesk orgs
+    const data: Customer[] = [
+      // Customers WITH Zendesk orgs - real ticket counts
+      { name: 'Screen Magic', tickets: 10, lastContact: '2/12', hasZendeskOrg: true },
+      { name: 'CareCo', tickets: 9, lastContact: '2/10', hasZendeskOrg: true },
+      { name: 'Mango Voice', tickets: 7, lastContact: '2/12', hasZendeskOrg: true },
+      { name: 'Simplii', tickets: 4, lastContact: '1/13', hasZendeskOrg: true },
+      { name: 'Callloom', tickets: 2, lastContact: '2/10', hasZendeskOrg: true },
+      { name: 'iFaxApp', tickets: 1, lastContact: '1/28', hasZendeskOrg: true },
+      { name: 'RetellAI', tickets: 1, lastContact: '1/22', hasZendeskOrg: true },
+      { name: '42Chat', tickets: 0, lastContact: 'N/A', hasZendeskOrg: true },
+      
+      // Customers WITHOUT Zendesk orgs - no ticket data available
+      { name: 'Chiirp', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
+      { name: 'General Atomics', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
+      { name: 'GetScaled', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
+      { name: 'Grupo Bimbo', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
+      { name: 'IVR Technologies', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
+      { name: 'Jobble', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
+      { name: 'Palate Connect', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
+      { name: 'Redo', tickets: 0, lastContact: 'N/A', hasZendeskOrg: false },
     ]
     
-    setCustomers(sheetData)
+    setCustomers(data)
     setLastUpdated(new Date())
     setLoading(false)
   }
 
-  const fetchTickets = loadSheetData
-
   useEffect(() => {
-    fetchTickets()
+    loadData()
   }, [gatewayConfig.url])
 
-  const totalTickets = customers.reduce((sum, c) => sum + c.tickets, 0)
-  const customersWithTickets = customers.filter(c => c.tickets > 0).length
-  const atRiskCount = customers.filter(c => c.tickets >= 4).length
+  const customersWithOrgs = customers.filter(c => c.hasZendeskOrg)
+  const totalTickets = customersWithOrgs.reduce((sum, c) => sum + c.tickets, 0)
+  const customersWithTickets = customersWithOrgs.filter(c => c.tickets > 0).length
+  const atRiskCount = customersWithOrgs.filter(c => c.tickets >= 4).length
+  const noOrgCount = customers.filter(c => !c.hasZendeskOrg).length
 
   return (
     <div className="space-y-6">
@@ -67,7 +70,7 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
             </span>
           )}
           <button
-            onClick={fetchTickets}
+            onClick={loadData}
             disabled={loading}
             className="px-3 py-1.5 text-sm bg-gray-800 hover:bg-gray-700 disabled:opacity-50 text-white rounded-lg transition-colors"
           >
@@ -85,14 +88,14 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
       {/* Stats Grid */}
       <div className="grid grid-cols-4 gap-4">
         <StatCard label="Open Tickets" value={totalTickets} icon="🎫" color="blue" loading={loading} />
-        <StatCard label="Total Customers" value={customers.length} icon="👥" color="purple" loading={loading} />
-        <StatCard label="With Open Tickets" value={customersWithTickets} icon="📋" color="yellow" loading={loading} />
-        <StatCard label="At Risk" value={atRiskCount} icon="⚠️" color="red" loading={loading} />
+        <StatCard label="With Zendesk Org" value={customersWithOrgs.length} icon="✓" color="purple" loading={loading} />
+        <StatCard label="At Risk (4+)" value={atRiskCount} icon="⚠️" color="red" loading={loading} />
+        <StatCard label="No Zendesk Org" value={noOrgCount} icon="❓" color="yellow" loading={loading} />
       </div>
 
-      {/* Customer Grid */}
+      {/* Customer Grid - Only those with Zendesk orgs */}
       <div>
-        <h2 className="text-lg font-semibold text-white mb-4">Customers</h2>
+        <h2 className="text-lg font-semibold text-white mb-4">Customers (Zendesk Linked)</h2>
         {loading ? (
           <div className="grid grid-cols-4 gap-4">
             {[1,2,3,4,5,6,7,8].map(i => (
@@ -104,29 +107,35 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
           </div>
         ) : (
           <div className="grid grid-cols-4 gap-4">
-            {customers.map((customer) => (
+            {customersWithOrgs.map((customer) => (
               <CustomerCard key={customer.name} customer={customer} />
             ))}
           </div>
         )}
       </div>
 
+      {/* Customers without Zendesk orgs */}
+      <div>
+        <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <span>Needs Zendesk Org</span>
+          <span className="text-xs text-yellow-500 bg-yellow-500/20 px-2 py-1 rounded">{noOrgCount}</span>
+        </h2>
+        <div className="grid grid-cols-4 gap-4">
+          {customers.filter(c => !c.hasZendeskOrg).map((customer) => (
+            <div key={customer.name} className="bg-gray-900 rounded-xl border border-yellow-500/30 p-4">
+              <h3 className="font-semibold text-white text-sm">{customer.name}</h3>
+              <div className="text-xs text-yellow-500 mt-2">⚠️ No Zendesk org linked</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Recent Activity */}
       <div className="grid grid-cols-2 gap-6">
         <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
-          <h3 className="text-sm font-semibold text-white mb-3">Recent Activity</h3>
-          <div className="space-y-3">
-            <ActivityItem icon="🎫" text="Redo: URGENT TF blocked" time="2/7" />
-            <ActivityItem icon="🎫" text="Callloom: Dead-air issue" time="2/10" />
-            <ActivityItem icon="🎫" text="Screen Magic: Text enablement" time="2/9" />
-            <ActivityItem icon="🎫" text="RetellAI: Support request" time="2/2" />
-          </div>
-        </div>
-
-        <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
           <h3 className="text-sm font-semibold text-white mb-3">Needs Attention</h3>
           <div className="space-y-3">
-            {customers.filter(c => c.tickets >= 4).map(c => (
+            {customersWithOrgs.filter(c => c.tickets >= 4).map(c => (
               <div key={c.name} className="flex items-center gap-3">
                 <span className="text-lg">⚠️</span>
                 <div className="flex-1">
@@ -135,9 +144,23 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
                 </div>
               </div>
             ))}
-            {customers.filter(c => c.tickets >= 4).length === 0 && (
+            {customersWithOrgs.filter(c => c.tickets >= 4).length === 0 && (
               <p className="text-sm text-gray-500">No customers at risk 🎉</p>
             )}
+          </div>
+        </div>
+
+        <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
+          <h3 className="text-sm font-semibold text-white mb-3">Ticket Summary</h3>
+          <div className="space-y-2">
+            {customersWithOrgs.filter(c => c.tickets > 0).slice(0, 5).map(c => (
+              <div key={c.name} className="flex items-center justify-between text-sm">
+                <span className="text-gray-400">{c.name}</span>
+                <span className={`font-mono ${c.tickets >= 4 ? 'text-red-400' : c.tickets >= 2 ? 'text-yellow-400' : 'text-green-400'}`}>
+                  {c.tickets}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -187,18 +210,6 @@ function CustomerCard({ customer }: { customer: Customer }) {
       </div>
       <div className="text-xs text-gray-500">
         {customer.tickets > 0 ? `Last: ${customer.lastContact}` : '✓ No tickets'}
-      </div>
-    </div>
-  )
-}
-
-function ActivityItem({ icon, text, time }: { icon: string; text: string; time: string }) {
-  return (
-    <div className="flex items-center gap-3">
-      <span className="text-lg">{icon}</span>
-      <div className="flex-1 min-w-0">
-        <p className="text-sm text-white truncate">{text}</p>
-        <p className="text-xs text-gray-500">{time}</p>
       </div>
     </div>
   )

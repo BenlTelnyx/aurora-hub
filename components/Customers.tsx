@@ -2,24 +2,28 @@
 
 import { useState } from 'react'
 
-// Customer data from memory/customers.json - single source of truth
+// Customer data - ONLY real Zendesk ticket counts for customers with orgs
+// Data from Zendesk org searches Feb 12, 2026 10:42 PM
 const customers = [
-  { id: 1, name: 'CareCo', email: 'support@careco.com', zendesk_id: '24316179795357', sfdc: '001Qk00000AnastIAB', tickets: 9, health: 'at-risk' },
-  { id: 2, name: 'Callloom', email: 'nauman@marsadvertisingllc.com', zendesk_id: '27751108046109', sfdc: '001Qk00000MBXOzIAP', tickets: 3, health: 'at-risk' },
-  { id: 3, name: 'Chiirp', email: 'cnielsen@chiirp.com', zendesk_id: null, sfdc: null, tickets: 1, health: 'warning' },
-  { id: 4, name: 'General Atomics', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
-  { id: 5, name: 'GetScaled', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
-  { id: 6, name: 'Grupo Bimbo', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
-  { id: 7, name: 'iFaxApp', email: 'support@ifaxapp.com', zendesk_id: '360133372252', sfdc: null, tickets: 1, health: 'warning' },
-  { id: 8, name: 'IVR Technologies', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
-  { id: 9, name: 'Jobble', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
-  { id: 10, name: 'Mango Voice', email: 'support@mangovoice.com', zendesk_id: '360495178337', sfdc: '0013a00001bc3NNAAY', tickets: 5, health: 'at-risk' },
-  { id: 11, name: 'Palate Connect', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
-  { id: 12, name: 'Redo', email: null, zendesk_id: null, sfdc: null, tickets: 5, health: 'at-risk' },
-  { id: 13, name: 'RetellAI', email: 'team@retellai.com', zendesk_id: '27751119088669', sfdc: '001Qk00000B8tAwIAJ', tickets: 3, health: 'warning' },
-  { id: 14, name: '42Chat', email: 'ops@42chat.com', zendesk_id: '360428930637', sfdc: '0013a00001etAMLAA2', tickets: 2, health: 'warning' },
-  { id: 15, name: 'Screen Magic', email: 'support@screenmagic.com', zendesk_id: '16422620764829', sfdc: '0013a00001eKJdyAAG', tickets: 10, health: 'at-risk' },
-  { id: 16, name: 'Simplii', email: 'support@simplii.com', zendesk_id: '9653484391069', sfdc: '0018Z00002Yc6T5QAJ', tickets: 4, health: 'warning' },
+  // Customers WITH Zendesk orgs - verified ticket counts
+  { id: 1, name: 'CareCo', email: 'support@careco.com', zendesk_id: '24316179795357', sfdc: '001Qk00000AnastIAB', tickets: 9, hasZendeskOrg: true },
+  { id: 2, name: 'Callloom', email: 'nauman@marsadvertisingllc.com', zendesk_id: '27751108046109', sfdc: '001Qk00000MBXOzIAP', tickets: 2, hasZendeskOrg: true },
+  { id: 3, name: 'iFaxApp', email: 'support@ifaxapp.com', zendesk_id: '360133372252', sfdc: null, tickets: 1, hasZendeskOrg: true },
+  { id: 4, name: 'Mango Voice', email: 'support@mangovoice.com', zendesk_id: '360495178337', sfdc: '0013a00001bc3NNAAY', tickets: 7, hasZendeskOrg: true },
+  { id: 5, name: 'RetellAI', email: 'team@retellai.com', zendesk_id: '27751119088669', sfdc: '001Qk00000B8tAwIAJ', tickets: 1, hasZendeskOrg: true },
+  { id: 6, name: '42Chat', email: 'ops@42chat.com', zendesk_id: '360428930637', sfdc: '0013a00001etAMLAA2', tickets: 0, hasZendeskOrg: true },
+  { id: 7, name: 'Screen Magic', email: 'support@screenmagic.com', zendesk_id: '16422620764829', sfdc: '0013a00001eKJdyAAG', tickets: 10, hasZendeskOrg: true },
+  { id: 8, name: 'Simplii', email: 'support@simplii.com', zendesk_id: '9653484391069', sfdc: '0018Z00002Yc6T5QAJ', tickets: 4, hasZendeskOrg: true },
+  
+  // Customers WITHOUT Zendesk orgs - cannot verify tickets
+  { id: 9, name: 'Chiirp', email: 'cnielsen@chiirp.com', zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
+  { id: 10, name: 'General Atomics', email: null, zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
+  { id: 11, name: 'GetScaled', email: null, zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
+  { id: 12, name: 'Grupo Bimbo', email: null, zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
+  { id: 13, name: 'IVR Technologies', email: null, zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
+  { id: 14, name: 'Jobble', email: null, zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
+  { id: 15, name: 'Palate Connect', email: null, zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
+  { id: 16, name: 'Redo', email: null, zendesk_id: null, sfdc: null, tickets: null, hasZendeskOrg: false },
 ]
 
 export default function Customers() {
@@ -31,11 +35,14 @@ export default function Customers() {
     (c.email && c.email.toLowerCase().includes(searchQuery.toLowerCase()))
   )
 
-  // Sort by tickets (most first), then by health priority
+  // Sort: customers with orgs first (by ticket count), then without orgs
   const sorted = [...filtered].sort((a, b) => {
-    const healthOrder = { 'at-risk': 0, 'warning': 1, 'healthy': 2 }
-    if (b.tickets !== a.tickets) return b.tickets - a.tickets
-    return healthOrder[a.health as keyof typeof healthOrder] - healthOrder[b.health as keyof typeof healthOrder]
+    if (a.hasZendeskOrg && !b.hasZendeskOrg) return -1
+    if (!a.hasZendeskOrg && b.hasZendeskOrg) return 1
+    if (a.hasZendeskOrg && b.hasZendeskOrg) {
+      return (b.tickets || 0) - (a.tickets || 0)
+    }
+    return a.name.localeCompare(b.name)
   })
 
   return (
@@ -61,22 +68,30 @@ export default function Customers() {
               className={`w-full text-left p-4 rounded-xl border transition-colors ${
                 selectedCustomer?.id === customer.id
                   ? 'bg-aurora-600/20 border-aurora-600/30'
-                  : 'bg-gray-900 border-gray-800 hover:border-gray-700'
+                  : customer.hasZendeskOrg 
+                    ? 'bg-gray-900 border-gray-800 hover:border-gray-700'
+                    : 'bg-gray-900 border-yellow-500/30 hover:border-yellow-500/50'
               }`}
             >
               <div className="flex items-center justify-between mb-1">
                 <span className="font-semibold text-white">{customer.name}</span>
-                <HealthBadge health={customer.health} />
-              </div>
-              {customer.email && <p className="text-sm text-gray-400">{customer.email}</p>}
-              <div className="flex gap-4 mt-2 text-xs text-gray-500">
-                <span>🎫 {customer.tickets} tickets</span>
-                {customer.zendesk_id ? (
-                  <span className="text-green-500">✓ Zendesk</span>
+                {customer.hasZendeskOrg ? (
+                  customer.tickets && customer.tickets > 0 ? (
+                    <span className={`text-xs px-2 py-0.5 rounded-full ${
+                      customer.tickets >= 4 ? 'bg-red-500/20 text-red-400' :
+                      customer.tickets >= 2 ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-blue-500/20 text-blue-400'
+                    }`}>
+                      {customer.tickets} tickets
+                    </span>
+                  ) : (
+                    <span className="text-xs text-green-500">✓</span>
+                  )
                 ) : (
-                  <span className="text-yellow-500">⚠️ No org</span>
+                  <span className="text-xs text-yellow-500">⚠️ No org</span>
                 )}
               </div>
+              {customer.email && <p className="text-sm text-gray-400">{customer.email}</p>}
             </button>
           ))}
         </div>
@@ -96,21 +111,6 @@ export default function Customers() {
   )
 }
 
-function HealthBadge({ health }: { health: string }) {
-  const colors = {
-    healthy: 'bg-green-500/20 text-green-400',
-    warning: 'bg-yellow-500/20 text-yellow-400',
-    'at-risk': 'bg-red-500/20 text-red-400',
-  }
-  const labels = { healthy: '✓', warning: '⚡', 'at-risk': '⚠️' }
-  
-  return (
-    <span className={`text-xs px-2 py-0.5 rounded-full ${colors[health as keyof typeof colors]}`}>
-      {labels[health as keyof typeof labels]}
-    </span>
-  )
-}
-
 function CustomerDetail({ customer }: { customer: typeof customers[0] }) {
   return (
     <div className="bg-gray-900 rounded-xl border border-gray-800 p-6 space-y-6">
@@ -127,11 +127,20 @@ function CustomerDetail({ customer }: { customer: typeof customers[0] }) {
         </div>
       </div>
 
+      {/* Status Banner */}
+      {!customer.hasZendeskOrg && (
+        <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
+          <p className="text-yellow-400 text-sm">⚠️ No Zendesk organization linked — ticket data unavailable</p>
+        </div>
+      )}
+
       {/* Quick Stats */}
       <div className="grid grid-cols-3 gap-4">
         <div className="bg-gray-800/50 rounded-lg p-4">
           <p className="text-sm text-gray-400">Open Tickets</p>
-          <p className="text-2xl font-bold text-white">{customer.tickets}</p>
+          <p className="text-2xl font-bold text-white">
+            {customer.hasZendeskOrg ? (customer.tickets || 0) : '—'}
+          </p>
         </div>
         <div className="bg-gray-800/50 rounded-lg p-4">
           <p className="text-sm text-gray-400">Zendesk Org</p>
@@ -145,16 +154,6 @@ function CustomerDetail({ customer }: { customer: typeof customers[0] }) {
             {customer.sfdc ? customer.sfdc.slice(0, 12) + '...' : 'None'}
           </p>
         </div>
-      </div>
-
-      {/* Status Info */}
-      <div className="flex items-center gap-4 p-4 bg-gray-800/30 rounded-lg">
-        <HealthBadge health={customer.health} />
-        <span className="text-gray-400 text-sm">
-          {customer.health === 'at-risk' && 'Multiple open issues - needs attention'}
-          {customer.health === 'warning' && 'Some open tickets - monitor closely'}
-          {customer.health === 'healthy' && 'No urgent issues'}
-        </span>
       </div>
 
       {/* Action Buttons */}
@@ -181,9 +180,6 @@ function CustomerDetail({ customer }: { customer: typeof customers[0] }) {
         )}
         <button className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm transition-colors">
           🔍 Lookup Account
-        </button>
-        <button className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm transition-colors">
-          📊 Billing History
         </button>
         <button className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm transition-colors">
           📝 Add Note
