@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { GatewayConfig } from '@/lib/gateway'
 
 interface Message {
   id: string
@@ -9,7 +10,11 @@ interface Message {
   timestamp: Date
 }
 
-export default function Chat() {
+interface ChatProps {
+  gatewayConfig: GatewayConfig
+}
+
+export default function Chat({ gatewayConfig }: ChatProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -44,18 +49,49 @@ export default function Chat() {
     setInput('')
     setIsTyping(true)
 
-    // TODO: Connect to actual gateway API
-    // For now, simulate response
-    setTimeout(() => {
-      const response: Message = {
+    try {
+      // Call gateway chat completions API
+      const response = await fetch(`${gatewayConfig.url}/v1/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${gatewayConfig.token}`
+        },
+        body: JSON.stringify({
+          model: 'default',
+          messages: messages.map(m => ({
+            role: m.role,
+            content: m.content
+          })).concat([{ role: 'user', content: input }]),
+          max_tokens: 2000
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error(`Gateway error: ${response.status}`)
+      }
+
+      const data = await response.json()
+      const content = data.choices?.[0]?.message?.content || 'Sorry, I had trouble responding.'
+      
+      const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: getSimulatedResponse(input),
+        content,
         timestamp: new Date(),
       }
-      setMessages(prev => [...prev, response])
+      setMessages(prev => [...prev, assistantMessage])
+    } catch (e: any) {
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: `⚠️ Connection error: ${e.message}. Make sure your gateway tunnel is running.`,
+        timestamp: new Date(),
+      }
+      setMessages(prev => [...prev, errorMessage])
+    } finally {
       setIsTyping(false)
-    }, 1500)
+    }
   }
 
   return (
