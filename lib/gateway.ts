@@ -5,7 +5,7 @@ export interface GatewayConfig {
   token: string
 }
 
-export interface VIPCustomer {
+export interface Customer {
   name: string
   tickets: number
   lastContact: string
@@ -20,15 +20,15 @@ export interface TicketSummary {
   url: string
 }
 
-// VIP customer list - the canonical list of customers to track
-export const VIP_CUSTOMERS = [
-  'CareCo', 'Callloom', 'Chiirp', 'RetellAi', 'Screen Magic', 
+// Customer list - the canonical list of customers to track (from memory/customers.json)
+export const TRACKED_CUSTOMERS = [
+  'CareCo', 'Callloom', 'Chiirp', 'RetellAI', 'Screen Magic', 
   'Simplii', 'iFaxApp', '42Chat', 'Mango Voice', 'Redo',
   'Jobble', 'Palate Connect', 'GetScaled', 'Grupo Bimbo',
-  'General Atomics', 'IVR Technologies', 'Automentor'
+  'General Atomics', 'IVR Technologies'
 ]
 
-export async function fetchVIPTickets(config: GatewayConfig): Promise<VIPCustomer[]> {
+export async function fetchCustomerTickets(config: GatewayConfig): Promise<Customer[]> {
   // Call the gateway's chat endpoint to ask Aurora to fetch Zendesk data
   const response = await fetch(`${config.url}/v1/chat/completions`, {
     method: 'POST',
@@ -40,7 +40,7 @@ export async function fetchVIPTickets(config: GatewayConfig): Promise<VIPCustome
       model: 'default',
       messages: [{
         role: 'user',
-        content: `Fetch open Zendesk tickets for these VIP customers and return as JSON array: ${VIP_CUSTOMERS.join(', ')}. 
+        content: `Fetch open Zendesk tickets for these customers and return as JSON array: ${TRACKED_CUSTOMERS.join(', ')}. 
         
 Format: [{"name": "CustomerName", "tickets": count, "openTickets": [{"id": "123", "subject": "...", "status": "open", "created": "date", "url": "..."}]}]
 
@@ -65,7 +65,7 @@ Return ONLY the JSON, no explanation.`
       return tickets.map((t: any) => ({
         name: t.name,
         tickets: t.tickets || t.openTickets?.length || 0,
-        mmcStatus: getMMCStatus(t.tickets || 0),
+        healthStatus: getHealthStatus(t.tickets || 0),
         lastContact: t.openTickets?.[0]?.created || 'N/A',
         openTickets: t.openTickets || []
       }))
@@ -77,8 +77,8 @@ Return ONLY the JSON, no explanation.`
   return []
 }
 
-// Simple MMC status based on ticket count (placeholder logic)
-function getMMCStatus(ticketCount: number): 'healthy' | 'warning' | 'at-risk' {
+// Health status based on ticket count
+function getHealthStatus(ticketCount: number): 'healthy' | 'warning' | 'at-risk' {
   if (ticketCount >= 4) return 'at-risk'
   if (ticketCount >= 2) return 'warning'
   return 'healthy'

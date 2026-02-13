@@ -19,7 +19,7 @@ const initialTasks: Task[] = [
   { id: '3', title: 'Prepare RetellAi QBR deck', customer: 'RetellAi', status: 'todo', priority: 'medium', dueDate: 'Friday' },
   { id: '4', title: 'Review Mango Voice call quality ticket', customer: 'Mango Voice', status: 'waiting', priority: 'medium' },
   { id: '5', title: 'Send Callloom billing analysis to Mike', customer: 'Callloom', status: 'done', priority: 'low' },
-  { id: '6', title: 'Update VIP tracker sheet', status: 'todo', priority: 'low' },
+  { id: '6', title: 'Update customer tracker sheet', status: 'todo', priority: 'low' },
 ]
 
 const columns: { id: TaskStatus; title: string; icon: string }[] = [

@@ -2,25 +2,41 @@
 
 import { useState } from 'react'
 
-const vipCustomers = [
-  { id: 1, name: 'CareCo', email: 'support@careco.com', tickets: 2, mmc: 15000, spend: 14200, health: 'healthy' },
-  { id: 2, name: 'Callloom', email: 'nauman@marsadvertisingllc.com', tickets: 1, mmc: null, spend: 8500, health: 'healthy' },
-  { id: 3, name: 'Chiirp', email: 'support@chiirp.com', tickets: 3, mmc: 10000, spend: 6800, health: 'at-risk' },
-  { id: 4, name: 'RetellAi', email: 'team@retellai.com', tickets: 0, mmc: 25000, spend: 32000, health: 'healthy' },
-  { id: 5, name: 'Automentor', email: 'ryan.federico@automentor.app', tickets: 0, mmc: 5000, spend: 1910, health: 'warning' },
-  { id: 6, name: 'iFaxApp', email: 'support@ifaxapp.com', tickets: 2, mmc: 8000, spend: 9200, health: 'healthy' },
-  { id: 7, name: '42Chat', email: 'ops@42chat.com', tickets: 1, mmc: 12000, spend: 10500, health: 'warning' },
-  { id: 8, name: 'Mango Voice', email: 'support@mangovoice.com', tickets: 4, mmc: 7500, spend: 4200, health: 'at-risk' },
+// Customer data from memory/customers.json - single source of truth
+const customers = [
+  { id: 1, name: 'CareCo', email: 'support@careco.com', zendesk_id: '24316179795357', sfdc: '001Qk00000AnastIAB', tickets: 9, health: 'at-risk' },
+  { id: 2, name: 'Callloom', email: 'nauman@marsadvertisingllc.com', zendesk_id: '27751108046109', sfdc: '001Qk00000MBXOzIAP', tickets: 3, health: 'at-risk' },
+  { id: 3, name: 'Chiirp', email: 'cnielsen@chiirp.com', zendesk_id: null, sfdc: null, tickets: 1, health: 'warning' },
+  { id: 4, name: 'General Atomics', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
+  { id: 5, name: 'GetScaled', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
+  { id: 6, name: 'Grupo Bimbo', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
+  { id: 7, name: 'iFaxApp', email: 'support@ifaxapp.com', zendesk_id: '360133372252', sfdc: null, tickets: 1, health: 'warning' },
+  { id: 8, name: 'IVR Technologies', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
+  { id: 9, name: 'Jobble', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
+  { id: 10, name: 'Mango Voice', email: 'support@mangovoice.com', zendesk_id: '360495178337', sfdc: '0013a00001bc3NNAAY', tickets: 5, health: 'at-risk' },
+  { id: 11, name: 'Palate Connect', email: null, zendesk_id: null, sfdc: null, tickets: 0, health: 'healthy' },
+  { id: 12, name: 'Redo', email: null, zendesk_id: null, sfdc: null, tickets: 5, health: 'at-risk' },
+  { id: 13, name: 'RetellAI', email: 'team@retellai.com', zendesk_id: '27751119088669', sfdc: '001Qk00000B8tAwIAJ', tickets: 3, health: 'warning' },
+  { id: 14, name: '42Chat', email: 'ops@42chat.com', zendesk_id: '360428930637', sfdc: '0013a00001etAMLAA2', tickets: 2, health: 'warning' },
+  { id: 15, name: 'Screen Magic', email: 'support@screenmagic.com', zendesk_id: '16422620764829', sfdc: '0013a00001eKJdyAAG', tickets: 10, health: 'at-risk' },
+  { id: 16, name: 'Simplii', email: 'support@simplii.com', zendesk_id: '9653484391069', sfdc: '0018Z00002Yc6T5QAJ', tickets: 4, health: 'warning' },
 ]
 
 export default function Customers() {
-  const [selectedCustomer, setSelectedCustomer] = useState<typeof vipCustomers[0] | null>(null)
+  const [selectedCustomer, setSelectedCustomer] = useState<typeof customers[0] | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
 
-  const filtered = vipCustomers.filter(c => 
+  const filtered = customers.filter(c => 
     c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    c.email.toLowerCase().includes(searchQuery.toLowerCase())
+    (c.email && c.email.toLowerCase().includes(searchQuery.toLowerCase()))
   )
+
+  // Sort by tickets (most first), then by health priority
+  const sorted = [...filtered].sort((a, b) => {
+    const healthOrder = { 'at-risk': 0, 'warning': 1, 'healthy': 2 }
+    if (b.tickets !== a.tickets) return b.tickets - a.tickets
+    return healthOrder[a.health as keyof typeof healthOrder] - healthOrder[b.health as keyof typeof healthOrder]
+  })
 
   return (
     <div className="flex gap-6 h-full">
@@ -37,8 +53,8 @@ export default function Customers() {
           />
         </div>
 
-        <div className="space-y-2">
-          {filtered.map((customer) => (
+        <div className="space-y-2 max-h-[calc(100vh-200px)] overflow-y-auto">
+          {sorted.map((customer) => (
             <button
               key={customer.id}
               onClick={() => setSelectedCustomer(customer)}
@@ -52,11 +68,13 @@ export default function Customers() {
                 <span className="font-semibold text-white">{customer.name}</span>
                 <HealthBadge health={customer.health} />
               </div>
-              <p className="text-sm text-gray-400">{customer.email}</p>
+              {customer.email && <p className="text-sm text-gray-400">{customer.email}</p>}
               <div className="flex gap-4 mt-2 text-xs text-gray-500">
                 <span>🎫 {customer.tickets} tickets</span>
-                {customer.mmc && (
-                  <span>💰 ${customer.spend.toLocaleString()} / ${customer.mmc.toLocaleString()}</span>
+                {customer.zendesk_id ? (
+                  <span className="text-green-500">✓ Zendesk</span>
+                ) : (
+                  <span className="text-yellow-500">⚠️ No org</span>
                 )}
               </div>
             </button>
@@ -93,16 +111,14 @@ function HealthBadge({ health }: { health: string }) {
   )
 }
 
-function CustomerDetail({ customer }: { customer: typeof vipCustomers[0] }) {
-  const mmcPercent = customer.mmc ? Math.round((customer.spend / customer.mmc) * 100) : null
-
+function CustomerDetail({ customer }: { customer: typeof customers[0] }) {
   return (
     <div className="bg-gray-900 rounded-xl border border-gray-800 p-6 space-y-6">
       {/* Header */}
       <div className="flex items-start justify-between">
         <div>
           <h2 className="text-2xl font-bold text-white">{customer.name}</h2>
-          <p className="text-gray-400">{customer.email}</p>
+          {customer.email && <p className="text-gray-400">{customer.email}</p>}
         </div>
         <div className="flex gap-2">
           <ActionButton icon="📧" label="Email" />
@@ -118,42 +134,53 @@ function CustomerDetail({ customer }: { customer: typeof vipCustomers[0] }) {
           <p className="text-2xl font-bold text-white">{customer.tickets}</p>
         </div>
         <div className="bg-gray-800/50 rounded-lg p-4">
-          <p className="text-sm text-gray-400">Current Spend</p>
-          <p className="text-2xl font-bold text-white">${customer.spend.toLocaleString()}</p>
+          <p className="text-sm text-gray-400">Zendesk Org</p>
+          <p className={`text-sm font-mono ${customer.zendesk_id ? 'text-green-400' : 'text-yellow-400'}`}>
+            {customer.zendesk_id ? customer.zendesk_id.slice(0, 10) + '...' : 'Not linked'}
+          </p>
         </div>
-        {customer.mmc && (
-          <div className="bg-gray-800/50 rounded-lg p-4">
-            <p className="text-sm text-gray-400">MMC Progress</p>
-            <p className={`text-2xl font-bold ${mmcPercent && mmcPercent >= 100 ? 'text-green-400' : mmcPercent && mmcPercent >= 75 ? 'text-yellow-400' : 'text-red-400'}`}>
-              {mmcPercent}%
-            </p>
-          </div>
-        )}
+        <div className="bg-gray-800/50 rounded-lg p-4">
+          <p className="text-sm text-gray-400">SFDC Account</p>
+          <p className={`text-sm font-mono ${customer.sfdc ? 'text-green-400' : 'text-gray-500'}`}>
+            {customer.sfdc ? customer.sfdc.slice(0, 12) + '...' : 'None'}
+          </p>
+        </div>
       </div>
 
-      {/* MMC Progress Bar */}
-      {customer.mmc && (
-        <div>
-          <div className="flex justify-between text-sm mb-2">
-            <span className="text-gray-400">MMC: ${customer.mmc.toLocaleString()}/mo</span>
-            <span className="text-gray-400">${customer.spend.toLocaleString()} spent</span>
-          </div>
-          <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
-            <div 
-              className={`h-full transition-all ${mmcPercent && mmcPercent >= 100 ? 'bg-green-500' : mmcPercent && mmcPercent >= 75 ? 'bg-yellow-500' : 'bg-red-500'}`}
-              style={{ width: `${Math.min(mmcPercent || 0, 100)}%` }}
-            />
-          </div>
-        </div>
-      )}
+      {/* Status Info */}
+      <div className="flex items-center gap-4 p-4 bg-gray-800/30 rounded-lg">
+        <HealthBadge health={customer.health} />
+        <span className="text-gray-400 text-sm">
+          {customer.health === 'at-risk' && 'Multiple open issues - needs attention'}
+          {customer.health === 'warning' && 'Some open tickets - monitor closely'}
+          {customer.health === 'healthy' && 'No urgent issues'}
+        </span>
+      </div>
 
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
-        <button className="px-4 py-2 bg-aurora-600 hover:bg-aurora-500 text-white rounded-lg text-sm transition-colors">
-          🔍 Lookup Account
-        </button>
+        {customer.zendesk_id && (
+          <a 
+            href={`https://telnyx.zendesk.com/agent/organizations/${customer.zendesk_id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-aurora-600 hover:bg-aurora-500 text-white rounded-lg text-sm transition-colors"
+          >
+            🎫 View in Zendesk
+          </a>
+        )}
+        {customer.sfdc && (
+          <a
+            href={`https://telnyx.lightning.force.com/lightning/r/Account/${customer.sfdc}/view`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm transition-colors"
+          >
+            ☁️ View in Salesforce
+          </a>
+        )}
         <button className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm transition-colors">
-          🎫 View Tickets
+          🔍 Lookup Account
         </button>
         <button className="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm transition-colors">
           📊 Billing History
