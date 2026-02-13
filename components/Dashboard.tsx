@@ -19,71 +19,38 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
   const [error, setError] = useState('')
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
 
-  const fetchTickets = async () => {
+  // Static data from Google Sheet (VIP Ticket Tracker - updated 2026-02-12)
+  // TODO: Add dynamic refresh via Cloudflare Worker proxy
+  const loadSheetData = () => {
     setLoading(true)
-    setError('')
     
-    try {
-      // Call gateway to fetch Zendesk tickets via chat completions
-      const response = await fetch(`${gatewayConfig.url}/v1/chat/completions`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${gatewayConfig.token}`
-        },
-        body: JSON.stringify({
-          model: 'default',
-          messages: [{
-            role: 'user',
-            content: `Search Zendesk for open tickets for these VIP customers: ${VIP_CUSTOMERS.join(', ')}
-
-For each customer, count their open tickets and get the most recent ticket date.
-
-Return ONLY a JSON array like this (no other text):
-[{"name": "CustomerName", "tickets": 3, "lastContact": "2/10"}]
-
-Include all customers even if they have 0 tickets.`
-          }],
-          max_tokens: 2000
-        })
-      })
-
-      if (!response.ok) {
-        throw new Error(`Gateway error: ${response.status}`)
-      }
-
-      const data = await response.json()
-      const content = data.choices?.[0]?.message?.content || ''
-      
-      // Parse JSON from response
-      const jsonMatch = content.match(/\[[\s\S]*?\]/)
-      if (jsonMatch) {
-        const ticketData = JSON.parse(jsonMatch[0])
-        const enrichedData = ticketData.map((t: any) => ({
-          name: t.name,
-          tickets: t.tickets || 0,
-          mmcStatus: getMMCStatus(t.tickets || 0),
-          lastContact: t.lastContact || 'N/A'
-        }))
-        setCustomers(enrichedData)
-        setLastUpdated(new Date())
-      } else {
-        throw new Error('Could not parse ticket data')
-      }
-    } catch (e: any) {
-      console.error('Fetch error:', e)
-      setError(e.message || 'Failed to fetch tickets')
-      // Fall back to default data
-      setCustomers(VIP_CUSTOMERS.map(name => ({
-        name,
-        tickets: 0,
-        mmcStatus: 'healthy' as const,
-        lastContact: 'N/A'
-      })))
-    } finally {
-      setLoading(false)
-    }
+    // Data from Google Sheet - last synced Feb 12, 2026
+    const sheetData: VIPCustomer[] = [
+      { name: 'CareCo', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'Callloom', tickets: 3, mmcStatus: 'warning', lastContact: '2/10' },
+      { name: 'Chiirp', tickets: 1, mmcStatus: 'healthy', lastContact: '3/24/25' },
+      { name: 'RetellAi', tickets: 3, mmcStatus: 'warning', lastContact: '2/2' },
+      { name: 'Screen Magic', tickets: 5, mmcStatus: 'at-risk', lastContact: '2/9' },
+      { name: 'Simplii', tickets: 5, mmcStatus: 'at-risk', lastContact: '1/18' },
+      { name: 'iFaxApp', tickets: 2, mmcStatus: 'warning', lastContact: '1/28' },
+      { name: '42Chat', tickets: 2, mmcStatus: 'warning', lastContact: '12/18' },
+      { name: 'Mango Voice', tickets: 5, mmcStatus: 'at-risk', lastContact: '1/16' },
+      { name: 'Redo', tickets: 5, mmcStatus: 'at-risk', lastContact: '2/7' },
+      { name: 'Jobble', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'Palate Connect', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'GetScaled', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'Grupo Bimbo', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'General Atomics', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'IVR Technologies', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'Automentor', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+    ]
+    
+    setCustomers(sheetData)
+    setLastUpdated(new Date('2026-02-12T21:00:00'))
+    setLoading(false)
   }
+
+  const fetchTickets = loadSheetData
 
   useEffect(() => {
     fetchTickets()

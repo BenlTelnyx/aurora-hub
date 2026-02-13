@@ -15,7 +15,7 @@ type View = 'dashboard' | 'customers' | 'inbox' | 'tasks' | 'issue-dive' | 'chat
 export default function Home() {
   const [currentView, setCurrentView] = useState<View>('dashboard')
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  // Default to Ben's gateway - auto-filled for convenience
+  // Gateway config (for Chat feature)
   const [gatewayUrl, setGatewayUrl] = useState('https://amounts-elite-chapel-born.trycloudflare.com')
   const [token, setToken] = useState('dbbe1141634dba037ed5e5a9aeec1d70c6485b95a73483e4fda3684de17684d6')
   const [connecting, setConnecting] = useState(false)
