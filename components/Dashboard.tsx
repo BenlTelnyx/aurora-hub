@@ -17,17 +17,12 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
   const loadSheetData = () => {
     setLoading(true)
     
-    // Data from Google Sheet - only customers with open tickets (Feb 12, 2026 9:50 PM)
+    // Real Zendesk data - customers with open tickets (Feb 12, 2026 10:05 PM)
     const sheetData: VIPCustomer[] = [
-      { name: 'Callloom', tickets: 3, lastContact: '2/10' },
-      { name: 'Chiirp', tickets: 1, lastContact: '3/24/25' },
-      { name: 'RetellAi', tickets: 3, lastContact: '2/2' },
-      { name: 'Screen Magic', tickets: 5, lastContact: '2/9' },
-      { name: 'Simplii', tickets: 5, lastContact: '1/18' },
-      { name: 'iFaxApp', tickets: 2, lastContact: '1/28' },
-      { name: '42Chat', tickets: 2, lastContact: '12/18' },
-      { name: 'Mango Voice', tickets: 5, lastContact: '1/16' },
-      { name: 'Redo', tickets: 5, lastContact: '2/7' },
+      { name: 'CareCo', tickets: 9, lastContact: '2/10' },
+      { name: 'Screen Magic', tickets: 10, lastContact: '2/12' },
+      { name: 'Simplii', tickets: 4, lastContact: '1/13' },
+      { name: 'RetellAi', tickets: 1, lastContact: '1/22' },
     ]
     
     setCustomers(sheetData)
