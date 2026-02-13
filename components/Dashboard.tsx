@@ -13,7 +13,7 @@ const vipCustomers = [
   { name: 'Automentor', tickets: 0, mmcStatus: 'warning', lastContact: '1 month ago' },
 ]
 
-const mmcStatusColors = {
+const mmcStatusColors: Record<string, string> = {
   'healthy': 'bg-green-500/20 text-green-400 border-green-500/30',
   'warning': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
   'at-risk': 'bg-red-500/20 text-red-400 border-red-500/30',
