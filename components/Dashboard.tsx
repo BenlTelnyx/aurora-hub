@@ -7,46 +7,39 @@ interface DashboardProps {
   gatewayConfig: GatewayConfig
 }
 
-const mmcStatusColors: Record<string, string> = {
-  'healthy': 'bg-green-500/20 text-green-400 border-green-500/30',
-  'warning': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
-  'at-risk': 'bg-red-500/20 text-red-400 border-red-500/30',
-}
-
 export default function Dashboard({ gatewayConfig }: DashboardProps) {
   const [customers, setCustomers] = useState<VIPCustomer[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
 
-  // Static data from Google Sheet (VIP Ticket Tracker - updated 2026-02-12)
-  // TODO: Add dynamic refresh via Cloudflare Worker proxy
+  // Static data from Google Sheet (VIP Ticket Tracker - updated 2026-02-12 9:50 PM)
   const loadSheetData = () => {
     setLoading(true)
     
-    // Data from Google Sheet - last synced Feb 12, 2026
+    // Data from Google Sheet - accurate counts as of Feb 12, 2026 9:50 PM
     const sheetData: VIPCustomer[] = [
-      { name: 'CareCo', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
-      { name: 'Callloom', tickets: 3, mmcStatus: 'warning', lastContact: '2/10' },
-      { name: 'Chiirp', tickets: 1, mmcStatus: 'healthy', lastContact: '3/24/25' },
-      { name: 'RetellAi', tickets: 3, mmcStatus: 'warning', lastContact: '2/2' },
-      { name: 'Screen Magic', tickets: 5, mmcStatus: 'at-risk', lastContact: '2/9' },
-      { name: 'Simplii', tickets: 5, mmcStatus: 'at-risk', lastContact: '1/18' },
-      { name: 'iFaxApp', tickets: 2, mmcStatus: 'warning', lastContact: '1/28' },
-      { name: '42Chat', tickets: 2, mmcStatus: 'warning', lastContact: '12/18' },
-      { name: 'Mango Voice', tickets: 5, mmcStatus: 'at-risk', lastContact: '1/16' },
-      { name: 'Redo', tickets: 5, mmcStatus: 'at-risk', lastContact: '2/7' },
-      { name: 'Jobble', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
-      { name: 'Palate Connect', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
-      { name: 'GetScaled', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
-      { name: 'Grupo Bimbo', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
-      { name: 'General Atomics', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
-      { name: 'IVR Technologies', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
-      { name: 'Automentor', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+      { name: 'CareCo', tickets: 0, lastContact: 'N/A' },
+      { name: 'Callloom', tickets: 3, lastContact: '2/10' },
+      { name: 'Chiirp', tickets: 1, lastContact: '3/24/25' },
+      { name: 'RetellAi', tickets: 3, lastContact: '2/2' },
+      { name: 'Screen Magic', tickets: 5, lastContact: '2/9' },
+      { name: 'Simplii', tickets: 5, lastContact: '1/18' },
+      { name: 'iFaxApp', tickets: 2, lastContact: '1/28' },
+      { name: '42Chat', tickets: 2, lastContact: '12/18' },
+      { name: 'Mango Voice', tickets: 5, lastContact: '1/16' },
+      { name: 'Redo', tickets: 5, lastContact: '2/7' },
+      { name: 'Jobble', tickets: 0, lastContact: 'N/A' },
+      { name: 'Palate Connect', tickets: 0, lastContact: 'N/A' },
+      { name: 'GetScaled', tickets: 0, lastContact: 'N/A' },
+      { name: 'Grupo Bimbo', tickets: 0, lastContact: 'N/A' },
+      { name: 'General Atomics', tickets: 0, lastContact: 'N/A' },
+      { name: 'IVR Technologies', tickets: 0, lastContact: 'N/A' },
+      { name: 'Automentor', tickets: 0, lastContact: 'N/A' },
     ]
     
     setCustomers(sheetData)
-    setLastUpdated(new Date('2026-02-12T21:00:00'))
+    setLastUpdated(new Date())
     setLoading(false)
   }
 
@@ -57,8 +50,7 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
   }, [gatewayConfig.url])
 
   const totalTickets = customers.reduce((sum, c) => sum + c.tickets, 0)
-  const atRiskCount = customers.filter(c => c.mmcStatus === 'at-risk').length
-  const warningCount = customers.filter(c => c.mmcStatus === 'warning').length
+  const customersWithTickets = customers.filter(c => c.tickets > 0).length
 
   return (
     <div className="space-y-6">
@@ -91,11 +83,10 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
       )}
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         <StatCard label="Open Tickets" value={totalTickets} icon="🎫" color="blue" loading={loading} />
         <StatCard label="VIP Customers" value={customers.length} icon="👥" color="purple" loading={loading} />
-        <StatCard label="At Risk" value={atRiskCount} icon="⚠️" color="red" loading={loading} />
-        <StatCard label="Needs Attention" value={warningCount} icon="👀" color="yellow" loading={loading} />
+        <StatCard label="With Open Tickets" value={customersWithTickets} icon="📋" color="yellow" loading={loading} />
       </div>
 
       {/* VIP Customer Grid */}
@@ -144,12 +135,6 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
   )
 }
 
-function getMMCStatus(ticketCount: number): 'healthy' | 'warning' | 'at-risk' {
-  if (ticketCount >= 4) return 'at-risk'
-  if (ticketCount >= 2) return 'warning'
-  return 'healthy'
-}
-
 function StatCard({ label, value, icon, color, loading }: { label: string; value: number; icon: string; color: string; loading?: boolean }) {
   const colorClasses = {
     blue: 'bg-blue-500/10 border-blue-500/20',
@@ -176,9 +161,11 @@ function CustomerCard({ customer }: { customer: VIPCustomer }) {
     <div className="bg-gray-900 rounded-xl border border-gray-800 p-4 hover:border-gray-700 transition-colors cursor-pointer">
       <div className="flex items-start justify-between mb-3">
         <h3 className="font-semibold text-white">{customer.name}</h3>
-        <span className={`text-xs px-2 py-1 rounded-full border ${mmcStatusColors[customer.mmcStatus]}`}>
-          {customer.mmcStatus === 'healthy' ? '✓ Healthy' : customer.mmcStatus === 'warning' ? '⚡ Warning' : '⚠️ At Risk'}
-        </span>
+        {customer.tickets > 0 && (
+          <span className="text-xs px-2 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">
+            {customer.tickets} open
+          </span>
+        )}
       </div>
       <div className="flex items-center gap-4 text-sm text-gray-400">
         <span>🎫 {customer.tickets} tickets</span>

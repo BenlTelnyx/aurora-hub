@@ -8,7 +8,6 @@ export interface GatewayConfig {
 export interface VIPCustomer {
   name: string
   tickets: number
-  mmcStatus: 'healthy' | 'warning' | 'at-risk'
   lastContact: string
   openTickets?: TicketSummary[]
 }
