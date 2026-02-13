@@ -47,74 +47,59 @@ const allTickets: Ticket[] = [
 ]
 
 export default function Tickets() {
-  const [filter, setFilter] = useState<string>('all')
-  
   const customers = Array.from(new Set(allTickets.map(t => t.customer))).sort()
-  const filteredTickets = filter === 'all' ? allTickets : allTickets.filter(t => t.customer === filter)
+  
+  // Group tickets by customer
+  const ticketsByCustomer = customers.map(customer => ({
+    customer,
+    tickets: allTickets.filter(t => t.customer === customer)
+  }))
 
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-white">Tickets</h1>
-          <p className="text-gray-400">{allTickets.length} open tickets across {customers.length} customers</p>
-        </div>
-        
-        {/* Filter */}
-        <select
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-          className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-aurora-500"
-        >
-          <option value="all">All Customers</option>
-          {customers.map(c => (
-            <option key={c} value={c}>{c}</option>
-          ))}
-        </select>
+      <div>
+        <h1 className="text-2xl font-bold text-white">Tickets</h1>
+        <p className="text-gray-400">{allTickets.length} open tickets across {customers.length} customers</p>
       </div>
 
-      {/* Tickets Table */}
-      <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-        <table className="w-full">
-          <thead>
-            <tr className="border-b border-gray-800">
-              <th className="text-left px-4 py-3 text-sm font-medium text-gray-400">Ticket</th>
-              <th className="text-left px-4 py-3 text-sm font-medium text-gray-400">Customer</th>
-              <th className="text-left px-4 py-3 text-sm font-medium text-gray-400">Description</th>
-              <th className="text-left px-4 py-3 text-sm font-medium text-gray-400">Opened</th>
-              <th className="text-left px-4 py-3 text-sm font-medium text-gray-400">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredTickets.map((ticket) => (
-              <tr key={ticket.id} className="border-b border-gray-800/50 hover:bg-gray-800/50 transition-colors">
-                <td className="px-4 py-3">
-                  <span className="text-aurora-400 font-mono text-sm">#{ticket.id}</span>
-                </td>
-                <td className="px-4 py-3">
-                  <span className="text-white">{ticket.customer}</span>
-                </td>
-                <td className="px-4 py-3">
-                  <span className="text-gray-300">{ticket.description}</span>
-                </td>
-                <td className="px-4 py-3">
-                  <span className="text-gray-400 text-sm">{ticket.opened}</span>
-                </td>
-                <td className="px-4 py-3">
+      {/* Tickets grouped by customer */}
+      <div className="space-y-6">
+        {ticketsByCustomer.map(({ customer, tickets }) => (
+          <div key={customer} className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
+            {/* Customer Header */}
+            <div className="px-4 py-3 bg-gray-800/50 border-b border-gray-800 flex items-center justify-between">
+              <h2 className="font-semibold text-white flex items-center gap-2">
+                <span>👥</span>
+                {customer}
+              </h2>
+              <span className="text-sm text-gray-400">{tickets.length} ticket{tickets.length !== 1 ? 's' : ''}</span>
+            </div>
+            
+            {/* Tickets */}
+            <div className="divide-y divide-gray-800/50">
+              {tickets.map((ticket) => (
+                <div key={ticket.id} className="px-4 py-3 hover:bg-gray-800/30 transition-colors flex items-center justify-between">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3">
+                      <span className="text-aurora-400 font-mono text-sm">#{ticket.id}</span>
+                      <span className="text-white truncate">{ticket.description}</span>
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">Opened {ticket.opened}</div>
+                  </div>
                   <a
                     href={ticket.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1.5 bg-aurora-600 hover:bg-aurora-500 text-white text-sm rounded-lg transition-colors"
+                    className="ml-4 inline-flex items-center gap-1 px-3 py-1.5 bg-aurora-600 hover:bg-aurora-500 text-white text-sm rounded-lg transition-colors whitespace-nowrap"
                   >
-                    Open in Zendesk →
+                    Open →
                   </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
