@@ -15,18 +15,24 @@ type View = 'dashboard' | 'customers' | 'inbox' | 'tasks' | 'issue-dive' | 'chat
 export default function Home() {
   const [currentView, setCurrentView] = useState<View>('dashboard')
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [gatewayUrl, setGatewayUrl] = useState('')
-  const [token, setToken] = useState('')
+  // Default to Ben's gateway - auto-filled for convenience
+  const [gatewayUrl, setGatewayUrl] = useState('https://amounts-elite-chapel-born.trycloudflare.com')
+  const [token, setToken] = useState('dbbe1141634dba037ed5e5a9aeec1d70c6485b95a73483e4fda3684de17684d6')
   const [connecting, setConnecting] = useState(false)
   const [error, setError] = useState('')
 
-  // Check for saved config on mount
+  // Auto-connect on mount (saved creds or defaults)
   useEffect(() => {
     const savedUrl = localStorage.getItem('aurora_gateway_url')
     const savedToken = localStorage.getItem('aurora_token')
     if (savedUrl && savedToken) {
       setGatewayUrl(savedUrl)
       setToken(savedToken)
+      setIsAuthenticated(true)
+    } else if (gatewayUrl && token) {
+      // Auto-connect with defaults
+      localStorage.setItem('aurora_gateway_url', gatewayUrl)
+      localStorage.setItem('aurora_token', token)
       setIsAuthenticated(true)
     }
   }, [])
