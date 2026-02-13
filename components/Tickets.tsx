@@ -46,11 +46,18 @@ const allTickets: Ticket[] = [
   { customer: 'Redo', url: 'https://telnyx.zendesk.com/agent/tickets/2490079', id: '2490079', description: 'Expedite TFN Verification', status: 'Open', opened: '11/18/25' },
 ]
 
+// All VIP customers (from Google Sheet tabs)
+const allCustomers = [
+  '42Chat', 'Automentor', 'Booksy', 'Callloom', 'CareCo', 'Chiirp',
+  'General Atomics', 'GetScaled', 'Grupo Bimbo', 'IVR Technologies',
+  'iFaxApp', 'Jobble', 'Jovee', 'Mango Voice', 'OutboundAi', 'Palate Connect',
+  'Patient Now', 'Redo', 'RetellAi', 'Screen Magic', 'Simplii', 'Softlinx',
+  'StandupWireless', 'SweedPOS', 'TalkDesk'
+].sort()
+
 export default function Tickets() {
-  const customers = Array.from(new Set(allTickets.map(t => t.customer))).sort()
-  
-  // Group tickets by customer
-  const ticketsByCustomer = customers.map(customer => ({
+  // Group tickets by customer, include all VIP customers
+  const ticketsByCustomer = allCustomers.map(customer => ({
     customer,
     tickets: allTickets.filter(t => t.customer === customer)
   }))
@@ -60,7 +67,7 @@ export default function Tickets() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-white">Tickets</h1>
-        <p className="text-gray-400">{allTickets.length} open tickets across {customers.length} customers</p>
+        <p className="text-gray-400">{allTickets.length} open tickets across {allCustomers.length} VIP customers</p>
       </div>
 
       {/* Tickets grouped by customer */}
@@ -78,25 +85,31 @@ export default function Tickets() {
             
             {/* Tickets */}
             <div className="divide-y divide-gray-800/50">
-              {tickets.map((ticket) => (
-                <div key={ticket.id} className="px-4 py-3 hover:bg-gray-800/30 transition-colors flex items-center justify-between">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-3">
-                      <span className="text-aurora-400 font-mono text-sm">#{ticket.id}</span>
-                      <span className="text-white truncate">{ticket.description}</span>
+              {tickets.length > 0 ? (
+                tickets.map((ticket) => (
+                  <div key={ticket.id} className="px-4 py-3 hover:bg-gray-800/30 transition-colors flex items-center justify-between">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3">
+                        <span className="text-aurora-400 font-mono text-sm">#{ticket.id}</span>
+                        <span className="text-white truncate">{ticket.description}</span>
+                      </div>
+                      <div className="text-xs text-gray-500 mt-1">Opened {ticket.opened}</div>
                     </div>
-                    <div className="text-xs text-gray-500 mt-1">Opened {ticket.opened}</div>
+                    <a
+                      href={ticket.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-4 inline-flex items-center gap-1 px-3 py-1.5 bg-aurora-600 hover:bg-aurora-500 text-white text-sm rounded-lg transition-colors whitespace-nowrap"
+                    >
+                      Open →
+                    </a>
                   </div>
-                  <a
-                    href={ticket.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-4 inline-flex items-center gap-1 px-3 py-1.5 bg-aurora-600 hover:bg-aurora-500 text-white text-sm rounded-lg transition-colors whitespace-nowrap"
-                  >
-                    Open →
-                  </a>
+                ))
+              ) : (
+                <div className="px-4 py-3 text-gray-500 text-sm">
+                  ✓ No open tickets
                 </div>
-              ))}
+              )}
             </div>
           </div>
         ))}
