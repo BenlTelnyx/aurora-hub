@@ -9,72 +9,65 @@ interface Ticket {
   opened: string
 }
 
-// VIP Tickets from Ben's Google Sheet (Summary tab) - source of truth
-// https://docs.google.com/spreadsheets/d/1SbZYF6BTlcwJKaBZm7Skl3Bt97VKH5muHj4UBRijpDs
+// REAL tickets from Zendesk (pulled Feb 12, 2026 10:15 PM via org ID search)
 const allTickets: Ticket[] = [
-  // Callloom (3)
-  { customer: 'Callloom', id: '2681181', url: 'https://telnyx.zendesk.com/agent/tickets/2681181', description: 'Dead-air issue', status: 'Open', opened: '2/10' },
-  { customer: 'Callloom', id: '2678598', url: 'https://telnyx.zendesk.com/agent/tickets/2678598', description: 'Distorting audio', status: 'Open', opened: '2/9' },
-  { customer: 'Callloom', id: '2646380', url: 'https://telnyx.zendesk.com/agent/tickets/2646380', description: 'SMS errors', status: 'Open', opened: '1/23' },
+  // Careco (9 tickets)
+  { customer: 'Careco', id: '2681890', url: 'https://telnyx.zendesk.com/agent/tickets/2681890', description: 'Intermittent audio issues on patient calls', status: 'open', opened: '2/10' },
+  { customer: 'Careco', id: '2678621', url: 'https://telnyx.zendesk.com/agent/tickets/2678621', description: 'Missing Call Recording – 2:09 Call', status: 'open', opened: '2/9' },
+  { customer: 'Careco', id: '2678904', url: 'https://telnyx.zendesk.com/agent/tickets/2678904', description: 'Destination Out of Order error', status: 'pending', opened: '2/9' },
+  { customer: 'Careco', id: '2567462', url: 'https://telnyx.zendesk.com/agent/tickets/2567462', description: 'Missing recording for bridged call', status: 'open', opened: '12/24' },
+  { customer: 'Careco', id: '2536736', url: 'https://telnyx.zendesk.com/agent/tickets/2536736', description: 'WebRTC client no audio in/out', status: 'open', opened: '12/11' },
+  { customer: 'Careco', id: '2560892', url: 'https://telnyx.zendesk.com/agent/tickets/2560892', description: 'Widespread WebRTC Audio Issues', status: 'pending', opened: '12/22' },
+  { customer: 'Careco', id: '2511621', url: 'https://telnyx.zendesk.com/agent/tickets/2511621', description: 'Incorrect Call and Recording Duration', status: 'hold', opened: '12/1' },
+  { customer: 'Careco', id: '2333729', url: 'https://telnyx.zendesk.com/agent/tickets/2333729', description: 'Calls purged due to internet lapses', status: 'hold', opened: '8/21' },
+  { customer: 'Careco', id: '2297449', url: 'https://telnyx.zendesk.com/agent/tickets/2297449', description: 'Calls dropping mid-call', status: 'pending', opened: '7/31' },
   
-  // Chiirp (1)
-  { customer: 'Chiirp', id: '2098521', url: 'https://telnyx.zendesk.com/agent/tickets/2098521', description: 'Inbound Support Request', status: 'Open', opened: '3/24/25' },
+  // Screen-magic (10 tickets)
+  { customer: 'Screen-magic', id: '2686955', url: 'https://telnyx.zendesk.com/agent/tickets/2686955', description: 'Text-enablement request', status: 'hold', opened: '2/12' },
+  { customer: 'Screen-magic', id: '2684958', url: 'https://telnyx.zendesk.com/agent/tickets/2684958', description: 'Ticket has been Closed', status: 'open', opened: '2/11' },
+  { customer: 'Screen-magic', id: '2678629', url: 'https://telnyx.zendesk.com/agent/tickets/2678629', description: 'Text enablement case', status: 'open', opened: '2/9' },
+  { customer: 'Screen-magic', id: '2675382', url: 'https://telnyx.zendesk.com/agent/tickets/2675382', description: 'Observing issues', status: 'open', opened: '2/6' },
+  { customer: 'Screen-magic', id: '2670353', url: 'https://telnyx.zendesk.com/agent/tickets/2670353', description: 'Messages being blocked', status: 'open', opened: '2/4' },
+  { customer: 'Screen-magic', id: '2645057', url: 'https://telnyx.zendesk.com/agent/tickets/2645057', description: 'Text enable number', status: 'hold', opened: '1/23' },
+  { customer: 'Screen-magic', id: '2637305', url: 'https://telnyx.zendesk.com/agent/tickets/2637305', description: 'Assessing Telnyx capabilities', status: 'open', opened: '1/21' },
+  { customer: 'Screen-magic', id: '2595218', url: 'https://telnyx.zendesk.com/agent/tickets/2595218', description: '10DLC for Affinity Gaming', status: 'pending', opened: '1/6' },
+  { customer: 'Screen-magic', id: '2539198', url: 'https://telnyx.zendesk.com/agent/tickets/2539198', description: '10DLC campaign submitted', status: 'pending', opened: '12/12' },
+  { customer: 'Screen-magic', id: '2450446', url: 'https://telnyx.zendesk.com/agent/tickets/2450446', description: 'Campaign submission update', status: 'pending', opened: '10/27' },
   
-  // RetellAi (3)
-  { customer: 'RetellAi', id: '2664371', url: 'https://telnyx.zendesk.com/agent/tickets/2664371', description: 'Inbound Support Request', status: 'Open', opened: '2/2' },
-  { customer: 'RetellAi', id: '2663036', url: 'https://telnyx.zendesk.com/agent/tickets/2663036', description: 'Misconfiguration on Telnyx', status: 'Open', opened: '2/1' },
-  { customer: 'RetellAi', id: '2641849', url: 'https://telnyx.zendesk.com/agent/tickets/2641849', description: 'Fraudulent calls from network', status: 'Open', opened: '1/22' },
+  // Simplii (4 tickets)
+  { customer: 'Simplii', id: '2612308', url: 'https://telnyx.zendesk.com/agent/tickets/2612308', description: 'Resubmit Campaign C2S48PH', status: 'pending', opened: '1/13' },
+  { customer: 'Simplii', id: '2531840', url: 'https://telnyx.zendesk.com/agent/tickets/2531840', description: 'Resubmit Multiple Campaigns', status: 'pending', opened: '12/9' },
+  { customer: 'Simplii', id: '2179033', url: 'https://telnyx.zendesk.com/agent/tickets/2179033', description: 'Port Out SMS Portion of a DID', status: 'open', opened: '5/14' },
+  { customer: 'Simplii', id: '2079429', url: 'https://telnyx.zendesk.com/agent/tickets/2079429', description: 'Numbers Not Fully Ported', status: 'pending', opened: '3/11' },
   
-  // Screen Magic (5)
-  { customer: 'Screen Magic', id: '2678629', url: 'https://telnyx.zendesk.com/agent/tickets/2678629', description: 'Text enablement case', status: 'Open', opened: '2/9' },
-  { customer: 'Screen Magic', id: '2675382', url: 'https://telnyx.zendesk.com/agent/tickets/2675382', description: 'Observing issues', status: 'Open', opened: '2/6' },
-  { customer: 'Screen Magic', id: '2670353', url: 'https://telnyx.zendesk.com/agent/tickets/2670353', description: 'Messages being blocked', status: 'Open', opened: '2/4' },
-  { customer: 'Screen Magic', id: '2645057', url: 'https://telnyx.zendesk.com/agent/tickets/2645057', description: 'Text enable number', status: 'Open', opened: '1/23' },
-  { customer: 'Screen Magic', id: '2637305', url: 'https://telnyx.zendesk.com/agent/tickets/2637305', description: 'Assessing Telnyx capabilities', status: 'Open', opened: '1/21' },
+  // iFax (1 ticket)
+  { customer: 'iFax', id: '2654944', url: 'https://telnyx.zendesk.com/agent/tickets/2654944', description: 'URGENT: Fax Failures from Default Fax Number', status: 'pending', opened: '1/28' },
   
-  // Simplii (5)
-  { customer: 'Simplii', id: '2628312', url: 'https://telnyx.zendesk.com/agent/tickets/2628312', description: 'Outbound Failed SMS', status: 'Open', opened: '1/18' },
-  { customer: 'Simplii', id: '2612308', url: 'https://telnyx.zendesk.com/agent/tickets/2612308', description: 'Resubmit Campaign C2S48PH', status: 'Open', opened: '1/13' },
-  { customer: 'Simplii', id: '2583053', url: 'https://telnyx.zendesk.com/agent/tickets/2583053', description: 'Port Out Notification', status: 'Open', opened: '1/1' },
-  { customer: 'Simplii', id: '2531840', url: 'https://telnyx.zendesk.com/agent/tickets/2531840', description: 'Resubmit Multiple Campaigns', status: 'Open', opened: '12/9' },
-  { customer: 'Simplii', id: '1040116', url: 'https://telnyx.zendesk.com/agent/tickets/1040116', description: 'Robocall Weekly Updates', status: 'Open', opened: '5/3/22' },
-  
-  // iFaxApp (2)
-  { customer: 'iFaxApp', id: '2654944', url: 'https://telnyx.zendesk.com/agent/tickets/2654944', description: 'URGENT: Fax Failures', status: 'Open', opened: '1/28' },
-  { customer: 'iFaxApp', id: '2402307', url: 'https://telnyx.zendesk.com/agent/tickets/2402307', description: 'Test Ticket', status: 'Open', opened: '9/30/25' },
-  
-  // 42Chat (2)
-  { customer: '42Chat', id: '2550080', url: 'https://telnyx.zendesk.com/agent/tickets/2550080', description: 'Outbound Failed SMS', status: 'Open', opened: '12/18' },
-  { customer: '42Chat', id: '2548629', url: 'https://telnyx.zendesk.com/agent/tickets/2548629', description: 'Message blocked as SPAM', status: 'Open', opened: '12/17' },
-  
-  // Mango Voice (5)
-  { customer: 'Mango Voice', id: '2627147', url: 'https://telnyx.zendesk.com/agent/tickets/2627147', description: 'End user validation port', status: 'Open', opened: '1/16' },
-  { customer: 'Mango Voice', id: '2625650', url: 'https://telnyx.zendesk.com/agent/tickets/2625650', description: 'Port Out Notification', status: 'Open', opened: '1/16' },
-  { customer: 'Mango Voice', id: '2524604', url: 'https://telnyx.zendesk.com/agent/tickets/2524604', description: 'Port Out Notification', status: 'Open', opened: '12/5' },
-  { customer: 'Mango Voice', id: '2524603', url: 'https://telnyx.zendesk.com/agent/tickets/2524603', description: 'Port Out Notification', status: 'Open', opened: '12/5' },
-  { customer: 'Mango Voice', id: '2194139', url: 'https://telnyx.zendesk.com/agent/tickets/2194139', description: 'Migrate campaign CGZ09YJ', status: 'Open', opened: '5/23/25' },
-  
-  // Redo (5)
-  { customer: 'Redo', id: '2676743', url: 'https://telnyx.zendesk.com/agent/tickets/2676743', description: 'URGENT: TF blocked', status: 'Open', opened: '2/7' },
-  { customer: 'Redo', id: '2667295', url: 'https://telnyx.zendesk.com/agent/tickets/2667295', description: 'Account Registration Review', status: 'Open', opened: '2/3' },
-  { customer: 'Redo', id: '2676531', url: 'https://telnyx.zendesk.com/agent/tickets/2676531', description: 'Questions about 10DLC', status: 'Open', opened: '2/7' },
-  { customer: 'Redo', id: '2625640', url: 'https://telnyx.zendesk.com/agent/tickets/2625640', description: 'Porting Numbers', status: 'Open', opened: '1/16' },
-  { customer: 'Redo', id: '2490079', url: 'https://telnyx.zendesk.com/agent/tickets/2490079', description: 'Expedite TFN Verification', status: 'Open', opened: '11/18/25' },
+  // Retellai (1 ticket)
+  { customer: 'Retellai', id: '2641849', url: 'https://telnyx.zendesk.com/agent/tickets/2641849', description: 'Fraudulent calls from network', status: 'pending', opened: '1/22' },
 ]
 
-// VIP Customers from sheet tabs
-const allCustomers = [
-  '42Chat', 'Automentor', 'Booksy', 'Callloom', 'CareCo', 'Chiirp',
-  'General Atomics', 'GetScaled', 'Grupo Bimbo', 'IVR Technologies',
-  'iFaxApp', 'Jobble', 'Jovee', 'Mango Voice', 'OutboundAi', 'Palate Connect',
-  'Patient Now', 'Redo', 'RetellAi', 'Screen Magic', 'Simplii', 'Softlinx',
-  'StandupWireless', 'SweedPOS', 'TalkDesk'
-].sort()
+// VIP Customers with Zendesk orgs found
+const vipCustomers = [
+  { name: 'Careco', orgId: '24316179795357', sfdc: '001Qk00000AnastIAB' },
+  { name: 'Screen-magic', orgId: '16422620764829', sfdc: '0013a00001eKJdyAAG' },
+  { name: 'Simplii', orgId: '9653484391069', sfdc: '0018Z00002Yc6T5QAJ' },
+  { name: 'iFax', orgId: '360133372252', sfdc: null },
+  { name: '42chat', orgId: '360428930637', sfdc: '0013a00001etAMLAA2' },
+  { name: 'Retellai', orgId: '27751119088669', sfdc: null },
+  // NOT FOUND in Zendesk - need to identify correct org names:
+  { name: 'Callloom', orgId: null, sfdc: null },
+  { name: 'Chiirp', orgId: null, sfdc: null },
+  { name: 'Mango Voice', orgId: null, sfdc: null },
+  { name: 'Redo', orgId: null, sfdc: null },
+  { name: 'Jobble', orgId: null, sfdc: null },
+  { name: 'Automentor', orgId: null, sfdc: null },
+].sort((a, b) => a.name.localeCompare(b.name))
 
 export default function Tickets() {
-  const ticketsByCustomer = allCustomers.map(customer => ({
-    customer,
-    tickets: allTickets.filter(t => t.customer === customer)
+  const ticketsByCustomer = vipCustomers.map(customer => ({
+    ...customer,
+    tickets: allTickets.filter(t => t.customer === customer.name)
   }))
 
   const totalTickets = allTickets.length
@@ -84,16 +77,17 @@ export default function Tickets() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-white">Tickets</h1>
-        <p className="text-gray-400">{totalTickets} open tickets • {customersWithTickets} of {allCustomers.length} VIP customers have tickets</p>
+        <p className="text-gray-400">{totalTickets} open tickets • {customersWithTickets} of {vipCustomers.length} VIP customers</p>
       </div>
 
       <div className="space-y-4">
-        {ticketsByCustomer.map(({ customer, tickets }) => (
-          <div key={customer} className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
+        {ticketsByCustomer.map(({ name, orgId, tickets }) => (
+          <div key={name} className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
             <div className="px-4 py-3 bg-gray-800/50 border-b border-gray-800 flex items-center justify-between">
               <h2 className="font-semibold text-white flex items-center gap-2">
                 <span>👥</span>
-                {customer}
+                {name}
+                {!orgId && <span className="text-xs text-yellow-500 ml-2">(org not found)</span>}
               </h2>
               <span className={`text-sm px-2 py-0.5 rounded ${tickets.length > 0 ? 'bg-blue-500/20 text-blue-400' : 'text-gray-500'}`}>
                 {tickets.length} ticket{tickets.length !== 1 ? 's' : ''}
@@ -108,6 +102,11 @@ export default function Tickets() {
                       <div className="flex items-center gap-3">
                         <span className="text-aurora-400 font-mono text-sm">#{ticket.id}</span>
                         <span className="text-white truncate">{ticket.description}</span>
+                        <span className={`text-xs px-1.5 py-0.5 rounded ${
+                          ticket.status === 'open' ? 'bg-green-500/20 text-green-400' :
+                          ticket.status === 'pending' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-gray-500/20 text-gray-400'
+                        }`}>{ticket.status}</span>
                       </div>
                       <div className="text-xs text-gray-500 mt-1">Opened {ticket.opened}</div>
                     </div>
@@ -123,7 +122,7 @@ export default function Tickets() {
                 ))
               ) : (
                 <div className="px-4 py-3 text-gray-500 text-sm">
-                  ✓ No open tickets
+                  {orgId ? '✓ No open tickets' : '⚠️ Need to link Zendesk org'}
                 </div>
               )}
             </div>
