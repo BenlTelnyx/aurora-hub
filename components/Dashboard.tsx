@@ -17,9 +17,8 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
   const loadSheetData = () => {
     setLoading(true)
     
-    // Data from Google Sheet - accurate counts as of Feb 12, 2026 9:50 PM
+    // Data from Google Sheet - only customers with open tickets (Feb 12, 2026 9:50 PM)
     const sheetData: VIPCustomer[] = [
-      { name: 'CareCo', tickets: 0, lastContact: 'N/A' },
       { name: 'Callloom', tickets: 3, lastContact: '2/10' },
       { name: 'Chiirp', tickets: 1, lastContact: '3/24/25' },
       { name: 'RetellAi', tickets: 3, lastContact: '2/2' },
@@ -29,13 +28,6 @@ export default function Dashboard({ gatewayConfig }: DashboardProps) {
       { name: '42Chat', tickets: 2, lastContact: '12/18' },
       { name: 'Mango Voice', tickets: 5, lastContact: '1/16' },
       { name: 'Redo', tickets: 5, lastContact: '2/7' },
-      { name: 'Jobble', tickets: 0, lastContact: 'N/A' },
-      { name: 'Palate Connect', tickets: 0, lastContact: 'N/A' },
-      { name: 'GetScaled', tickets: 0, lastContact: 'N/A' },
-      { name: 'Grupo Bimbo', tickets: 0, lastContact: 'N/A' },
-      { name: 'General Atomics', tickets: 0, lastContact: 'N/A' },
-      { name: 'IVR Technologies', tickets: 0, lastContact: 'N/A' },
-      { name: 'Automentor', tickets: 0, lastContact: 'N/A' },
     ]
     
     setCustomers(sheetData)

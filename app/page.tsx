@@ -4,13 +4,14 @@ import { useState, useEffect } from 'react'
 import Sidebar from '@/components/Sidebar'
 import Dashboard from '@/components/Dashboard'
 import Customers from '@/components/Customers'
+import Tickets from '@/components/Tickets'
 import Inbox from '@/components/Inbox'
 import Tasks from '@/components/Tasks'
 import IssueDive from '@/components/IssueDive'
 import Chat from '@/components/Chat'
 import { GatewayConfig } from '@/lib/gateway'
 
-type View = 'dashboard' | 'customers' | 'inbox' | 'tasks' | 'issue-dive' | 'chat'
+type View = 'dashboard' | 'customers' | 'tickets' | 'inbox' | 'tasks' | 'issue-dive' | 'chat'
 
 export default function Home() {
   const [currentView, setCurrentView] = useState<View>('dashboard')
@@ -122,6 +123,7 @@ export default function Home() {
     switch (currentView) {
       case 'dashboard': return <Dashboard gatewayConfig={gatewayConfig} />
       case 'customers': return <Customers />
+      case 'tickets': return <Tickets />
       case 'inbox': return <Inbox />
       case 'tasks': return <Tasks />
       case 'issue-dive': return <IssueDive />
