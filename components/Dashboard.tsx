@@ -1,16 +1,25 @@
 'use client'
 
-// VIP customers from Ben's list
+// VIP customers - ticket counts from Google Sheet (updated 2026-02-12)
+// TODO: Fetch dynamically from gateway → Google Sheets
 const vipCustomers = [
-  { name: 'CareCo', tickets: 2, mmcStatus: 'healthy', lastContact: '2 days ago' },
-  { name: 'Callloom', tickets: 1, mmcStatus: 'healthy', lastContact: '1 day ago' },
-  { name: 'Chiirp', tickets: 3, mmcStatus: 'at-risk', lastContact: '5 days ago' },
-  { name: 'RetellAi', tickets: 0, mmcStatus: 'healthy', lastContact: '3 days ago' },
-  { name: 'Screen Magic', tickets: 1, mmcStatus: 'healthy', lastContact: '1 week ago' },
-  { name: 'iFaxApp', tickets: 2, mmcStatus: 'healthy', lastContact: '4 days ago' },
-  { name: '42Chat', tickets: 1, mmcStatus: 'warning', lastContact: '3 days ago' },
-  { name: 'Mango Voice', tickets: 4, mmcStatus: 'at-risk', lastContact: '2 weeks ago' },
-  { name: 'Automentor', tickets: 0, mmcStatus: 'warning', lastContact: '1 month ago' },
+  { name: 'CareCo', tickets: 0, mmcStatus: 'healthy', lastContact: 'Today' },
+  { name: 'Callloom', tickets: 3, mmcStatus: 'warning', lastContact: '2/10' },
+  { name: 'Chiirp', tickets: 1, mmcStatus: 'at-risk', lastContact: '3/24/25' },
+  { name: 'RetellAi', tickets: 3, mmcStatus: 'healthy', lastContact: '2/2' },
+  { name: 'Screen Magic', tickets: 5, mmcStatus: 'warning', lastContact: '2/9' },
+  { name: 'Simplii', tickets: 5, mmcStatus: 'warning', lastContact: '1/18' },
+  { name: 'iFaxApp', tickets: 2, mmcStatus: 'healthy', lastContact: '1/28' },
+  { name: '42Chat', tickets: 2, mmcStatus: 'at-risk', lastContact: '12/18' },
+  { name: 'Mango Voice', tickets: 5, mmcStatus: 'at-risk', lastContact: '1/16' },
+  { name: 'Redo', tickets: 5, mmcStatus: 'warning', lastContact: '2/7' },
+  { name: 'Jobble', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+  { name: 'Palate Connect', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+  { name: 'GetScaled', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+  { name: 'Grupo Bimbo', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+  { name: 'General Atomics', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+  { name: 'IVR Technologies', tickets: 0, mmcStatus: 'healthy', lastContact: 'N/A' },
+  { name: 'Automentor', tickets: 0, mmcStatus: 'warning', lastContact: 'N/A' },
 ]
 
 const mmcStatusColors: Record<string, string> = {
