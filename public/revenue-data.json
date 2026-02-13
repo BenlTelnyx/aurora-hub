@@ -1,0 +1,34 @@
+{
+  "updated": "2026-02-13T13:07:50Z",
+  "period": {
+    "currentMonth": "2026-02",
+    "currentMonthDays": 13,
+    "lastMonth": "2026-01",
+    "lastYearMonth": "2025-02"
+  },
+  "customers": [
+    { "name": "IVR Technologies", "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df", "mtd": 29805, "lastMonth": 66399, "lastYearMonth": null, "momChange": -55.1, "yoyChange": null, "mrc": 1702 },
+    { "name": "Jobble", "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde", "mtd": 26495, "lastMonth": 75808, "lastYearMonth": null, "momChange": -65.0, "yoyChange": null, "mrc": 2 },
+    { "name": "Redo", "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722", "mtd": 22655, "lastMonth": 44766, "lastYearMonth": null, "momChange": -49.4, "yoyChange": null, "mrc": 1881 },
+    { "name": "Mango Voice", "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9", "mtd": 14778, "lastMonth": 29103, "lastYearMonth": null, "momChange": -49.2, "yoyChange": null, "mrc": 1592 },
+    { "name": "RetellAI", "user_id": "b2726e8d-d955-420a-bcf8-497231821daa", "mtd": 13416, "lastMonth": 52463, "lastYearMonth": null, "momChange": -74.4, "yoyChange": null, "mrc": 6086 },
+    { "name": "Screen Magic", "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277", "mtd": 9916, "lastMonth": 12846, "lastYearMonth": null, "momChange": -22.8, "yoyChange": null, "mrc": 114 },
+    { "name": "42Chat", "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1", "mtd": 7704, "lastMonth": 6978, "lastYearMonth": null, "momChange": 10.4, "yoyChange": null, "mrc": 476 },
+    { "name": "General Atomics", "user_id": "af78ea36-649b-4411-bd33-70326f452c8c", "mtd": 6396, "lastMonth": 6918, "lastYearMonth": null, "momChange": -7.5, "yoyChange": null, "mrc": 6004 },
+    { "name": "iFaxApp", "user_id": "a13411e0-1850-4778-8c09-2048d2945105", "mtd": 3028, "lastMonth": 25662, "lastYearMonth": null, "momChange": -88.2, "yoyChange": null, "mrc": 4489 },
+    { "name": "Grupo Bimbo (USA)", "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d", "mtd": 2240, "lastMonth": 3161, "lastYearMonth": null, "momChange": -29.1, "yoyChange": null, "mrc": 1620 },
+    { "name": "CareCo", "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b", "mtd": 621, "lastMonth": 162, "lastYearMonth": null, "momChange": 283.3, "yoyChange": null, "mrc": 463 },
+    { "name": "Grupo Bimbo (Canada)", "user_id": "462a3df9-f7ec-4bcb-aa62-4f63e8529567", "mtd": 501, "lastMonth": 1500, "lastYearMonth": null, "momChange": -66.6, "yoyChange": null, "mrc": 254 },
+    { "name": "Callloom", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null },
+    { "name": "Chiirp", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null },
+    { "name": "GetScaled", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null },
+    { "name": "Palate Connect", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null },
+    { "name": "Simplii", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null }
+  ],
+  "totals": {
+    "mtd": 137555,
+    "lastMonth": 325766,
+    "mrc": 24683
+  },
+  "notes": "MTD is Feb 1-13 (13 days). MoM% compares MTD to full January - will be more accurate at month end."
+}

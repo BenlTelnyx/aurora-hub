@@ -1,6 +1,6 @@
 'use client'
 
-type View = 'dashboard' | 'customers' | 'tickets' | 'inbox' | 'tasks' | 'issue-dive' | 'chat'
+type View = 'dashboard' | 'customers' | 'revenue' | 'tickets' | 'inbox' | 'tasks' | 'issue-dive' | 'chat'
 
 interface SidebarProps {
   currentView: View
@@ -10,6 +10,7 @@ interface SidebarProps {
 const navItems = [
   { id: 'dashboard', label: 'Dashboard', icon: '📊' },
   { id: 'customers', label: 'Customers', icon: '👥' },
+  { id: 'revenue', label: 'Revenue', icon: '💰' },
   { id: 'tickets', label: 'Tickets', icon: '🎫' },
   { id: 'inbox', label: 'Inbox', icon: '📥' },
   { id: 'tasks', label: 'Tasks', icon: '✅' },

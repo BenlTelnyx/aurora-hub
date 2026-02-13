@@ -9,12 +9,12 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-12 22:55 MST
+// Auto-generated from Zendesk - 2026-02-13 07:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2681890", subject: "Reviewed two calls where it appears the patients experience ", status: "open", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681890" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2678904", subject: "User keeps getting \"Destination Out of Order\" error message ", status: "pending", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678904" },
-  { customer: "CareCo", id: "2567462", subject: "We are missing the recording for the second part of an outgo", status: "open", created: "2025-12-24", url: "https://telnyx.zendesk.com/agent/tickets/2567462" },
+  { customer: "CareCo", id: "2567462", subject: "We are missing the recording for the second part of an outgo", status: "hold", created: "2025-12-24", url: "https://telnyx.zendesk.com/agent/tickets/2567462" },
   { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "open", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
   { customer: "CareCo", id: "2560892", subject: "Widespread WebRTC Audio Issues - One-way/No Audio on Calls", status: "pending", created: "2025-12-22", url: "https://telnyx.zendesk.com/agent/tickets/2560892" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
@@ -25,8 +25,8 @@ const allTickets: Ticket[] = [
   { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
   { customer: "Screen Magic", id: "2686955", subject: "I initiated a text-enablement request for the number 1207770", status: "hold", created: "2026-02-12", url: "https://telnyx.zendesk.com/agent/tickets/2686955" },
+  { customer: "Screen Magic", id: "2645057", subject: "Kindly assist in text enabling the below number for the Camp", status: "open", created: "2026-01-23", url: "https://telnyx.zendesk.com/agent/tickets/2645057" },
   { customer: "Screen Magic", id: "2637305", subject: "Benl,. We are currently assessing Telnyx’s capabilities to s", status: "open", created: "2026-01-21", url: "https://telnyx.zendesk.com/agent/tickets/2637305" },
-  { customer: "Screen Magic", id: "2645057", subject: "Kindly assist in text enabling the below number for the Camp", status: "hold", created: "2026-01-23", url: "https://telnyx.zendesk.com/agent/tickets/2645057" },
   { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
