@@ -9,14 +9,13 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-13 22:00 MST
+// Auto-generated from Zendesk - 2026-02-14 07:02 MST
 const allTickets: Ticket[] = [
-  { customer: "CareCo", id: "2681890", subject: "Reviewed two calls where it appears the patients experience ", status: "open", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681890" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
+  { customer: "CareCo", id: "2681890", subject: "Reviewed two calls where it appears the patients experience ", status: "pending", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681890" },
   { customer: "CareCo", id: "2678904", subject: "User keeps getting \"Destination Out of Order\" error message ", status: "pending", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678904" },
   { customer: "CareCo", id: "2567462", subject: "We are missing the recording for the second part of an outgo", status: "open", created: "2025-12-24", url: "https://telnyx.zendesk.com/agent/tickets/2567462" },
   { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "open", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
-  { customer: "CareCo", id: "2560892", subject: "Widespread WebRTC Audio Issues - One-way/No Audio on Calls", status: "pending", created: "2025-12-22", url: "https://telnyx.zendesk.com/agent/tickets/2560892" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "CareCo", id: "2333729", subject: "Question about calls purged due to short internet connectivi", status: "hold", created: "2025-08-21", url: "https://telnyx.zendesk.com/agent/tickets/2333729" },
   { customer: "CareCo", id: "2297449", subject: "Reports of calls dropping mid call: 63399a90-6e0f-11f0-9469-", status: "pending", created: "2025-07-31", url: "https://telnyx.zendesk.com/agent/tickets/2297449" },
