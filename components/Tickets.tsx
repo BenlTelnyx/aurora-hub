@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-14 07:02 MST
+// Auto-generated from Zendesk - 2026-02-14 11:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2681890", subject: "Reviewed two calls where it appears the patients experience ", status: "pending", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681890" },
@@ -41,8 +41,6 @@ const allTickets: Ticket[] = [
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
   { customer: "Callloom", id: "2681181", subject: "We are facing a consistent dead-air issue that appears to be", status: "open", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681181" },
-  { customer: "Callloom", id: "2678598", subject: "Today we are facing alot of distorting within the calls.", status: "pending", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678598" },
-  { customer: "iFaxApp", id: "2654944", subject: "URGENT: Fax Failures from Default Fax Number +1 907 313 1400", status: "pending", created: "2026-01-28", url: "https://telnyx.zendesk.com/agent/tickets/2654944" },
   { customer: "RetellAI", id: "2641849", subject: "Fraudulent calls from your network", status: "pending", created: "2026-01-22", url: "https://telnyx.zendesk.com/agent/tickets/2641849" },
 ]
 
