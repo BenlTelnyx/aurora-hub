@@ -9,8 +9,37 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-15 07:02 MST
+// Auto-generated from Zendesk - 2026-02-15 11:00 MST
 const allTickets: Ticket[] = [
+  { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
+  { customer: "CareCo", id: "2681890", subject: "Reviewed two calls where it appears the patients experience ", status: "pending", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681890" },
+  { customer: "CareCo", id: "2567462", subject: "We are missing the recording for the second part of an outgo", status: "open", created: "2025-12-24", url: "https://telnyx.zendesk.com/agent/tickets/2567462" },
+  { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "open", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
+  { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
+  { customer: "CareCo", id: "2333729", subject: "Question about calls purged due to short internet connectivi", status: "hold", created: "2025-08-21", url: "https://telnyx.zendesk.com/agent/tickets/2333729" },
+  { customer: "CareCo", id: "2297449", subject: "Reports of calls dropping mid call: 63399a90-6e0f-11f0-9469-", status: "pending", created: "2025-07-31", url: "https://telnyx.zendesk.com/agent/tickets/2297449" },
+  { customer: "Screen Magic", id: "2690222", subject: "One of our clients is facing a delivery issue", status: "open", created: "2026-02-13", url: "https://telnyx.zendesk.com/agent/tickets/2690222" },
+  { customer: "Screen Magic", id: "2686955", subject: "I initiated a text-enablement request for the number 1207770", status: "open", created: "2026-02-12", url: "https://telnyx.zendesk.com/agent/tickets/2686955" },
+  { customer: "Screen Magic", id: "2684958", subject: "[##49108##] Your ticket has been Closed", status: "open", created: "2026-02-11", url: "https://telnyx.zendesk.com/agent/tickets/2684958" },
+  { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
+  { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
+  { customer: "Screen Magic", id: "2645057", subject: "Kindly assist in text enabling the below number for the Camp", status: "open", created: "2026-01-23", url: "https://telnyx.zendesk.com/agent/tickets/2645057" },
+  { customer: "Screen Magic", id: "2637305", subject: "Benl,. We are currently assessing Telnyx’s capabilities to s", status: "open", created: "2026-01-21", url: "https://telnyx.zendesk.com/agent/tickets/2637305" },
+  { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
+  { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
+  { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
+  { customer: "Mango Voice", id: "2545726", subject: "For TN: 6139003390 the number is porting away, rejection rec", status: "hold", created: "2025-12-16", url: "https://telnyx.zendesk.com/agent/tickets/2545726" },
+  { customer: "Mango Voice", id: "2545712", subject: "For TN: 6139003370 the number is porting away, rejection rec", status: "hold", created: "2025-12-16", url: "https://telnyx.zendesk.com/agent/tickets/2545712" },
+  { customer: "Mango Voice", id: "2242342", subject: "406) 587-9700(tel:406)587-9700)* hi team, we have a campaign", status: "pending", created: "2025-06-26", url: "https://telnyx.zendesk.com/agent/tickets/2242342" },
+  { customer: "Mango Voice", id: "2140178", subject: "Campaign CNW7TU8 assignment failed for tn 7404802452", status: "pending", created: "2025-04-21", url: "https://telnyx.zendesk.com/agent/tickets/2140178" },
+  { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
+  { customer: "Mango Voice", id: "2072112", subject: "4154610700", status: "pending", created: "2025-03-06", url: "https://telnyx.zendesk.com/agent/tickets/2072112" },
+  { customer: "Mango Voice", id: "2029444", subject: "There is a pending NNID request we would like to be approved", status: "open", created: "2025-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2029444" },
+  { customer: "Simplii", id: "2612308", subject: "Resubmit Campaign C2S48PH", status: "pending", created: "2026-01-13", url: "https://telnyx.zendesk.com/agent/tickets/2612308" },
+  { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
+  { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
+  { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
+  { customer: "Callloom", id: "2681181", subject: "We are facing a consistent dead-air issue that appears to be", status: "open", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681181" },
 ]
 
 const customers = [
