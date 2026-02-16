@@ -10,30 +10,15 @@ interface CustomerRevenue {
   lastYearMonth: number | null // Same month last year
   momChange: number | null     // Month over month % change
   yoyChange: number | null     // Year over year % change
-  mrc: number | null           // Monthly recurring charges
+  mrc: number | null           // Monthly Recurring Charges
+  mmc: number | null           // Monthly Metered Charges (usage)
+  commitment: number | null    // Monthly commitment amount
+  commitPct: number | null     // % of commitment reached
   updated: string | null
 }
 
-// Initial customer data - populated from vip-revenue.json
-const initialCustomers: CustomerRevenue[] = [
-  { name: 'CareCo', user_id: '3307ca65-df56-4f15-8ba7-589d584d215b', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Callloom', user_id: null, mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Chiirp', user_id: null, mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'General Atomics', user_id: 'af78ea36-649b-4411-bd33-70326f452c8c', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'GetScaled', user_id: null, mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Grupo Bimbo (USA)', user_id: 'a2da2a31-3377-473b-8184-ed201e422c6d', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Grupo Bimbo (Canada)', user_id: '462a3df9-f7ec-4bcb-aa62-4f63e8529567', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'iFaxApp', user_id: 'a13411e0-1850-4778-8c09-2048d2945105', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'IVR Technologies', user_id: 'db941093-691f-4c8e-ac7a-a0f6a69555df', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Jobble', user_id: 'edc2b628-61e2-4b1d-81f8-687f60719fde', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Mango Voice', user_id: '36462c59-72e9-43f6-812c-89477b80b6b9', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Palate Connect', user_id: null, mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Redo', user_id: '7a0503f9-ead1-4d35-9795-c6359798e722', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'RetellAI', user_id: 'b2726e8d-d955-420a-bcf8-497231821daa', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: '42Chat', user_id: 'd0444236-00f6-4212-a01f-201f543b8eb1', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Screen Magic', user_id: '38285cf8-6803-4f7a-91be-ec50400b7277', mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-  { name: 'Simplii', user_id: null, mtd: null, lastMonth: null, lastYearMonth: null, momChange: null, yoyChange: null, mrc: null, updated: null },
-]
+// Initial customer data - populated from revenue-data.json
+const initialCustomers: CustomerRevenue[] = []
 
 function formatCurrency(amount: number | null): string {
   if (amount === null) return '—'
@@ -60,11 +45,35 @@ function ChangeIndicator({ value }: { value: number | null }) {
   )
 }
 
+function CommitmentIndicator({ pct }: { pct: number | null }) {
+  if (pct === null) return <span className="text-gray-500">—</span>
+  
+  let colorClass = 'text-red-400'
+  let bgClass = 'bg-red-500/10'
+  
+  if (pct >= 100) {
+    colorClass = 'text-green-400'
+    bgClass = 'bg-green-500/10'
+  } else if (pct >= 75) {
+    colorClass = 'text-yellow-400'
+    bgClass = 'bg-yellow-500/10'
+  } else if (pct >= 50) {
+    colorClass = 'text-orange-400'
+    bgClass = 'bg-orange-500/10'
+  }
+  
+  return (
+    <span className={`${colorClass} ${bgClass} px-2 py-0.5 rounded text-sm font-medium`}>
+      {pct.toFixed(0)}%
+    </span>
+  )
+}
+
 export default function Revenue() {
   const [customers, setCustomers] = useState<CustomerRevenue[]>(initialCustomers)
   const [loading, setLoading] = useState(false)
   const [lastUpdated, setLastUpdated] = useState<string | null>(null)
-  const [sortBy, setSortBy] = useState<'name' | 'mtd' | 'mom' | 'yoy'>('mtd')
+  const [sortBy, setSortBy] = useState<'name' | 'mtd' | 'mrc' | 'mmc' | 'commitPct' | 'mom'>('mtd')
   const [sortDesc, setSortDesc] = useState(true)
 
   // Load revenue data from file
@@ -74,25 +83,31 @@ export default function Revenue() {
 
   const loadRevenueData = async () => {
     try {
-      // Fetch from static JSON file (updated daily by Aurora)
+      setLoading(true)
       const response = await fetch('/revenue-data.json')
       if (response.ok) {
         const data = await response.json()
         if (data.customers) {
-          setCustomers(data.customers)
+          // Calculate commitPct for each customer if they have commitment
+          const customersWithPct = data.customers.map((c: CustomerRevenue) => ({
+            ...c,
+            commitPct: c.commitment && c.mmc ? Math.round((c.mmc / c.commitment) * 100) : c.commitPct
+          }))
+          setCustomers(customersWithPct)
           setLastUpdated(data.updated)
         }
       }
     } catch (e) {
-      // Data file doesn't exist yet, use initial data
       console.log('Revenue data not loaded yet')
+    } finally {
+      setLoading(false)
     }
   }
 
   // Sort customers
   const sorted = [...customers].sort((a, b) => {
-    let aVal: number | null = null
-    let bVal: number | null = null
+    let aVal: number | string | null = null
+    let bVal: number | string | null = null
     
     switch (sortBy) {
       case 'name':
@@ -103,22 +118,29 @@ export default function Revenue() {
         aVal = a.mtd
         bVal = b.mtd
         break
+      case 'mrc':
+        aVal = a.mrc
+        bVal = b.mrc
+        break
+      case 'mmc':
+        aVal = a.mmc
+        bVal = b.mmc
+        break
+      case 'commitPct':
+        aVal = a.commitPct
+        bVal = b.commitPct
+        break
       case 'mom':
         aVal = a.momChange
         bVal = b.momChange
         break
-      case 'yoy':
-        aVal = a.yoyChange
-        bVal = b.yoyChange
-        break
     }
     
-    // Handle nulls - put them at the bottom
     if (aVal === null && bVal === null) return 0
     if (aVal === null) return 1
     if (bVal === null) return -1
     
-    return sortDesc ? bVal - aVal : aVal - bVal
+    return sortDesc ? (bVal as number) - (aVal as number) : (aVal as number) - (bVal as number)
   })
 
   const handleSort = (column: typeof sortBy) => {
@@ -141,8 +163,9 @@ export default function Revenue() {
 
   // Calculate totals
   const totalMTD = customers.reduce((sum, c) => sum + (c.mtd || 0), 0)
-  const totalLastMonth = customers.reduce((sum, c) => sum + (c.lastMonth || 0), 0)
   const totalMRC = customers.reduce((sum, c) => sum + (c.mrc || 0), 0)
+  const totalMMC = customers.reduce((sum, c) => sum + (c.mmc || 0), 0)
+  const totalCommitment = customers.reduce((sum, c) => sum + (c.commitment || 0), 0)
 
   return (
     <div className="space-y-6">
@@ -151,8 +174,8 @@ export default function Revenue() {
         <div>
           <h1 className="text-2xl font-bold text-white">💰 Revenue</h1>
           <p className="text-gray-400 text-sm mt-1">
-            VIP Customer Monthly Spend Tracking
-            {lastUpdated && <span className="text-gray-500"> • Last updated: {lastUpdated}</span>}
+            VIP Customer Monthly Spend & Commitment Tracking
+            {lastUpdated && <span className="text-gray-500"> • Updated: {new Date(lastUpdated).toLocaleString()}</span>}
           </p>
         </div>
         <button 
@@ -165,18 +188,22 @@ export default function Revenue() {
       </div>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-5 gap-4">
         <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
           <p className="text-sm text-gray-400">Total MTD</p>
           <p className="text-2xl font-bold text-white">{formatCurrency(totalMTD)}</p>
         </div>
         <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
-          <p className="text-sm text-gray-400">Last Month Total</p>
-          <p className="text-2xl font-bold text-white">{formatCurrency(totalLastMonth)}</p>
+          <p className="text-sm text-gray-400">Total MRC</p>
+          <p className="text-2xl font-bold text-blue-400">{formatCurrency(totalMRC)}</p>
         </div>
         <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
-          <p className="text-sm text-gray-400">Total MRC</p>
-          <p className="text-2xl font-bold text-white">{formatCurrency(totalMRC)}</p>
+          <p className="text-sm text-gray-400">Total MMC</p>
+          <p className="text-2xl font-bold text-green-400">{formatCurrency(totalMMC)}</p>
+        </div>
+        <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
+          <p className="text-sm text-gray-400">Total Commitment</p>
+          <p className="text-2xl font-bold text-purple-400">{formatCurrency(totalCommitment || null)}</p>
         </div>
         <div className="bg-gray-900 rounded-xl border border-gray-800 p-4">
           <p className="text-sm text-gray-400">Customers Tracked</p>
@@ -190,12 +217,12 @@ export default function Revenue() {
           <thead className="bg-gray-800/50">
             <tr>
               <SortHeader column="name" label="Customer" />
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-400">MRC</th>
-              <SortHeader column="mtd" label="MTD Spend" />
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-400">Last Month</th>
+              <SortHeader column="mrc" label="MRC" />
+              <SortHeader column="mmc" label="MMC" />
+              <SortHeader column="mtd" label="Total MTD" />
+              <th className="px-4 py-3 text-left text-sm font-medium text-gray-400">Commitment</th>
+              <SortHeader column="commitPct" label="% to Commit" />
               <SortHeader column="mom" label="MoM" />
-              <SortHeader column="yoy" label="YoY" />
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-400">Status</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-800">
@@ -203,28 +230,25 @@ export default function Revenue() {
               <tr key={idx} className="hover:bg-gray-800/30 transition-colors">
                 <td className="px-4 py-3">
                   <span className="font-medium text-white">{customer.name}</span>
+                  {!customer.user_id && <span className="ml-2 text-yellow-500 text-xs">⚠️</span>}
                 </td>
-                <td className="px-4 py-3 text-gray-300 font-mono text-sm">
+                <td className="px-4 py-3 text-blue-400 font-mono text-sm">
                   {formatCurrency(customer.mrc)}
                 </td>
-                <td className="px-4 py-3 text-white font-mono">
+                <td className="px-4 py-3 text-green-400 font-mono text-sm">
+                  {formatCurrency(customer.mmc)}
+                </td>
+                <td className="px-4 py-3 text-white font-mono font-medium">
                   {formatCurrency(customer.mtd)}
                 </td>
-                <td className="px-4 py-3 text-gray-400 font-mono text-sm">
-                  {formatCurrency(customer.lastMonth)}
+                <td className="px-4 py-3 text-purple-400 font-mono text-sm">
+                  {formatCurrency(customer.commitment)}
+                </td>
+                <td className="px-4 py-3">
+                  <CommitmentIndicator pct={customer.commitPct} />
                 </td>
                 <td className="px-4 py-3">
                   <ChangeIndicator value={customer.momChange} />
-                </td>
-                <td className="px-4 py-3">
-                  <ChangeIndicator value={customer.yoyChange} />
-                </td>
-                <td className="px-4 py-3">
-                  {customer.user_id ? (
-                    <span className="text-green-500 text-sm">✓ Linked</span>
-                  ) : (
-                    <span className="text-yellow-500 text-sm">⚠️ No ID</span>
-                  )}
                 </td>
               </tr>
             ))}
@@ -232,12 +256,18 @@ export default function Revenue() {
         </table>
       </div>
 
-      {/* Notes */}
-      <div className="text-sm text-gray-500 space-y-1">
-        <p><strong>MTD:</strong> Month-to-date spend (current month so far)</p>
-        <p><strong>MRC:</strong> Monthly Recurring Charges (phone numbers, SIMs, etc.)</p>
-        <p><strong>MoM:</strong> Month-over-month change vs last month</p>
-        <p><strong>YoY:</strong> Year-over-year change vs same month last year</p>
+      {/* Legend */}
+      <div className="text-sm text-gray-500 space-y-1 bg-gray-900/50 rounded-lg p-4">
+        <p className="font-medium text-gray-400 mb-2">📖 Legend</p>
+        <div className="grid grid-cols-2 gap-2">
+          <p><span className="text-blue-400">MRC:</span> Monthly Recurring Charges (phone numbers, SIMs, etc.)</p>
+          <p><span className="text-green-400">MMC:</span> Monthly Metered Charges (usage - calls, SMS, etc.)</p>
+          <p><span className="text-purple-400">Commitment:</span> Monthly minimum spend commitment</p>
+          <p><span className="text-white">% to Commit:</span> How close to hitting commitment (MMC / Commitment)</p>
+        </div>
+        <div className="mt-2 pt-2 border-t border-gray-800">
+          <p><strong>% Indicators:</strong> 🟢 ≥100% | 🟡 ≥75% | 🟠 ≥50% | 🔴 &lt;50%</p>
+        </div>
       </div>
     </div>
   )
