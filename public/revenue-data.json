@@ -1,24 +1,24 @@
 {
-  "updated": "2026-02-16T13:00:00Z",
+  "updated": "2026-02-17T13:00:00Z",
   "period": {
     "currentMonth": "2026-02",
-    "currentMonthDays": 16,
+    "currentMonthDays": 17,
     "lastMonth": "2026-01",
     "lastYearMonth": "2025-02"
   },
   "customers": [
-    { "name": "IVR Technologies", "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df", "mtd": 34096, "lastMonth": 66399, "lastYearMonth": null, "momChange": -48.6, "yoyChange": null, "mrc": 1702, "mmc": 32394, "commitment": null, "commitPct": null },
-    { "name": "Jobble", "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde", "mtd": 34081, "lastMonth": 75808, "lastYearMonth": null, "momChange": -55.0, "yoyChange": null, "mrc": 2, "mmc": 34079, "commitment": null, "commitPct": null },
-    { "name": "Redo", "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722", "mtd": 84, "lastMonth": 163, "lastYearMonth": null, "momChange": -48.5, "yoyChange": null, "mrc": 1881, "mmc": -1797, "commitment": null, "commitPct": null },
-    { "name": "Mango Voice", "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9", "mtd": 15785, "lastMonth": 29453, "lastYearMonth": null, "momChange": -46.4, "yoyChange": null, "mrc": 1592, "mmc": 14193, "commitment": null, "commitPct": null },
-    { "name": "RetellAI", "user_id": "b2726e8d-d955-420a-bcf8-497231821daa", "mtd": 14582, "lastMonth": 52462, "lastYearMonth": null, "momChange": -72.2, "yoyChange": null, "mrc": 5086, "mmc": 9496, "commitment": null, "commitPct": null },
-    { "name": "iFaxApp", "user_id": "a13411e0-1850-4778-8c09-2048d2945105", "mtd": 13192, "lastMonth": 25662, "lastYearMonth": null, "momChange": -48.6, "yoyChange": null, "mrc": 3720, "mmc": 9472, "commitment": null, "commitPct": null },
-    { "name": "42Chat", "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1", "mtd": 9214, "lastMonth": 6394, "lastYearMonth": null, "momChange": 44.1, "yoyChange": null, "mrc": 476, "mmc": 8738, "commitment": null, "commitPct": null },
-    { "name": "General Atomics", "user_id": "af78ea36-649b-4411-bd33-70326f452c8c", "mtd": 6410, "lastMonth": 6950, "lastYearMonth": null, "momChange": -7.8, "yoyChange": null, "mrc": 6004, "mmc": 406, "commitment": null, "commitPct": null },
-    { "name": "CareCo", "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b", "mtd": 2921, "lastMonth": 5260, "lastYearMonth": null, "momChange": -44.5, "yoyChange": null, "mrc": 456, "mmc": 2465, "commitment": null, "commitPct": null },
-    { "name": "Grupo Bimbo (USA)", "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d", "mtd": 2349, "lastMonth": 8742, "lastYearMonth": null, "momChange": -73.1, "yoyChange": null, "mrc": 1620, "mmc": 729, "commitment": null, "commitPct": null },
-    { "name": "Grupo Bimbo (Canada)", "user_id": "462a3df9-f7ec-4bcb-aa62-4f63e8529567", "mtd": 518, "lastMonth": 1500, "lastYearMonth": null, "momChange": -65.5, "yoyChange": null, "mrc": 254, "mmc": 264, "commitment": null, "commitPct": null },
-    { "name": "Screen Magic", "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277", "mtd": 811, "lastMonth": 12847, "lastYearMonth": null, "momChange": -93.7, "yoyChange": null, "mrc": 114, "mmc": 697, "commitment": null, "commitPct": null },
+    { "name": "Jobble", "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde", "mtd": 36950, "lastMonth": 75808, "lastYearMonth": null, "momChange": -51.3, "yoyChange": null, "mrc": 2, "mmc": 36948, "commitment": null, "commitPct": null },
+    { "name": "IVR Technologies", "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df", "mtd": 35896, "lastMonth": 66399, "lastYearMonth": null, "momChange": -45.9, "yoyChange": null, "mrc": 1702, "mmc": 34194, "commitment": null, "commitPct": null },
+    { "name": "Mango Voice", "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9", "mtd": 16916, "lastMonth": 30103, "lastYearMonth": null, "momChange": -43.8, "yoyChange": null, "mrc": 1592, "mmc": 15324, "commitment": null, "commitPct": null },
+    { "name": "RetellAI", "user_id": "b2726e8d-d955-420a-bcf8-497231821daa", "mtd": 16889, "lastMonth": 53657, "lastYearMonth": null, "momChange": -68.5, "yoyChange": null, "mrc": 6086, "mmc": 10803, "commitment": null, "commitPct": null },
+    { "name": "Screen Magic", "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277", "mtd": 12517, "lastMonth": 17224, "lastYearMonth": null, "momChange": -27.3, "yoyChange": null, "mrc": 114, "mmc": 12403, "commitment": null, "commitPct": null },
+    { "name": "42Chat", "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1", "mtd": 9245, "lastMonth": 6991, "lastYearMonth": null, "momChange": 32.2, "yoyChange": null, "mrc": 476, "mmc": 8769, "commitment": null, "commitPct": null },
+    { "name": "General Atomics", "user_id": "af78ea36-649b-4411-bd33-70326f452c8c", "mtd": 6412, "lastMonth": 7714, "lastYearMonth": null, "momChange": -16.9, "yoyChange": null, "mrc": 6004, "mmc": 408, "commitment": null, "commitPct": null },
+    { "name": "iFaxApp", "user_id": "a13411e0-1850-4778-8c09-2048d2945105", "mtd": 2919, "lastMonth": 593, "lastYearMonth": null, "momChange": 392.2, "yoyChange": null, "mrc": 3721, "mmc": -802, "commitment": null, "commitPct": null },
+    { "name": "Grupo Bimbo (USA)", "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d", "mtd": 2095, "lastMonth": 1757, "lastYearMonth": null, "momChange": 19.2, "yoyChange": null, "mrc": 1620, "mmc": 475, "commitment": null, "commitPct": null },
+    { "name": "Grupo Bimbo (Canada)", "user_id": "462a3df9-f7ec-4bcb-aa62-4f63e8529567", "mtd": 528, "lastMonth": 1500, "lastYearMonth": null, "momChange": -64.8, "yoyChange": null, "mrc": 254, "mmc": 274, "commitment": null, "commitPct": null },
+    { "name": "CareCo", "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b", "mtd": 159, "lastMonth": 162, "lastYearMonth": null, "momChange": -1.9, "yoyChange": null, "mrc": 456, "mmc": -297, "commitment": null, "commitPct": null },
+    { "name": "Redo", "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722", "mtd": 118, "lastMonth": 163, "lastYearMonth": null, "momChange": -27.6, "yoyChange": null, "mrc": 1881, "mmc": -1763, "commitment": null, "commitPct": null },
     { "name": "Callloom", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null, "mmc": null, "commitment": null, "commitPct": null },
     { "name": "Chiirp", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null, "mmc": null, "commitment": null, "commitPct": null },
     { "name": "GetScaled", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null, "mmc": null, "commitment": null, "commitPct": null },
@@ -26,10 +26,10 @@
     { "name": "Simplii", "user_id": null, "mtd": null, "lastMonth": null, "lastYearMonth": null, "momChange": null, "yoyChange": null, "mrc": null, "mmc": null, "commitment": null, "commitPct": null }
   ],
   "totals": {
-    "mtd": 134043,
-    "lastMonth": 291640,
-    "mrc": 22907,
-    "mmc": 111136
+    "mtd": 140644,
+    "lastMonth": 262072,
+    "mrc": 23908,
+    "mmc": 116736
   },
-  "notes": "MTD is Feb 1-16 (16 days). MMC = MTD - MRC. commitPct = (MMC / commitment) * 100. MoM% compares MTD to full January."
+  "notes": "MTD is Feb 1-17 (17 days). MMC = MTD - MRC. commitPct = (MMC / commitment) * 100. MoM% compares MTD to full January. Some customers show high MoM% variance due to credits applied."
 }
