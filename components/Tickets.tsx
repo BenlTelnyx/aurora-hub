@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-17 07:00 MST
+// Auto-generated from Zendesk - 2026-02-17 11:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "open", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
@@ -19,6 +19,7 @@ const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "CareCo", id: "2333729", subject: "Question about calls purged due to short internet connectivi", status: "hold", created: "2025-08-21", url: "https://telnyx.zendesk.com/agent/tickets/2333729" },
   { customer: "CareCo", id: "2297449", subject: "Reports of calls dropping mid call: 63399a90-6e0f-11f0-9469-", status: "pending", created: "2025-07-31", url: "https://telnyx.zendesk.com/agent/tickets/2297449" },
+  { customer: "Screen Magic", id: "2696093", subject: "One of our clients is facing a delivery issue", status: "open", created: "2026-02-17", url: "https://telnyx.zendesk.com/agent/tickets/2696093" },
   { customer: "Screen Magic", id: "2684958", subject: "[##49108##] Your ticket has been Closed", status: "open", created: "2026-02-11", url: "https://telnyx.zendesk.com/agent/tickets/2684958" },
   { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
