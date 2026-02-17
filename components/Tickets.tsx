@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-16 19:00 MST
+// Auto-generated from Zendesk - 2026-02-16 22:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "open", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
@@ -24,8 +24,8 @@ const allTickets: Ticket[] = [
   { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
   { customer: "Screen Magic", id: "2690222", subject: "One of our clients is facing a delivery issue", status: "pending", created: "2026-02-13", url: "https://telnyx.zendesk.com/agent/tickets/2690222" },
-  { customer: "Screen Magic", id: "2645057", subject: "Kindly assist in text enabling the below number for the Camp", status: "open", created: "2026-01-23", url: "https://telnyx.zendesk.com/agent/tickets/2645057" },
-  { customer: "Screen Magic", id: "2637305", subject: "Benl,. We are currently assessing Telnyx’s capabilities to s", status: "hold", created: "2026-01-21", url: "https://telnyx.zendesk.com/agent/tickets/2637305" },
+  { customer: "Screen Magic", id: "2637305", subject: "Benl,. We are currently assessing Telnyx’s capabilities to s", status: "open", created: "2026-01-21", url: "https://telnyx.zendesk.com/agent/tickets/2637305" },
+  { customer: "Screen Magic", id: "2645057", subject: "Kindly assist in text enabling the below number for the Camp", status: "hold", created: "2026-01-23", url: "https://telnyx.zendesk.com/agent/tickets/2645057" },
   { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
