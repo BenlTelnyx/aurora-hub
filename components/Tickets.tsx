@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-17 15:00 MST
+// Auto-generated from Zendesk - 2026-02-17 19:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "open", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
@@ -43,7 +43,7 @@ const allTickets: Ticket[] = [
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
-  { customer: "Callloom", id: "2681181", subject: "We are facing a consistent dead-air issue that appears to be", status: "open", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681181" },
+  { customer: "Callloom", id: "2681181", subject: "We are facing a consistent dead-air issue that appears to be", status: "hold", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681181" },
 ]
 
 const customers = [
