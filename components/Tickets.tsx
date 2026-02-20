@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-20 07:00 MST
+// Auto-generated from Zendesk - 2026-02-20 11:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2702407", subject: "CDR endpoint started failing", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702407" },
   { customer: "CareCo", id: "2702277", subject: "We are receiving multiple and escalating complaints from use", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702277" },
@@ -19,13 +19,13 @@ const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "hold", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2602796", subject: "Users are experiencing an intermittent issue where, upon pla", status: "open", created: "2026-01-08", url: "https://telnyx.zendesk.com/agent/tickets/2602796" },
   { customer: "CareCo", id: "2567462", subject: "We are missing the recording for the second part of an outgo", status: "open", created: "2025-12-24", url: "https://telnyx.zendesk.com/agent/tickets/2567462" },
-  { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "hold", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
+  { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "open", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "CareCo", id: "2333729", subject: "Question about calls purged due to short internet connectivi", status: "hold", created: "2025-08-21", url: "https://telnyx.zendesk.com/agent/tickets/2333729" },
   { customer: "Screen Magic", id: "2684958", subject: "[##49108##] Your ticket has been Closed", status: "open", created: "2026-02-11", url: "https://telnyx.zendesk.com/agent/tickets/2684958" },
   { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
-  { customer: "Screen Magic", id: "2637305", subject: "Benl,. We are currently assessing Telnyx’s capabilities to s", status: "hold", created: "2026-01-21", url: "https://telnyx.zendesk.com/agent/tickets/2637305" },
+  { customer: "Screen Magic", id: "2637305", subject: "Benl,. We are currently assessing Telnyx’s capabilities to s", status: "open", created: "2026-01-21", url: "https://telnyx.zendesk.com/agent/tickets/2637305" },
   { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
