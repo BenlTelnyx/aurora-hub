@@ -9,8 +9,10 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-20 11:00 MST
+// Auto-generated from Zendesk - 2026-02-20 15:00 MST
 const allTickets: Ticket[] = [
+  { customer: "CareCo", id: "2704715", subject: "A user reported that some patients calling from the Wisconsi", status: "open", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704715" },
+  { customer: "CareCo", id: "2704368", subject: "SS @benl our phone is spinning again for many users!!!. WebR", status: "open", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704368" },
   { customer: "CareCo", id: "2702407", subject: "CDR endpoint started failing", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702407" },
   { customer: "CareCo", id: "2702277", subject: "We are receiving multiple and escalating complaints from use", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702277" },
   { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
@@ -22,7 +24,6 @@ const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "open", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "CareCo", id: "2333729", subject: "Question about calls purged due to short internet connectivi", status: "hold", created: "2025-08-21", url: "https://telnyx.zendesk.com/agent/tickets/2333729" },
-  { customer: "Screen Magic", id: "2684958", subject: "[##49108##] Your ticket has been Closed", status: "open", created: "2026-02-11", url: "https://telnyx.zendesk.com/agent/tickets/2684958" },
   { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
   { customer: "Screen Magic", id: "2637305", subject: "Benl,. We are currently assessing Telnyx’s capabilities to s", status: "open", created: "2026-01-21", url: "https://telnyx.zendesk.com/agent/tickets/2637305" },
@@ -30,6 +31,7 @@ const allTickets: Ticket[] = [
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
   { customer: "Mango Voice", id: "2699775", subject: "Is there a port out request for TN 9138882474?", status: "open", created: "2026-02-18", url: "https://telnyx.zendesk.com/agent/tickets/2699775" },
+  { customer: "Mango Voice", id: "2694256", subject: "Unable to send or receive sms for 2106584011", status: "pending", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2694256" },
   { customer: "Mango Voice", id: "2693791", subject: "I have the Telnyx number 262-334-4083(tel:2623344083) not ab", status: "pending", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693791" },
   { customer: "Mango Voice", id: "2545726", subject: "For TN: 6139003390 the number is porting away, rejection rec", status: "hold", created: "2025-12-16", url: "https://telnyx.zendesk.com/agent/tickets/2545726" },
   { customer: "Mango Voice", id: "2545712", subject: "For TN: 6139003370 the number is porting away, rejection rec", status: "hold", created: "2025-12-16", url: "https://telnyx.zendesk.com/agent/tickets/2545712" },
@@ -38,6 +40,7 @@ const allTickets: Ticket[] = [
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
   { customer: "Mango Voice", id: "2072112", subject: "4154610700", status: "pending", created: "2025-03-06", url: "https://telnyx.zendesk.com/agent/tickets/2072112" },
   { customer: "Mango Voice", id: "2029444", subject: "There is a pending NNID request we would like to be approved", status: "open", created: "2025-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2029444" },
+  { customer: "Simplii", id: "2704446", subject: "Phone lines going haywire!", status: "open", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704446" },
   { customer: "Simplii", id: "2696657", subject: "SMS Message Spam Flag", status: "pending", created: "2026-02-17", url: "https://telnyx.zendesk.com/agent/tickets/2696657" },
   { customer: "Simplii", id: "2612308", subject: "Resubmit Campaign C2S48PH", status: "pending", created: "2026-01-13", url: "https://telnyx.zendesk.com/agent/tickets/2612308" },
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
