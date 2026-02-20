@@ -9,11 +9,11 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-19 19:00 MST
+// Auto-generated from Zendesk - 2026-02-19 22:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "open", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
-  { customer: "CareCo", id: "2702407", subject: "CDR endpoint started failing", status: "pending", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702407" },
+  { customer: "CareCo", id: "2702407", subject: "CDR endpoint started failing", status: "hold", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702407" },
   { customer: "CareCo", id: "2702277", subject: "We are receiving multiple and escalating complaints from use", status: "pending", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702277" },
   { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "pending", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
   { customer: "CareCo", id: "2699552", subject: "Intermittent Audio Issues During Calls – Patients Unable to ", status: "pending", created: "2026-02-18", url: "https://telnyx.zendesk.com/agent/tickets/2699552" },
