@@ -1,38 +1,38 @@
 {
-  "lastUpdated": "2026-02-20T14:45:00Z",
+  "lastUpdated": "2026-02-21T13:06:37Z",
   "month": "February 2026",
   "customers": [
     {
       "name": "CareCo",
       "userId": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 135.49,
-      "lastMonth": 162.41,
+      "mtd": 4111.07,
+      "lastMonth": 5260.06,
       "mrc": 456.18,
-      "momPercent": -16.6
+      "momPercent": -21.8
     },
     {
       "name": "General Atomics",
       "userId": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": 6572.30,
-      "lastMonth": 7714.42,
-      "mrc": 6003.50,
-      "momPercent": -14.8
+      "mtd": 588.47,
+      "lastMonth": 6917.92,
+      "mrc": 6003.5,
+      "momPercent": -91.5
     },
     {
       "name": "Grupo Bimbo (USA)",
       "userId": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "mtd": 2576.58,
-      "lastMonth": 3158.22,
-      "mrc": 1619.70,
-      "momPercent": -18.4
+      "mtd": 2624.15,
+      "lastMonth": 8742.22,
+      "mrc": 1619.7,
+      "momPercent": -70.0
     },
     {
       "name": "Grupo Bimbo (Canada)",
       "userId": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
-      "mtd": 577.63,
-      "lastMonth": 1500.00,
-      "mrc": 254.00,
-      "momPercent": -61.5
+      "mtd": 591.97,
+      "lastMonth": 1500.0,
+      "mrc": 254.0,
+      "momPercent": -60.5
     },
     {
       "name": "iFaxApp",
@@ -45,18 +45,18 @@
     {
       "name": "IVR Technologies",
       "userId": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": 44088.09,
+      "mtd": 46431.63,
       "lastMonth": 77.55,
-      "mrc": 1703.08,
-      "momPercent": 56756.3
+      "mrc": 1702.08,
+      "momPercent": 59773.2
     },
     {
       "name": "Jobble",
       "userId": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 46796.97,
-      "lastMonth": 75807.56,
-      "mrc": 1.80,
-      "momPercent": -38.3
+      "mtd": 49983.44,
+      "lastMonth": 75807.45,
+      "mrc": 1.8,
+      "momPercent": -34.1
     },
     {
       "name": "Mango Voice",
@@ -69,7 +69,7 @@
     {
       "name": "Redo",
       "userId": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 35133.20,
+      "mtd": 35133.2,
       "lastMonth": 47165.19,
       "mrc": 2902.12,
       "momPercent": -25.5
@@ -95,7 +95,7 @@
       "userId": "38285cf8-6803-4f7a-91be-ec50400b7277",
       "mtd": 16815.12,
       "lastMonth": 12847.48,
-      "mrc": 114.40,
+      "mrc": 114.4,
       "momPercent": 30.9
     },
     {
@@ -140,8 +140,8 @@
     }
   ],
   "totals": {
-    "mtd": 204422.71,
-    "lastMonth": 238000.32,
-    "mrc": 24931.59
+    "mtd": 208006.38,
+    "lastMonth": 247885.36,
+    "mrc": 24930.59
   }
 }
