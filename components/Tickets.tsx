@@ -9,15 +9,14 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-21 22:00 MST
+// Auto-generated from Zendesk - 2026-02-22 15:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2704715", subject: "A user reported that some patients calling from the Wisconsi", status: "open", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704715" },
-  { customer: "CareCo", id: "2704368", subject: "SS @benl our phone is spinning again for many users!!!. WebR", status: "open", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704368" },
   { customer: "CareCo", id: "2702407", subject: "CDR endpoint started failing", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702407" },
   { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
   { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "open", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
-  { customer: "CareCo", id: "2699552", subject: "Intermittent Audio Issues During Calls – Patients Unable to ", status: "pending", created: "2026-02-18", url: "https://telnyx.zendesk.com/agent/tickets/2699552" },
+  { customer: "CareCo", id: "2704368", subject: "SS @benl our phone is spinning again for many users!!!. WebR", status: "pending", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704368" },
   { customer: "CareCo", id: "2602796", subject: "Users are experiencing an intermittent issue where, upon pla", status: "open", created: "2026-01-08", url: "https://telnyx.zendesk.com/agent/tickets/2602796" },
   { customer: "CareCo", id: "2567462", subject: "We are missing the recording for the second part of an outgo", status: "open", created: "2025-12-24", url: "https://telnyx.zendesk.com/agent/tickets/2567462" },
   { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "open", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
