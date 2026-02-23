@@ -9,14 +9,14 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-02-22 15:00 MST
+// Auto-generated from Zendesk - 2026-02-22 19:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2704715", subject: "A user reported that some patients calling from the Wisconsi", status: "open", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704715" },
   { customer: "CareCo", id: "2702407", subject: "CDR endpoint started failing", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702407" },
   { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
-  { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "open", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "open", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2704368", subject: "SS @benl our phone is spinning again for many users!!!. WebR", status: "pending", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704368" },
+  { customer: "CareCo", id: "2693638", subject: "@benl @ahmed Many users Suddenly stating they cannot make ca", status: "hold", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2693638" },
   { customer: "CareCo", id: "2602796", subject: "Users are experiencing an intermittent issue where, upon pla", status: "open", created: "2026-01-08", url: "https://telnyx.zendesk.com/agent/tickets/2602796" },
   { customer: "CareCo", id: "2567462", subject: "We are missing the recording for the second part of an outgo", status: "open", created: "2025-12-24", url: "https://telnyx.zendesk.com/agent/tickets/2567462" },
   { customer: "CareCo", id: "2536736", subject: "Telnyx Webrtc client will connect but no audio in/out", status: "open", created: "2025-12-11", url: "https://telnyx.zendesk.com/agent/tickets/2536736" },
@@ -38,12 +38,12 @@ const allTickets: Ticket[] = [
   { customer: "Mango Voice", id: "2072112", subject: "4154610700", status: "pending", created: "2025-03-06", url: "https://telnyx.zendesk.com/agent/tickets/2072112" },
   { customer: "Mango Voice", id: "2029444", subject: "There is a pending NNID request we would like to be approved", status: "open", created: "2025-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2029444" },
   { customer: "Simplii", id: "2704446", subject: "Phone lines going haywire!", status: "pending", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704446" },
-  { customer: "Simplii", id: "2696657", subject: "SMS Message Spam Flag", status: "pending", created: "2026-02-17", url: "https://telnyx.zendesk.com/agent/tickets/2696657" },
   { customer: "Simplii", id: "2612308", subject: "Resubmit Campaign C2S48PH", status: "pending", created: "2026-01-13", url: "https://telnyx.zendesk.com/agent/tickets/2612308" },
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
   { customer: "Callloom", id: "2681181", subject: "We are facing a consistent dead-air issue that appears to be", status: "open", created: "2026-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2681181" },
+  { customer: "RetellAI", id: "2706257", subject: "@Hayden Langelier this is the ip acl/fqdn based authenticati", status: "new", created: "2026-02-22", url: "https://telnyx.zendesk.com/agent/tickets/2706257" },
 ]
 
 const customers = [
