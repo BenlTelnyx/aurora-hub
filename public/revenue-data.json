@@ -1,5 +1,8 @@
 {
   "lastUpdated": "2026-02-21T13:06:37Z",
+  "lastAttempted": "2026-02-23T13:05:00Z",
+  "status": "stale",
+  "statusNote": "Billing agent budget exceeded - data from last successful fetch",
   "month": "February 2026",
   "customers": [
     {
