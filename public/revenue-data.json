@@ -1,8 +1,8 @@
 {
   "lastUpdated": "2026-02-21T13:06:37Z",
-  "lastAttempted": "2026-02-23T13:05:00Z",
+  "lastAttempted": "2026-02-26T13:03:00Z",
   "status": "stale",
-  "statusNote": "Billing agent budget exceeded - data from last successful fetch",
+  "statusNote": "Billing agent queries timed out - data from last successful fetch (Feb 21)",
   "month": "February 2026",
   "customers": [
     {
