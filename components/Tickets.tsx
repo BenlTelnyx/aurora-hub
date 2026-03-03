@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-02 15:00 MST
+// Auto-generated from Zendesk - 2026-03-02 19:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
@@ -25,8 +25,8 @@ const allTickets: Ticket[] = [
   { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
-  { customer: "Mango Voice", id: "2720978", subject: "The fax number 956-585-9971(tel:9565859971) has requested a ", status: "open", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2720978" },
   { customer: "Mango Voice", id: "2694256", subject: "Unable to send or receive sms for 2106584011", status: "open", created: "2026-02-16", url: "https://telnyx.zendesk.com/agent/tickets/2694256" },
+  { customer: "Mango Voice", id: "2720978", subject: "The fax number 956-585-9971(tel:9565859971) has requested a ", status: "pending", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2720978" },
   { customer: "Mango Voice", id: "2242342", subject: "406) 587-9700(tel:406)587-9700)* hi team, we have a campaign", status: "pending", created: "2025-06-26", url: "https://telnyx.zendesk.com/agent/tickets/2242342" },
   { customer: "Mango Voice", id: "2140178", subject: "Campaign CNW7TU8 assignment failed for tn 7404802452", status: "pending", created: "2025-04-21", url: "https://telnyx.zendesk.com/agent/tickets/2140178" },
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
