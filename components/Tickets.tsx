@@ -9,19 +9,18 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-02 22:00 MST
+// Auto-generated from Zendesk - 2026-03-03 11:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
-  { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
   { customer: "CareCo", id: "2718040", subject: "User reports experiencing audio delay during calls where the", status: "pending", created: "2026-02-27", url: "https://telnyx.zendesk.com/agent/tickets/2718040" },
-  { customer: "CareCo", id: "2704715", subject: "A user reported that some patients calling from the Wisconsi", status: "pending", created: "2026-02-20", url: "https://telnyx.zendesk.com/agent/tickets/2704715" },
   { customer: "CareCo", id: "2702407", subject: "CDR endpoint started failing", status: "pending", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702407" },
+  { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "pending", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "Screen Magic", id: "2720470", subject: "Please review the below logs where the customer has escalate", status: "open", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2720470" },
   { customer: "Screen Magic", id: "2710465", subject: "Benl,. One of our clients has raised an issue regarding a me", status: "open", created: "2026-02-24", url: "https://telnyx.zendesk.com/agent/tickets/2710465" },
-  { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
+  { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "pending", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
