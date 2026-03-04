@@ -9,11 +9,11 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-03 22:00 MST
+// Auto-generated from Zendesk - 2026-03-04 11:00 MST
 const allTickets: Ticket[] = [
+  { customer: "CareCo", id: "2726949", subject: "I am attempting to assign phone numbers to providers, but th", status: "open", created: "2026-03-04", url: "https://telnyx.zendesk.com/agent/tickets/2726949" },
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
-  { customer: "CareCo", id: "2718040", subject: "User reports experiencing audio delay during calls where the", status: "pending", created: "2026-02-27", url: "https://telnyx.zendesk.com/agent/tickets/2718040" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "Screen Magic", id: "2720470", subject: "Please review the below logs where the customer has escalate", status: "open", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2720470" },
