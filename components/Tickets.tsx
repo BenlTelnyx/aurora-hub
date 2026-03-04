@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-03 19:00 MST
+// Auto-generated from Zendesk - 2026-03-03 22:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2702076", subject: "User is experiencing audio issues during calls", status: "open", created: "2026-02-19", url: "https://telnyx.zendesk.com/agent/tickets/2702076" },
