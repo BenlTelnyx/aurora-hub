@@ -9,11 +9,11 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-05 07:01 MST
+// Auto-generated from Zendesk - 2026-03-05 11:00 MST
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2727507", subject: "User is experiencing an intermittent issue during both inbou", status: "open", created: "2026-03-04", url: "https://telnyx.zendesk.com/agent/tickets/2727507" },
   { customer: "CareCo", id: "2726949", subject: "I am attempting to assign phone numbers to providers, but th", status: "open", created: "2026-03-04", url: "https://telnyx.zendesk.com/agent/tickets/2726949" },
-  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "pending", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
+  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "Screen Magic", id: "2720470", subject: "Please review the below logs where the customer has escalate", status: "pending", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2720470" },
@@ -30,7 +30,7 @@ const allTickets: Ticket[] = [
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
   { customer: "Mango Voice", id: "2072112", subject: "4154610700", status: "pending", created: "2025-03-06", url: "https://telnyx.zendesk.com/agent/tickets/2072112" },
   { customer: "Mango Voice", id: "2029444", subject: "There is a pending NNID request we would like to be approved", status: "open", created: "2025-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2029444" },
-  { customer: "Simplii", id: "2719622", subject: "Inbound Calls Failing", status: "hold", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2719622" },
+  { customer: "Simplii", id: "2719622", subject: "Inbound Calls Failing", status: "open", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2719622" },
   { customer: "Simplii", id: "2718111", subject: "Is there a way to get the pcap of a call with audio?", status: "pending", created: "2026-02-27", url: "https://telnyx.zendesk.com/agent/tickets/2718111" },
   { customer: "Simplii", id: "2612308", subject: "Resubmit Campaign C2S48PH", status: "pending", created: "2026-01-13", url: "https://telnyx.zendesk.com/agent/tickets/2612308" },
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
