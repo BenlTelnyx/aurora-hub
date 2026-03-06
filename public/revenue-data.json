@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2026-03-05T13:03:00Z",
-  "lastAttempted": "2026-03-05T13:03:00Z",
-  "status": "partial",
-  "statusNote": "March data - partial update. Some queries timed out. Will retry remaining customers next run.",
+  "lastUpdated": "2026-03-06T06:00:00-07:00",
+  "lastAttempted": "2026-03-06T06:00:00-07:00",
+  "status": "success",
+  "statusNote": "March 6, 2026 daily update. 11/12 customers with user_id queried successfully. iFaxApp query timed out.",
   "month": "March 2026",
   "customers": [
     {
       "name": "CareCo",
       "userId": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 1272.94,
+      "mtd": 1528.77,
       "lastMonth": 5280.01,
-      "mrc": 494.68,
-      "momPercent": -75.9
+      "mrc": 506.38,
+      "momPercent": -71.0
     },
     {
       "name": "General Atomics",
       "userId": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": null,
-      "lastMonth": 2408.35,
-      "mrc": 1204.17,
-      "momPercent": null
+      "mtd": 6147.38,
+      "lastMonth": 6794.91,
+      "mrc": 6003.75,
+      "momPercent": -9.5
     },
     {
       "name": "Grupo Bimbo (USA)",
       "userId": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "mtd": null,
-      "lastMonth": 2247.88,
-      "mrc": 1200.00,
-      "momPercent": null
+      "mtd": 1916.30,
+      "lastMonth": 2917.91,
+      "mrc": 1620.45,
+      "momPercent": -34.3
     },
     {
       "name": "Grupo Bimbo (Canada)",
       "userId": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
-      "mtd": null,
-      "lastMonth": 1456.78,
-      "mrc": 234.50,
-      "momPercent": null
+      "mtd": 1500.00,
+      "lastMonth": 1499.99,
+      "mrc": 254.00,
+      "momPercent": 0.0
     },
     {
       "name": "iFaxApp",
@@ -43,63 +43,64 @@
       "mtd": null,
       "lastMonth": 25661.66,
       "mrc": 3721.29,
-      "momPercent": null
+      "momPercent": null,
+      "note": "Query timed out - using previous lastMonth/MRC values"
     },
     {
       "name": "IVR Technologies",
       "userId": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": null,
-      "lastMonth": 46431.63,
-      "mrc": 1702.08,
-      "momPercent": null
+      "mtd": 14868.42,
+      "lastMonth": 63914.61,
+      "mrc": 1704.08,
+      "momPercent": -76.7
     },
     {
       "name": "Jobble",
       "userId": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 9012.01,
+      "mtd": 11585.69,
       "lastMonth": 72389.62,
       "mrc": 1.80,
-      "momPercent": -87.5
+      "momPercent": -84.0
     },
     {
       "name": "Mango Voice",
       "userId": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": null,
-      "lastMonth": 2234.85,
-      "mrc": 2234.85,
-      "momPercent": null
+      "mtd": 6927.50,
+      "lastMonth": 28422.72,
+      "mrc": 1572.04,
+      "momPercent": -75.6
     },
     {
       "name": "Redo",
       "userId": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": null,
-      "lastMonth": 3285.78,
-      "mrc": 94.50,
-      "momPercent": null
+      "mtd": 10043.44,
+      "lastMonth": 47451.71,
+      "mrc": 156.50,
+      "momPercent": -78.8
     },
     {
       "name": "RetellAI",
       "userId": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 8506.00,
-      "lastMonth": 32618.00,
-      "mrc": 6249.85,
-      "momPercent": -73.9
+      "mtd": 8562.67,
+      "lastMonth": 32617.50,
+      "mrc": 6248.75,
+      "momPercent": -73.7
     },
     {
       "name": "42Chat",
       "userId": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 4965.00,
+      "mtd": 6165.40,
       "lastMonth": 14348.10,
       "mrc": 475.95,
-      "momPercent": -65.4
+      "momPercent": -57.0
     },
     {
       "name": "Screen Magic",
       "userId": "38285cf8-6803-4f7a-91be-ec50400b7277",
-      "mtd": 5039.39,
-      "lastMonth": 25998.00,
+      "mtd": 5790.85,
+      "lastMonth": 26002.15,
       "mrc": 117.00,
-      "momPercent": -80.6
+      "momPercent": -77.7
     },
     {
       "name": "Callloom",
@@ -143,8 +144,8 @@
     }
   ],
   "totals": {
-    "mtd": 28795.34,
-    "lastMonth": 205930.03,
-    "mrc": 15730.67
+    "mtd": 69036.42,
+    "lastMonth": 300880.28,
+    "mrc": 22380.99
   }
 }
