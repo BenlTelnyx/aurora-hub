@@ -1,8 +1,8 @@
 {
   "lastUpdated": "2026-03-06T06:00:00-07:00",
-  "lastAttempted": "2026-03-06T06:00:00-07:00",
-  "status": "success",
-  "statusNote": "March 6, 2026 daily update. 11/12 customers with user_id queried successfully. iFaxApp query timed out.",
+  "lastAttempted": "2026-03-09T06:00:00-07:00",
+  "status": "failed",
+  "statusNote": "March 9, 2026 update failed. Billing agent unreachable - VPN disconnected or network issue. DNS resolution failed for revenue-agents.query.prod.telnyx.io (curl exit code 6). Using March 6 data.",
   "month": "March 2026",
   "customers": [
     {
