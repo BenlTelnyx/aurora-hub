@@ -9,9 +9,9 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-10 15:00 MDT
+// Auto-generated from Zendesk - 2026-03-10 19:00 MDT
 const allTickets: Ticket[] = [
-  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
+  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "hold", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "Screen Magic", id: "2710465", subject: "Benl,. One of our clients has raised an issue regarding a me", status: "open", created: "2026-02-24", url: "https://telnyx.zendesk.com/agent/tickets/2710465" },
@@ -33,7 +33,7 @@ const allTickets: Ticket[] = [
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
-  { customer: "iFaxApp", id: "2739554", subject: "Conversation with web57", status: "new", created: "2026-03-10", url: "https://telnyx.zendesk.com/agent/tickets/2739554" },
+  { customer: "iFaxApp", id: "2739554", subject: "Conversation with web57", status: "open", created: "2026-03-10", url: "https://telnyx.zendesk.com/agent/tickets/2739554" },
 ]
 
 const customers = [
