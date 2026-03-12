@@ -9,10 +9,10 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-12 07:02 MDT
+// Auto-generated from Zendesk - 2026-03-12 11:00 MDT
 const allTickets: Ticket[] = [
+  { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "open", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
-  { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "pending", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
   { customer: "CareCo", id: "2741749", subject: "Morning!Can we get a 212 number?", status: "pending", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2741749" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
@@ -23,13 +23,14 @@ const allTickets: Ticket[] = [
   { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
-  { customer: "Mango Voice", id: "2730477", subject: "I show on our end EU is supposed to have texting services wi", status: "pending", created: "2026-03-05", url: "https://telnyx.zendesk.com/agent/tickets/2730477" },
+  { customer: "Mango Voice", id: "2730477", subject: "I show on our end EU is supposed to have texting services wi", status: "open", created: "2026-03-05", url: "https://telnyx.zendesk.com/agent/tickets/2730477" },
   { customer: "Mango Voice", id: "2242342", subject: "406) 587-9700(tel:406)587-9700)* hi team, we have a campaign", status: "pending", created: "2025-06-26", url: "https://telnyx.zendesk.com/agent/tickets/2242342" },
   { customer: "Mango Voice", id: "2140178", subject: "Campaign CNW7TU8 assignment failed for tn 7404802452", status: "pending", created: "2025-04-21", url: "https://telnyx.zendesk.com/agent/tickets/2140178" },
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
   { customer: "Mango Voice", id: "2072112", subject: "4154610700", status: "pending", created: "2025-03-06", url: "https://telnyx.zendesk.com/agent/tickets/2072112" },
   { customer: "Mango Voice", id: "2029444", subject: "There is a pending NNID request we would like to be approved", status: "open", created: "2025-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2029444" },
   { customer: "Simplii", id: "2719622", subject: "Inbound Calls Failing", status: "open", created: "2026-03-02", url: "https://telnyx.zendesk.com/agent/tickets/2719622" },
+  { customer: "Simplii", id: "2745027", subject: "Problems with connectivity in our New York server", status: "pending", created: "2026-03-12", url: "https://telnyx.zendesk.com/agent/tickets/2745027" },
   { customer: "Simplii", id: "2730508", subject: "Queued Messaging", status: "hold", created: "2026-03-05", url: "https://telnyx.zendesk.com/agent/tickets/2730508" },
   { customer: "Simplii", id: "2612308", subject: "Resubmit Campaign C2S48PH", status: "pending", created: "2026-01-13", url: "https://telnyx.zendesk.com/agent/tickets/2612308" },
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
