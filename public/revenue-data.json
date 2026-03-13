@@ -1,106 +1,105 @@
 {
-  "lastUpdated": "2026-03-12T06:03:32-07:00",
-  "lastAttempted": "2026-03-12T06:03:32-07:00",
+  "lastUpdated": "2026-03-13T06:15:00-07:00",
+  "lastAttempted": "2026-03-13T06:15:00-07:00",
   "status": "success",
-  "statusNote": "March 12, 2026 update. All 12 customers with user_ids queried successfully.",
+  "statusNote": "March 13, 2026 update. All 12 customers with user_ids queried successfully.",
   "month": "March 2026",
   "customers": [
     {
       "name": "CareCo",
       "userId": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 2714.24,
+      "mtd": 3001.16,
       "lastMonth": 5280.04,
-      "mrc": 494.68,
-      "momPercent": -48.6
+      "mrc": 637.14,
+      "momPercent": 46.8
     },
     {
       "name": "General Atomics",
       "userId": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": 6288.58,
-      "lastMonth": 6801.31,
+      "mtd": 6326.40,
+      "lastMonth": 7695.46,
       "mrc": 6003.75,
-      "momPercent": -7.5
+      "momPercent": 112.5
     },
     {
       "name": "Grupo Bimbo (USA)",
       "userId": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "mtd": 2131.55,
-      "lastMonth": 8733.44,
+      "mtd": 2181.59,
+      "lastMonth": 2917.91,
       "mrc": 1620.45,
-      "momPercent": -75.6
+      "momPercent": 93.2
     },
     {
       "name": "Grupo Bimbo (Canada)",
       "userId": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
-      "mtd": 391.44,
-      "lastMonth": 678.02,
+      "mtd": 403.03,
+      "lastMonth": 677.82,
       "mrc": 254.00,
-      "momPercent": -42.3
+      "momPercent": 53.6
     },
     {
       "name": "iFaxApp",
       "userId": "a13411e0-1850-4778-8c09-2048d2945105",
-      "mtd": 4331.64,
+      "mtd": 12929.27,
       "lastMonth": 21327.56,
       "mrc": 4056.93,
-      "momPercent": -79.7,
-      "note": "MTD includes $4,056.93 MRC + usage charges"
+      "momPercent": 56.6
     },
     {
       "name": "IVR Technologies",
       "userId": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": 26883.94,
+      "mtd": 29363.27,
       "lastMonth": 63914.62,
       "mrc": 1704.08,
-      "momPercent": -57.9
+      "momPercent": 18.7
     },
     {
       "name": "Jobble",
       "userId": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 24883.70,
+      "mtd": 27214.20,
       "lastMonth": 72389.62,
-      "mrc": 1.80,
-      "momPercent": -65.6
+      "mrc": 1.70,
+      "momPercent": -2.9
     },
     {
       "name": "Mango Voice",
       "userId": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": 11969.23,
+      "mtd": 13187.94,
       "lastMonth": 28422.73,
       "mrc": 1572.04,
-      "momPercent": -57.9
+      "momPercent": 19.9
     },
     {
       "name": "Redo",
       "userId": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 18856.09,
+      "mtd": 20575.69,
       "lastMonth": 47451.71,
-      "mrc": 161.80,
-      "momPercent": -60.3
+      "mrc": 2719.00,
+      "momPercent": 12.0
     },
     {
       "name": "RetellAI",
       "userId": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 12729.00,
-      "lastMonth": 32618.00,
-      "mrc": 6432.00,
-      "momPercent": -61.0
+      "mtd": 10519.57,
+      "lastMonth": 32617.49,
+      "mrc": 6442.54,
+      "momPercent": -16.7
     },
     {
       "name": "42Chat",
       "userId": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 7531.74,
-      "lastMonth": 14348.10,
-      "mrc": 455.95,
-      "momPercent": -47.5
+      "mtd": 8208.02,
+      "lastMonth": 14348.08,
+      "mrc": 475.95,
+      "momPercent": 47.8
     },
     {
       "name": "Screen Magic",
       "userId": "38285cf8-6803-4f7a-91be-ec50400b7277",
-      "mtd": 13513.17,
+      "mtd": 14054.15,
       "lastMonth": 26002.15,
       "mrc": 117.00,
-      "momPercent": -48.0
+      "momPercent": 39.6
     },
     {
       "name": "Callloom",
@@ -144,8 +143,8 @@
     }
   ],
   "totals": {
-    "mtd": 132224.32,
-    "lastMonth": 327967.30,
-    "mrc": 22874.48
+    "mtd": 137965.29,
+    "lastMonth": 323045.19,
+    "mrc": 25605.58
   }
 }
