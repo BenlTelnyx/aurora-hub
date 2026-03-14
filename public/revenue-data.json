@@ -1,8 +1,8 @@
 {
   "lastUpdated": "2026-03-13T06:15:00-07:00",
-  "lastAttempted": "2026-03-13T06:15:00-07:00",
-  "status": "success",
-  "statusNote": "March 13, 2026 update. All 12 customers with user_ids queried successfully.",
+  "lastAttempted": "2026-03-14T06:06:00-07:00",
+  "status": "stale",
+  "statusNote": "Billing agent unresponsive at 06:06 MDT. Data from March 13, 2026.",
   "month": "March 2026",
   "customers": [
     {
