@@ -1,8 +1,8 @@
 {
   "lastUpdated": "2026-03-15T07:45:00-07:00",
-  "lastAttempted": "2026-03-15T07:45:00-07:00",
-  "status": "fresh",
-  "statusNote": "Data retrieved from billing agent on March 15, 2026. MTD through Mar 14.",
+  "lastAttempted": "2026-03-16T06:02:00-06:00",
+  "status": "stale",
+  "statusNote": "Billing agent unreachable (A2A endpoint not responding). Using data from March 15. MTD through Mar 14.",
   "month": "March 2026",
   "customers": [
     {
