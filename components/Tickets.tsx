@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-17 07:02 MDT
+// Auto-generated from Zendesk - 2026-03-17 11:00 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "open", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
   { customer: "CareCo", id: "2741749", subject: "Morning!Can we get a 212 number?", status: "pending", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2741749" },
@@ -37,7 +37,7 @@ const allTickets: Ticket[] = [
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
-  { customer: "iFaxApp", id: "2753254", subject: "Conversation with web57", status: "new", created: "2026-03-17", url: "https://telnyx.zendesk.com/agent/tickets/2753254" },
+  { customer: "iFaxApp", id: "2753254", subject: "Conversation with web57", status: "pending", created: "2026-03-17", url: "https://telnyx.zendesk.com/agent/tickets/2753254" },
   { customer: "iFaxApp", id: "2739554", subject: "Conversation with web57", status: "pending", created: "2026-03-10", url: "https://telnyx.zendesk.com/agent/tickets/2739554" },
 ]
 
