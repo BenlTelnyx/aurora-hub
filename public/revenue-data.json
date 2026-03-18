@@ -1,8 +1,8 @@
 {
   "lastUpdated": "2026-03-15T07:45:00-07:00",
-  "lastAttempted": "2026-03-17T06:06:15-0600",
+  "lastAttempted": "2026-03-18T06:03:00-0600",
   "status": "stale",
-  "statusNote": "Billing agent A2A endpoint (http://revenue-agents.query.prod.telnyx.io:8000/a2a/billing-account/rpc) returns JSON-RPC 'Method not found' errors for all attempted methods (query, ask, chat, request, invoke, call, run, a2a, stream, send_message). Endpoint exists but correct method name unknown. Using data from March 15. MTD through Mar 14.",
+  "statusNote": "Billing A2A queries timing out (60s+ per customer). Using cached data from March 15. MTD through Mar 14.",
   "month": "March 2026",
   "customers": [
     {
