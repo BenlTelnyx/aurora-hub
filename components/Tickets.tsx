@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-18 22:00 MDT
+// Auto-generated from Zendesk - 2026-03-19 07:02 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "pending", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
   { customer: "CareCo", id: "2741749", subject: "Morning!Can we get a 212 number?", status: "pending", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2741749" },
@@ -17,8 +17,8 @@ const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "Screen Magic", id: "2755320", subject: "I initiated a text-enablement request for the numbers, but t", status: "open", created: "2026-03-17", url: "https://telnyx.zendesk.com/agent/tickets/2755320" },
-  { customer: "Screen Magic", id: "2748862", subject: "Could you please review why the messages are marked as *deli", status: "open", created: "2026-03-13", url: "https://telnyx.zendesk.com/agent/tickets/2748862" },
   { customer: "Screen Magic", id: "2710465", subject: "Benl,. One of our clients has raised an issue regarding a me", status: "open", created: "2026-02-24", url: "https://telnyx.zendesk.com/agent/tickets/2710465" },
+  { customer: "Screen Magic", id: "2748862", subject: "Could you please review why the messages are marked as *deli", status: "pending", created: "2026-03-13", url: "https://telnyx.zendesk.com/agent/tickets/2748862" },
   { customer: "Screen Magic", id: "2675382", subject: "Request your assistance. We have observed that at times, the", status: "open", created: "2026-02-06", url: "https://telnyx.zendesk.com/agent/tickets/2675382" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
   { customer: "Screen Magic", id: "2595218", subject: "Request for advice on 10DLC for Affinity Gaming", status: "pending", created: "2026-01-06", url: "https://telnyx.zendesk.com/agent/tickets/2595218" },
