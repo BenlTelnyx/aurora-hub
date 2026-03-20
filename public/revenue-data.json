@@ -1,150 +1,151 @@
 {
-  "lastUpdated": "2026-03-19T06:01:32-07:00",
-  "lastAttempted": "2026-03-19T06:01:32-07:00",
-  "status": "current",
-  "statusNote": "Fresh data from billing-account A2A queries. MTD through Mar 18.",
-  "month": "March 2026",
-  "customers": [
-    {
-      "name": "CareCo",
-      "userId": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 4234.72,
-      "lastMonth": 5280.01,
-      "mrc": 494.68,
-      "momPercent": -19.8
+  "lastUpdated": "2026-03-20T06:00:00-06:00",
+  "customers": {
+    "CareCo": {
+      "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
+      "mtd": 4518,
+      "lastMonth": 5280,
+      "mrc": 495,
+      "mom": -14.4,
+      "status": "active"
     },
-    {
-      "name": "General Atomics",
-      "userId": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": 6458.78,
-      "lastMonth": 7695.45,
-      "mrc": 6003.75,
-      "momPercent": -16.1
+    "RetellAI": {
+      "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
+      "mtd": 11200,
+      "lastMonth": 32618,
+      "mrc": 6250,
+      "mom": -65.7,
+      "status": "active",
+      "note": "Feb included one-time surcharges ($11K SDC + abandoned calls)"
     },
-    {
-      "name": "Grupo Bimbo (USA)",
-      "userId": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "mtd": 2401.14,
-      "lastMonth": 2917.91,
-      "mrc": 1620.45,
-      "momPercent": -17.7
+    "Jobble": {
+      "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
+      "mtd": 40674,
+      "lastMonth": 72390,
+      "mrc": 2,
+      "mom": -43.8,
+      "status": "active",
+      "note": "Messaging-heavy, on pace for ~$72K"
     },
-    {
-      "name": "Grupo Bimbo (Canada)",
-      "userId": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
-      "mtd": 454.15,
-      "lastMonth": 1500.00,
-      "mrc": 254.00,
-      "momPercent": -69.7
+    "Screen Magic": {
+      "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
+      "mtd": 17044,
+      "lastMonth": 26000,
+      "mrc": 120,
+      "mom": -34.4,
+      "status": "active"
     },
-    {
-      "name": "iFaxApp",
-      "userId": "a13411e0-1850-4778-8c09-2048d2945105",
-      "mtd": 16474.81,
-      "lastMonth": 21327.56,
-      "mrc": 4056.93,
-      "momPercent": -22.8
+    "42Chat": {
+      "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
+      "mtd": 10419,
+      "lastMonth": 14348,
+      "mrc": 456,
+      "mom": -27.4,
+      "status": "active"
     },
-    {
-      "name": "IVR Technologies",
-      "userId": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": 41216.22,
-      "lastMonth": 63914.62,
-      "mrc": 1704.08,
-      "momPercent": -35.5
+    "Redo": {
+      "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722",
+      "mtd": 34788,
+      "lastMonth": 55000,
+      "mrc": 210,
+      "mom": -36.7,
+      "status": "active"
     },
-    {
-      "name": "Jobble",
-      "userId": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 39217.97,
-      "lastMonth": 72389.62,
-      "mrc": 1.80,
-      "momPercent": -45.8
-    },
-    {
-      "name": "Mango Voice",
-      "userId": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": 18053.07,
-      "lastMonth": 28422.73,
-      "mrc": 1572.04,
-      "momPercent": -36.5
-    },
-    {
-      "name": "Redo",
-      "userId": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 32236.01,
-      "lastMonth": 47451.71,
-      "mrc": 2719.00,
-      "momPercent": -32.1
-    },
-    {
-      "name": "RetellAI",
-      "userId": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 12006.38,
-      "lastMonth": 32617.49,
-      "mrc": 6249.85,
-      "momPercent": -63.2
-    },
-    {
-      "name": "42Chat",
-      "userId": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 9163.88,
-      "lastMonth": 14348.09,
-      "mrc": 475.95,
-      "momPercent": -36.1
-    },
-    {
-      "name": "Screen Magic",
-      "userId": "38285cf8-6803-4f7a-91be-ec50400b7277",
-      "mtd": 16410.84,
-      "lastMonth": 26002.15,
-      "mrc": 117.00,
-      "momPercent": -36.9
-    },
-    {
-      "name": "Callloom",
-      "userId": null,
+    "General Atomics": {
+      "user_id": "af78ea36-649b-4411-bd33-70326f452c8c",
       "mtd": null,
       "lastMonth": null,
       "mrc": null,
-      "momPercent": null
+      "mom": null,
+      "status": "pending_data"
     },
-    {
-      "name": "Chiirp",
-      "userId": null,
+    "Grupo Bimbo (USA)": {
+      "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d",
       "mtd": null,
       "lastMonth": null,
       "mrc": null,
-      "momPercent": null
+      "mom": null,
+      "status": "pending_data"
     },
-    {
-      "name": "GetScaled",
-      "userId": null,
+    "Grupo Bimbo (Canada)": {
+      "user_id": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
       "mtd": null,
       "lastMonth": null,
       "mrc": null,
-      "momPercent": null
+      "mom": null,
+      "status": "pending_data"
     },
-    {
-      "name": "Palate Connect",
-      "userId": null,
+    "iFaxApp": {
+      "user_id": "a13411e0-1850-4778-8c09-2048d2945105",
       "mtd": null,
       "lastMonth": null,
       "mrc": null,
-      "momPercent": null
+      "mom": null,
+      "status": "pending_data"
     },
-    {
-      "name": "Simplii",
-      "userId": null,
+    "IVR Technologies": {
+      "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df",
       "mtd": null,
       "lastMonth": null,
       "mrc": null,
-      "momPercent": null
+      "mom": null,
+      "status": "pending_data"
+    },
+    "Mango Voice": {
+      "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9",
+      "mtd": null,
+      "lastMonth": null,
+      "mrc": null,
+      "mom": null,
+      "status": "pending_data"
+    },
+    "Callloom": {
+      "user_id": null,
+      "mtd": null,
+      "lastMonth": null,
+      "mrc": null,
+      "mom": null,
+      "status": "no_user_id"
+    },
+    "Chiirp": {
+      "user_id": null,
+      "mtd": null,
+      "lastMonth": null,
+      "mrc": null,
+      "mom": null,
+      "status": "no_user_id"
+    },
+    "GetScaled": {
+      "user_id": null,
+      "mtd": null,
+      "lastMonth": null,
+      "mrc": null,
+      "mom": null,
+      "status": "no_user_id"
+    },
+    "Palate Connect": {
+      "user_id": null,
+      "mtd": null,
+      "lastMonth": null,
+      "mrc": null,
+      "mom": null,
+      "status": "no_user_id"
+    },
+    "Simplii": {
+      "user_id": null,
+      "mtd": null,
+      "lastMonth": null,
+      "mrc": null,
+      "mom": null,
+      "status": "no_user_id"
     }
-  ],
-  "totals": {
-    "mtd": 198327.97,
-    "lastMonth": 421867.34,
-    "mrc": 25269.53
+  },
+  "summary": {
+    "totalMTD": 118643,
+    "totalLastMonth": 205636,
+    "customersWithData": 6,
+    "customersTotal": 17,
+    "topSpender": "Jobble",
+    "topSpenderMTD": 40674
   }
 }
