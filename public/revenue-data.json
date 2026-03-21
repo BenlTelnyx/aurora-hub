@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-20T06:00:00-06:00",
+  "lastUpdated": "2026-03-21T06:00:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
@@ -147,5 +147,6 @@
     "customersTotal": 17,
     "topSpender": "Jobble",
     "topSpenderMTD": 40674
-  }
+  },
+  "note": "A2A billing agent unreachable - data from previous day"
 }
