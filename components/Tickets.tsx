@@ -9,12 +9,12 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-21 07:01 MDT
+// Auto-generated from Zendesk - 2026-03-21 11:00 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2763543", subject: "User is getting \"Destination Out of order\" when attempting t", status: "open", created: "2026-03-20", url: "https://telnyx.zendesk.com/agent/tickets/2763543" },
   { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "open", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
-  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2741749", subject: "Morning!Can we get a 212 number?", status: "pending", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2741749" },
+  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "hold", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "Screen Magic", id: "2755320", subject: "I initiated a text-enablement request for the numbers, but t", status: "open", created: "2026-03-17", url: "https://telnyx.zendesk.com/agent/tickets/2755320" },
