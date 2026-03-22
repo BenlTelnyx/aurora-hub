@@ -1,55 +1,94 @@
 {
-  "lastUpdated": "2026-03-21T06:00:00-06:00",
+  "lastUpdated": "2026-03-22T06:00:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 4518,
-      "lastMonth": 5280,
+      "mtd": 4118,
+      "lastMonth": 4836,
       "mrc": 495,
-      "mom": -14.4,
+      "mom": 31.9,
+      "commit": 3500,
       "status": "active"
     },
     "RetellAI": {
       "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 11200,
-      "lastMonth": 32618,
+      "mtd": 11185,
+      "lastMonth": 17938,
       "mrc": 6250,
-      "mom": -65.7,
-      "status": "active",
-      "note": "Feb included one-time surcharges ($11K SDC + abandoned calls)"
+      "mom": -3.3,
+      "commit": 1000,
+      "status": "active"
     },
     "Jobble": {
       "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 40674,
-      "lastMonth": 72390,
+      "mtd": 17026,
+      "lastMonth": 30326,
       "mrc": 2,
-      "mom": -43.8,
-      "status": "active",
-      "note": "Messaging-heavy, on pace for ~$72K"
-    },
-    "Screen Magic": {
-      "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
-      "mtd": 17044,
-      "lastMonth": 26000,
-      "mrc": 120,
-      "mom": -34.4,
-      "status": "active"
-    },
-    "42Chat": {
-      "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 10419,
-      "lastMonth": 14348,
-      "mrc": 456,
-      "mom": -27.4,
+      "mom": -12.9,
+      "commit": 10000,
       "status": "active"
     },
     "Redo": {
       "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 34788,
-      "lastMonth": 55000,
+      "mtd": 14351,
+      "lastMonth": 20248,
       "mrc": 210,
-      "mom": -36.7,
+      "mom": 9.8,
+      "commit": 2000,
       "status": "active"
+    },
+    "42Chat": {
+      "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
+      "mtd": 5940,
+      "lastMonth": 8105,
+      "mrc": 456,
+      "mom": 13.5,
+      "commit": 2500,
+      "status": "active"
+    },
+    "Palate Connect": {
+      "user_id": null,
+      "mtd": 6590,
+      "lastMonth": 10982,
+      "mrc": null,
+      "mom": -6.9,
+      "commit": 10500,
+      "status": "at_risk"
+    },
+    "Patient Now": {
+      "user_id": null,
+      "mtd": 8429,
+      "lastMonth": 11726,
+      "mrc": null,
+      "mom": 11.4,
+      "commit": 10000,
+      "status": "active"
+    },
+    "Automentor": {
+      "user_id": null,
+      "mtd": 3865,
+      "lastMonth": 7129,
+      "mrc": null,
+      "mom": -15.9,
+      "commit": 5000,
+      "status": "at_risk"
+    },
+    "Chiirp": {
+      "user_id": null,
+      "mtd": 6067,
+      "lastMonth": 9834,
+      "mrc": null,
+      "mom": -4.3,
+      "commit": 7500,
+      "status": "active"
+    },
+    "Screen Magic": {
+      "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
+      "mtd": null,
+      "lastMonth": null,
+      "mrc": 120,
+      "mom": null,
+      "status": "pending_data"
     },
     "General Atomics": {
       "user_id": "af78ea36-649b-4411-bd33-70326f452c8c",
@@ -107,23 +146,7 @@
       "mom": null,
       "status": "no_user_id"
     },
-    "Chiirp": {
-      "user_id": null,
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "no_user_id"
-    },
     "GetScaled": {
-      "user_id": null,
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "no_user_id"
-    },
-    "Palate Connect": {
       "user_id": null,
       "mtd": null,
       "lastMonth": null,
@@ -141,12 +164,12 @@
     }
   },
   "summary": {
-    "totalMTD": 118643,
-    "totalLastMonth": 205636,
-    "customersWithData": 6,
-    "customersTotal": 17,
+    "totalMTD": 77571,
+    "totalLastMonth": 121124,
+    "customersWithData": 9,
+    "customersTotal": 19,
     "topSpender": "Jobble",
-    "topSpenderMTD": 40674
-  },
-  "note": "A2A billing agent unreachable - data from previous day"
+    "topSpenderMTD": 17026,
+    "atRisk": ["Palate Connect", "Automentor"]
+  }
 }
