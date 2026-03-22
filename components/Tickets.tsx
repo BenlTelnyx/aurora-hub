@@ -9,12 +9,12 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-21 19:00 MDT
+// Auto-generated from Zendesk - 2026-03-21 22:00 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2763543", subject: "User is getting \"Destination Out of order\" when attempting t", status: "open", created: "2026-03-20", url: "https://telnyx.zendesk.com/agent/tickets/2763543" },
   { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "open", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
-  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2741749", subject: "Morning!Can we get a 212 number?", status: "pending", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2741749" },
+  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "hold", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "CareCo", id: "2511621", subject: "Incorrect Call and Recording Duration: 70566fde-cc5e-11f0-94", status: "hold", created: "2025-12-01", url: "https://telnyx.zendesk.com/agent/tickets/2511621" },
   { customer: "Screen Magic", id: "2755320", subject: "I initiated a text-enablement request for the numbers, but t", status: "open", created: "2026-03-17", url: "https://telnyx.zendesk.com/agent/tickets/2755320" },
@@ -26,7 +26,6 @@ const allTickets: Ticket[] = [
   { customer: "Screen Magic", id: "2539198", subject: "A campaign is submitted for 10DLC registration", status: "pending", created: "2025-12-12", url: "https://telnyx.zendesk.com/agent/tickets/2539198" },
   { customer: "Screen Magic", id: "2450446", subject: "I wanted to inform you that I’ve submitted the campaign CSFT", status: "pending", created: "2025-10-27", url: "https://telnyx.zendesk.com/agent/tickets/2450446" },
   { customer: "Mango Voice", id: "2763657", subject: "Team! Do you see PON 485cfb67-905e-4d29-bc01-389e81b1484d in", status: "open", created: "2026-03-20", url: "https://telnyx.zendesk.com/agent/tickets/2763657" },
-  { customer: "Mango Voice", id: "2751897", subject: "SMS Delivery Issues - Messages Stuck in Queued Status from D", status: "pending", created: "2026-03-16", url: "https://telnyx.zendesk.com/agent/tickets/2751897" },
   { customer: "Mango Voice", id: "2242342", subject: "406) 587-9700(tel:406)587-9700)* hi team, we have a campaign", status: "pending", created: "2025-06-26", url: "https://telnyx.zendesk.com/agent/tickets/2242342" },
   { customer: "Mango Voice", id: "2140178", subject: "Campaign CNW7TU8 assignment failed for tn 7404802452", status: "pending", created: "2025-04-21", url: "https://telnyx.zendesk.com/agent/tickets/2140178" },
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
