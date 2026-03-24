@@ -1,59 +1,59 @@
 {
-  "lastUpdated": "2026-03-22T06:00:00-06:00",
+  "lastUpdated": "2026-03-24T06:00:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 4118,
-      "lastMonth": 4836,
+      "mtd": 5069,
+      "lastMonth": 5280,
       "mrc": 495,
-      "mom": 31.9,
+      "mom": 24.0,
       "commit": 3500,
       "status": "active"
     },
     "RetellAI": {
       "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 11185,
-      "lastMonth": 17938,
+      "mtd": 27843,
+      "lastMonth": 38725,
       "mrc": 6250,
-      "mom": -3.3,
+      "mom": -7.1,
       "commit": 1000,
       "status": "active"
     },
     "Jobble": {
       "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 17026,
-      "lastMonth": 30326,
+      "mtd": 40865,
+      "lastMonth": 72390,
       "mrc": 2,
-      "mom": -12.9,
+      "mom": -27.1,
       "commit": 10000,
-      "status": "active"
+      "status": "at_risk"
     },
     "Redo": {
       "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 14351,
-      "lastMonth": 20248,
-      "mrc": 210,
-      "mom": 9.8,
+      "mtd": 39716,
+      "lastMonth": 47452,
+      "mrc": 2719,
+      "mom": 8.1,
       "commit": 2000,
       "status": "active"
     },
     "42Chat": {
       "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 5940,
-      "lastMonth": 8105,
-      "mrc": 456,
-      "mom": 13.5,
+      "mtd": 11156,
+      "lastMonth": 14348,
+      "mrc": 476,
+      "mom": 0.4,
       "commit": 2500,
       "status": "active"
     },
     "Palate Connect": {
       "user_id": null,
-      "mtd": 6590,
-      "lastMonth": 10982,
+      "mtd": null,
+      "lastMonth": null,
       "mrc": null,
-      "mom": -6.9,
+      "mom": null,
       "commit": 10500,
-      "status": "at_risk"
+      "status": "no_user_id"
     },
     "Patient Now": {
       "user_id": null,
@@ -75,68 +75,68 @@
     },
     "Chiirp": {
       "user_id": null,
-      "mtd": 6067,
-      "lastMonth": 9834,
+      "mtd": null,
+      "lastMonth": null,
       "mrc": null,
-      "mom": -4.3,
+      "mom": null,
       "commit": 7500,
-      "status": "active"
+      "status": "no_user_id"
     },
     "Screen Magic": {
       "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": 120,
-      "mom": null,
-      "status": "pending_data"
+      "mtd": 18130,
+      "lastMonth": 26002,
+      "mrc": 117,
+      "mom": -9.9,
+      "status": "active"
     },
     "General Atomics": {
       "user_id": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "pending_data"
+      "mtd": 6562,
+      "lastMonth": 7695,
+      "mrc": 6004,
+      "mom": 10.1,
+      "status": "active"
     },
     "Grupo Bimbo (USA)": {
       "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "pending_data"
+      "mtd": 6167,
+      "lastMonth": 2918,
+      "mrc": 1620,
+      "mom": 173.1,
+      "status": "active"
     },
     "Grupo Bimbo (Canada)": {
       "user_id": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "pending_data"
+      "mtd": 490,
+      "lastMonth": 678,
+      "mrc": 254,
+      "mom": -6.5,
+      "status": "active"
     },
     "iFaxApp": {
       "user_id": "a13411e0-1850-4778-8c09-2048d2945105",
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "pending_data"
+      "mtd": 19550,
+      "lastMonth": 21328,
+      "mrc": 4057,
+      "mom": 18.4,
+      "status": "active"
     },
     "IVR Technologies": {
       "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "pending_data"
+      "mtd": 50028,
+      "lastMonth": 63913,
+      "mrc": 1704,
+      "mom": 1.1,
+      "status": "active"
     },
     "Mango Voice": {
       "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "status": "pending_data"
+      "mtd": 21819,
+      "lastMonth": 28423,
+      "mrc": 1572,
+      "mom": -0.8,
+      "status": "active"
     },
     "Callloom": {
       "user_id": null,
@@ -164,12 +164,12 @@
     }
   },
   "summary": {
-    "totalMTD": 77571,
-    "totalLastMonth": 121124,
-    "customersWithData": 9,
+    "totalMTD": 227405,
+    "totalLastMonth": 340154,
+    "customersWithData": 14,
     "customersTotal": 19,
-    "topSpender": "Jobble",
-    "topSpenderMTD": 17026,
-    "atRisk": ["Palate Connect", "Automentor"]
+    "topSpender": "IVR Technologies",
+    "topSpenderMTD": 50028,
+    "atRisk": ["Jobble", "Automentor"]
   }
 }
