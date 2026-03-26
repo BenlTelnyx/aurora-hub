@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-25 22:00 MDT
+// Auto-generated from Zendesk - 2026-03-26 07:02 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2765864", subject: "This user has been experiencing a recurring but intermittent", status: "open", created: "2026-03-23", url: "https://telnyx.zendesk.com/agent/tickets/2765864" },
   { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "open", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
@@ -36,6 +36,7 @@ const allTickets: Ticket[] = [
   { customer: "Simplii", id: "2531840", subject: "Resubmit Multiple Campaigns", status: "pending", created: "2025-12-09", url: "https://telnyx.zendesk.com/agent/tickets/2531840" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
+  { customer: "iFaxApp", id: "2774597", subject: "Conversation with web57", status: "new", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2774597" },
 ]
 
 const customers = [

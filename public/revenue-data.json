@@ -1,30 +1,30 @@
 {
-  "lastUpdated": "2026-03-24T06:00:00-06:00",
+  "lastUpdated": "2026-03-26T06:02:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 5069,
+      "mtd": 5669,
       "lastMonth": 5280,
       "mrc": 495,
-      "mom": 24.0,
+      "mom": 7.4,
       "commit": 3500,
       "status": "active"
     },
     "RetellAI": {
       "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 27843,
-      "lastMonth": 38725,
-      "mrc": 6250,
-      "mom": -7.1,
+      "mtd": 13725,
+      "lastMonth": 17938,
+      "mrc": 5828,
+      "mom": -23.5,
       "commit": 1000,
       "status": "active"
     },
     "Jobble": {
       "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 40865,
+      "mtd": 40805,
       "lastMonth": 72390,
       "mrc": 2,
-      "mom": -27.1,
+      "mom": -43.6,
       "commit": 10000,
       "status": "at_risk"
     },
@@ -33,7 +33,7 @@
       "mtd": 39716,
       "lastMonth": 47452,
       "mrc": 2719,
-      "mom": 8.1,
+      "mom": -16.3,
       "commit": 2000,
       "status": "active"
     },
@@ -42,7 +42,7 @@
       "mtd": 11156,
       "lastMonth": 14348,
       "mrc": 476,
-      "mom": 0.4,
+      "mom": -22.2,
       "commit": 2500,
       "status": "active"
     },
@@ -57,45 +57,46 @@
     },
     "Patient Now": {
       "user_id": null,
-      "mtd": 8429,
+      "mtd": 9009,
       "lastMonth": 11726,
       "mrc": null,
-      "mom": 11.4,
+      "mom": -23.2,
       "commit": 10000,
       "status": "active"
     },
     "Automentor": {
       "user_id": null,
-      "mtd": 3865,
+      "mtd": 4016,
       "lastMonth": 7129,
       "mrc": null,
-      "mom": -15.9,
+      "mom": -43.7,
       "commit": 5000,
       "status": "at_risk"
     },
     "Chiirp": {
       "user_id": null,
-      "mtd": null,
-      "lastMonth": null,
+      "mtd": 6649,
+      "lastMonth": 9834,
       "mrc": null,
-      "mom": null,
+      "mom": -32.4,
       "commit": 7500,
-      "status": "no_user_id"
+      "status": "at_risk"
     },
     "Screen Magic": {
       "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
       "mtd": 18130,
       "lastMonth": 26002,
       "mrc": 117,
-      "mom": -9.9,
+      "mom": -30.3,
       "status": "active"
     },
     "General Atomics": {
       "user_id": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": 6562,
-      "lastMonth": 7695,
+      "mtd": 6418,
+      "lastMonth": 7500,
       "mrc": 6004,
-      "mom": 10.1,
+      "mom": -14.4,
+      "commit": 7500,
       "status": "active"
     },
     "Grupo Bimbo (USA)": {
@@ -103,7 +104,7 @@
       "mtd": 6167,
       "lastMonth": 2918,
       "mrc": 1620,
-      "mom": 173.1,
+      "mom": 111.3,
       "status": "active"
     },
     "Grupo Bimbo (Canada)": {
@@ -111,15 +112,16 @@
       "mtd": 490,
       "lastMonth": 678,
       "mrc": 254,
-      "mom": -6.5,
+      "mom": -27.7,
       "status": "active"
     },
     "iFaxApp": {
       "user_id": "a13411e0-1850-4778-8c09-2048d2945105",
-      "mtd": 19550,
-      "lastMonth": 21328,
+      "mtd": 18421,
+      "lastMonth": 21070,
       "mrc": 4057,
-      "mom": 18.4,
+      "mom": -12.6,
+      "commit": 7500,
       "status": "active"
     },
     "IVR Technologies": {
@@ -127,7 +129,7 @@
       "mtd": 50028,
       "lastMonth": 63913,
       "mrc": 1704,
-      "mom": 1.1,
+      "mom": -21.7,
       "status": "active"
     },
     "Mango Voice": {
@@ -135,7 +137,7 @@
       "mtd": 21819,
       "lastMonth": 28423,
       "mrc": 1572,
-      "mom": -0.8,
+      "mom": -23.2,
       "status": "active"
     },
     "Callloom": {
@@ -148,11 +150,12 @@
     },
     "GetScaled": {
       "user_id": null,
-      "mtd": null,
-      "lastMonth": null,
+      "mtd": 6041,
+      "lastMonth": 11999,
       "mrc": null,
-      "mom": null,
-      "status": "no_user_id"
+      "mom": -49.7,
+      "commit": 40000,
+      "status": "at_risk"
     },
     "Simplii": {
       "user_id": null,
@@ -164,12 +167,12 @@
     }
   },
   "summary": {
-    "totalMTD": 227405,
-    "totalLastMonth": 340154,
-    "customersWithData": 14,
+    "totalMTD": 258259,
+    "totalLastMonth": 361128,
+    "customersWithData": 16,
     "customersTotal": 19,
     "topSpender": "IVR Technologies",
     "topSpenderMTD": 50028,
-    "atRisk": ["Jobble", "Automentor"]
+    "atRisk": ["Jobble", "Automentor", "Chiirp", "GetScaled"]
   }
 }
