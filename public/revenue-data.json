@@ -1,48 +1,48 @@
 {
-  "lastUpdated": "2026-03-26T06:02:00-06:00",
+  "lastUpdated": "2026-03-27T06:10:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 5669,
-      "lastMonth": 5280,
-      "mrc": 495,
-      "mom": 7.4,
+      "mtd": 5957,
+      "lastMonth": 5500,
+      "mrc": 301,
+      "mom": 8.3,
       "commit": 3500,
       "status": "active"
     },
     "RetellAI": {
       "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 13725,
+      "mtd": 14090,
       "lastMonth": 17938,
-      "mrc": 5828,
-      "mom": -23.5,
+      "mrc": 5854,
+      "mom": -21.5,
       "commit": 1000,
       "status": "active"
     },
     "Jobble": {
       "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 40805,
+      "mtd": 41142,
       "lastMonth": 72390,
       "mrc": 2,
-      "mom": -43.6,
+      "mom": -43.2,
       "commit": 10000,
       "status": "at_risk"
     },
     "Redo": {
       "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 39716,
+      "mtd": 46309,
       "lastMonth": 47452,
-      "mrc": 2719,
-      "mom": -16.3,
+      "mrc": 222,
+      "mom": -2.4,
       "commit": 2000,
       "status": "active"
     },
     "42Chat": {
       "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 11156,
+      "mtd": 12425,
       "lastMonth": 14348,
-      "mrc": 476,
-      "mom": -22.2,
+      "mrc": 456,
+      "mom": -13.4,
       "commit": 2500,
       "status": "active"
     },
@@ -92,27 +92,27 @@
     },
     "General Atomics": {
       "user_id": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": 6418,
-      "lastMonth": 7500,
+      "mtd": 6710,
+      "lastMonth": 7695,
       "mrc": 6004,
-      "mom": -14.4,
+      "mom": -12.8,
       "commit": 7500,
       "status": "active"
     },
     "Grupo Bimbo (USA)": {
       "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "mtd": 6167,
+      "mtd": 2707,
       "lastMonth": 2918,
-      "mrc": 1620,
-      "mom": 111.3,
+      "mrc": 1493,
+      "mom": -7.2,
       "status": "active"
     },
     "Grupo Bimbo (Canada)": {
       "user_id": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
-      "mtd": 490,
+      "mtd": 535,
       "lastMonth": 678,
-      "mrc": 254,
-      "mom": -27.7,
+      "mrc": 244,
+      "mom": -21.1,
       "status": "active"
     },
     "iFaxApp": {
@@ -126,18 +126,18 @@
     },
     "IVR Technologies": {
       "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": 50028,
-      "lastMonth": 63913,
-      "mrc": 1704,
-      "mom": -21.7,
+      "mtd": 57242,
+      "lastMonth": 63915,
+      "mrc": 1702,
+      "mom": -10.4,
       "status": "active"
     },
     "Mango Voice": {
       "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": 21819,
+      "mtd": 25527,
       "lastMonth": 28423,
-      "mrc": 1572,
-      "mom": -23.2,
+      "mrc": 2097,
+      "mom": -10.2,
       "status": "active"
     },
     "Callloom": {
@@ -167,12 +167,12 @@
     }
   },
   "summary": {
-    "totalMTD": 258259,
-    "totalLastMonth": 361128,
+    "totalMTD": 269961,
+    "totalLastMonth": 383217,
     "customersWithData": 16,
     "customersTotal": 19,
     "topSpender": "IVR Technologies",
-    "topSpenderMTD": 50028,
+    "topSpenderMTD": 57242,
     "atRisk": ["Jobble", "Automentor", "Chiirp", "GetScaled"]
   }
 }
