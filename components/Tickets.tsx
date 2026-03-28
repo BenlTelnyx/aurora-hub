@@ -9,12 +9,12 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-28 07:02 MDT
+// Auto-generated from Zendesk - 2026-03-28 11:00 MDT
 const allTickets: Ticket[] = [
-  { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
   { customer: "CareCo", id: "2765864", subject: "This user has been experiencing a recurring but intermittent", status: "open", created: "2026-03-23", url: "https://telnyx.zendesk.com/agent/tickets/2765864" },
   { customer: "CareCo", id: "2743138", subject: "Intermittent Audio Issues During Calls: This user has been e", status: "open", created: "2026-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2743138" },
   { customer: "CareCo", id: "2776398", subject: "https://telnyx.zendesk.com/requests/2704715 following up on ", status: "pending", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2776398" },
+  { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "pending", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "Screen Magic", id: "2748862", subject: "Could you please review why the messages are marked as *deli", status: "open", created: "2026-03-13", url: "https://telnyx.zendesk.com/agent/tickets/2748862" },
@@ -49,7 +49,7 @@ const allTickets: Ticket[] = [
   { customer: "iFaxApp", id: "2778924", subject: "Your fax request was unsuccessful", status: "pending", created: "2026-03-27", url: "https://telnyx.zendesk.com/agent/tickets/2778924" },
   { customer: "iFaxApp", id: "2778912", subject: "Your fax request was unsuccessful", status: "pending", created: "2026-03-27", url: "https://telnyx.zendesk.com/agent/tickets/2778912" },
   { customer: "iFaxApp", id: "2774597", subject: "Conversation with web57", status: "pending", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2774597" },
-  { customer: "RetellAI", id: "2777005", subject: "Benl, we are seeing an issue with RTP/audio originating from", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2777005" },
+  { customer: "RetellAI", id: "2777005", subject: "Benl, we are seeing an issue with RTP/audio originating from", status: "pending", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2777005" },
 ]
 
 const customers = [
