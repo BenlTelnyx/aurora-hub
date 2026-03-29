@@ -1,30 +1,30 @@
 {
-  "lastUpdated": "2026-03-28T06:05:00-06:00",
+  "lastUpdated": "2026-03-29T06:05:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 5186,
-      "lastMonth": 4836,
-      "mrc": 301,
-      "mom": 7.2,
+      "mtd": 6178,
+      "lastMonth": 5280,
+      "mrc": 495,
+      "mom": 17.0,
       "commit": 3500,
       "status": "active"
     },
     "RetellAI": {
       "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 12272,
-      "lastMonth": 17938,
-      "mrc": 5854,
-      "mom": -31.6,
+      "mtd": 14458,
+      "lastMonth": 32617,
+      "mrc": 6250,
+      "mom": -55.7,
       "commit": 1000,
       "status": "active"
     },
     "Jobble": {
       "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 17084,
-      "lastMonth": 30326,
+      "mtd": 42944,
+      "lastMonth": 72390,
       "mrc": 2,
-      "mom": -43.7,
+      "mom": -40.7,
       "commit": 10000,
       "status": "at_risk"
     },
@@ -39,10 +39,10 @@
     },
     "42Chat": {
       "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 6696,
-      "lastMonth": 8105,
-      "mrc": 456,
-      "mom": -17.4,
+      "mtd": 12627,
+      "lastMonth": 14348,
+      "mrc": 476,
+      "mom": -12.0,
       "commit": 2500,
       "status": "active"
     },
@@ -128,10 +128,10 @@
     },
     "Mango Voice": {
       "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": 23345,
-      "lastMonth": 27128,
-      "mrc": 2097,
-      "mom": -13.9,
+      "mtd": 26426,
+      "lastMonth": 28422,
+      "mrc": 1572,
+      "mom": -7.0,
       "commit": 20000,
       "status": "active"
     },
@@ -190,8 +190,8 @@
     }
   },
   "summary": {
-    "totalMTD": 373836,
-    "totalLastMonth": 410971,
+    "totalMTD": 405937,
+    "totalLastMonth": 470795,
     "customersWithData": 19,
     "customersTotal": 21,
     "topSpender": "Booksy",
