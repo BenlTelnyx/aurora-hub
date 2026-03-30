@@ -1,21 +1,21 @@
 {
-  "lastUpdated": "2026-03-29T06:05:00-06:00",
+  "lastUpdated": "2026-03-30T06:02:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 6178,
+      "mtd": 6218,
       "lastMonth": 5280,
       "mrc": 495,
-      "mom": 17.0,
+      "mom": 17.8,
       "commit": 3500,
       "status": "active"
     },
     "RetellAI": {
       "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 14458,
+      "mtd": 14511,
       "lastMonth": 32617,
       "mrc": 6250,
-      "mom": -55.7,
+      "mom": -55.5,
       "commit": 1000,
       "status": "active"
     },
