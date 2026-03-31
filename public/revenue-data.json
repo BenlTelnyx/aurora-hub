@@ -1,48 +1,48 @@
 {
-  "lastUpdated": "2026-03-30T06:02:00-06:00",
+  "lastUpdated": "2026-03-31T06:02:00-06:00",
   "customers": {
     "CareCo": {
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 6218,
+      "mtd": 6485,
       "lastMonth": 5280,
-      "mrc": 495,
-      "mom": 17.8,
+      "mrc": 637,
+      "mom": 22.8,
       "commit": 3500,
       "status": "active"
     },
     "RetellAI": {
       "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 14511,
+      "mtd": 14840,
       "lastMonth": 32617,
-      "mrc": 6250,
-      "mom": -55.5,
+      "mrc": 5512,
+      "mom": -54.5,
       "commit": 1000,
       "status": "active"
     },
     "Jobble": {
       "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 42944,
+      "mtd": 45377,
       "lastMonth": 72390,
       "mrc": 2,
-      "mom": -40.7,
+      "mom": -37.3,
       "commit": 10000,
       "status": "at_risk"
     },
     "Redo": {
       "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 46309,
-      "lastMonth": 47452,
-      "mrc": 222,
-      "mom": -2.4,
+      "mtd": 47452,
+      "lastMonth": 47381,
+      "mrc": 2719,
+      "mom": 0.1,
       "commit": 2000,
       "status": "active"
     },
     "42Chat": {
       "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 12627,
+      "mtd": 12805,
       "lastMonth": 14348,
       "mrc": 476,
-      "mom": -12.0,
+      "mom": -10.8,
       "commit": 2500,
       "status": "active"
     },
@@ -84,29 +84,31 @@
     },
     "Screen Magic": {
       "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
-      "mtd": 18130,
+      "mtd": 22198,
       "lastMonth": 26002,
       "mrc": 117,
-      "mom": -30.3,
+      "mom": -14.6,
       "status": "active"
     },
     "General Atomics": {
       "user_id": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": 6532,
-      "lastMonth": 7500,
+      "mtd": 6753,
+      "lastMonth": 7696,
       "mrc": 6004,
-      "mom": -12.9,
+      "mom": -12.3,
       "commit": 7500,
       "status": "active"
     },
     "Grupo Bimbo": {
       "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "mtd": 2971,
-      "lastMonth": 10000,
-      "mrc": 1493,
-      "mom": -70.3,
+      "user_id_canada": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
+      "mtd": 3402,
+      "lastMonth": 4418,
+      "mrc": 1874,
+      "mom": -23.0,
       "commit": 7500,
-      "status": "at_risk"
+      "status": "at_risk",
+      "notes": "Combined USA + Canada"
     },
     "iFaxApp": {
       "user_id": "a13411e0-1850-4778-8c09-2048d2945105",
@@ -119,19 +121,19 @@
     },
     "IVR Technologies": {
       "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": 41637,
-      "lastMonth": 47758,
-      "mrc": 1702,
-      "mom": -12.8,
+      "mtd": 63915,
+      "lastMonth": 65989,
+      "mrc": 1704,
+      "mom": -3.1,
       "commit": 45000,
       "status": "active"
     },
     "Mango Voice": {
       "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": 26426,
-      "lastMonth": 28422,
+      "mtd": 27816,
+      "lastMonth": 28423,
       "mrc": 1572,
-      "mom": -7.0,
+      "mom": -2.1,
       "commit": 20000,
       "status": "active"
     },
@@ -190,8 +192,8 @@
     }
   },
   "summary": {
-    "totalMTD": 405937,
-    "totalLastMonth": 470795,
+    "totalMTD": 438911,
+    "totalLastMonth": 476641,
     "customersWithData": 19,
     "customersTotal": 21,
     "topSpender": "Booksy",
