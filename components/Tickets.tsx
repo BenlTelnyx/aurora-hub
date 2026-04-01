@@ -9,12 +9,12 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-03-31 15:00 MDT
+// Auto-generated from Zendesk - 2026-03-31 19:00 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2786784", subject: "Two users reported experiencing audio issues when calling th", status: "new", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786784" },
   { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
   { customer: "CareCo", id: "2765864", subject: "This user has been experiencing a recurring but intermittent", status: "open", created: "2026-03-23", url: "https://telnyx.zendesk.com/agent/tickets/2765864" },
-  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
+  { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "hold", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
   { customer: "Mango Voice", id: "2786719", subject: "Carolina Aesthetic Dentistry is running into an issue where ", status: "new", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786719" },
