@@ -9,17 +9,16 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-04-01 07:01 MDT
+// Auto-generated from Zendesk - 2026-04-01 11:01 MDT
 const allTickets: Ticket[] = [
-  { customer: "CareCo", id: "2786784", subject: "Two users reported experiencing audio issues when calling th", status: "new", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786784" },
+  { customer: "CareCo", id: "2786784", subject: "Two users reported experiencing audio issues when calling th", status: "open", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786784" },
+  { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "open", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
   { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
-  { customer: "CareCo", id: "2765864", subject: "This user has been experiencing a recurring but intermittent", status: "pending", created: "2026-03-23", url: "https://telnyx.zendesk.com/agent/tickets/2765864" },
+  { customer: "CareCo", id: "2765864", subject: "This user has been experiencing a recurring but intermittent", status: "open", created: "2026-03-23", url: "https://telnyx.zendesk.com/agent/tickets/2765864" },
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "hold", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
-  { customer: "CareCo", id: "2678621", subject: "Missing Call Recording – 2:09 Call", status: "hold", created: "2026-02-09", url: "https://telnyx.zendesk.com/agent/tickets/2678621" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
-  { customer: "Mango Voice", id: "2786719", subject: "Carolina Aesthetic Dentistry is running into an issue where ", status: "new", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786719" },
   { customer: "Mango Voice", id: "2763657", subject: "Team! Do you see PON 485cfb67-905e-4d29-bc01-389e81b1484d in", status: "open", created: "2026-03-20", url: "https://telnyx.zendesk.com/agent/tickets/2763657" },
-  { customer: "Mango Voice", id: "2773333", subject: "We're currently seeing issues with calls from a number under", status: "hold", created: "2026-03-25", url: "https://telnyx.zendesk.com/agent/tickets/2773333" },
+  { customer: "Mango Voice", id: "2786719", subject: "Carolina Aesthetic Dentistry is running into an issue where ", status: "hold", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786719" },
   { customer: "Mango Voice", id: "2242342", subject: "406) 587-9700(tel:406)587-9700)* hi team, we have a campaign", status: "pending", created: "2025-06-26", url: "https://telnyx.zendesk.com/agent/tickets/2242342" },
   { customer: "Mango Voice", id: "2140178", subject: "Campaign CNW7TU8 assignment failed for tn 7404802452", status: "pending", created: "2025-04-21", url: "https://telnyx.zendesk.com/agent/tickets/2140178" },
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
