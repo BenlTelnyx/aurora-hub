@@ -9,12 +9,13 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-04-02 07:04 MDT
+// Auto-generated from Zendesk - 2026-04-02 11:07 MDT
 const allTickets: Ticket[] = [
+  { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
   { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "pending", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
   { customer: "CareCo", id: "2786784", subject: "Two users reported experiencing audio issues when calling th", status: "pending", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786784" },
-  { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "hold", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "hold", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
+  { customer: "Screen Magic", id: "2791421", subject: "I initiated a text-enablement request for the number 1516327", status: "open", created: "2026-04-02", url: "https://telnyx.zendesk.com/agent/tickets/2791421" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
   { customer: "Mango Voice", id: "2786719", subject: "Carolina Aesthetic Dentistry is running into an issue where ", status: "open", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786719" },
   { customer: "Mango Voice", id: "2763657", subject: "Team! Do you see PON 485cfb67-905e-4d29-bc01-389e81b1484d in", status: "open", created: "2026-03-20", url: "https://telnyx.zendesk.com/agent/tickets/2763657" },
