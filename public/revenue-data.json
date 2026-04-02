@@ -1,206 +1,147 @@
 {
-  "lastUpdated": "2026-04-01T06:03:00-06:00",
-  "dataSource": "cached - billing agent unavailable",
-  "note": "April 1 - MTD values are from March (billing agent offline)",
-  "customers": {
-    "CareCo": {
+  "lastUpdated": "2026-04-02T12:04:36Z",
+  "customers": [
+    {
+      "name": "CareCo",
       "user_id": "3307ca65-df56-4f15-8ba7-589d584d215b",
-      "mtd": 185,
-      "lastMonth": 6485,
-      "mrc": 637,
-      "mom": null,
-      "commit": 3500,
-      "status": "active"
+      "mtd": 726.71,
+      "last_month": 6728.99,
+      "mrc": 377.02,
+      "mom_pct": -89.2
     },
-    "RetellAI": {
-      "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
-      "mtd": 478,
-      "lastMonth": 14840,
-      "mrc": 5512,
-      "mom": null,
-      "commit": 1000,
-      "status": "active"
-    },
-    "Jobble": {
-      "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
-      "mtd": 1464,
-      "lastMonth": 45377,
-      "mrc": 2,
-      "mom": null,
-      "commit": 10000,
-      "status": "at_risk"
-    },
-    "Redo": {
-      "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722",
-      "mtd": 1531,
-      "lastMonth": 47452,
-      "mrc": 2719,
-      "mom": null,
-      "commit": 2000,
-      "status": "active"
-    },
-    "42Chat": {
-      "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
-      "mtd": 413,
-      "lastMonth": 12805,
-      "mrc": 476,
-      "mom": null,
-      "commit": 2500,
-      "status": "active"
-    },
-    "Palate Connect": {
-      "user_id": null,
-      "mtd": null,
-      "lastMonth": null,
-      "mrc": null,
-      "mom": null,
-      "commit": 10500,
-      "status": "no_user_id"
-    },
-    "Patient Now": {
-      "user_id": null,
-      "mtd": 344,
-      "lastMonth": 10672,
-      "mrc": null,
-      "mom": null,
-      "commit": 10000,
-      "status": "active"
-    },
-    "Automentor": {
-      "user_id": null,
-      "mtd": 135,
-      "lastMonth": 4196,
-      "mrc": null,
-      "mom": null,
-      "commit": 5000,
-      "status": "at_risk"
-    },
-    "Chiirp": {
-      "user_id": null,
-      "mtd": 273,
-      "lastMonth": 8455,
-      "mrc": null,
-      "mom": null,
-      "commit": 7500,
-      "status": "active"
-    },
-    "Screen Magic": {
-      "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
-      "mtd": 716,
-      "lastMonth": 22198,
-      "mrc": 117,
-      "mom": null,
-      "status": "active"
-    },
-    "General Atomics": {
+    {
+      "name": "General Atomics",
       "user_id": "af78ea36-649b-4411-bd33-70326f452c8c",
-      "mtd": 218,
-      "lastMonth": 6753,
-      "mrc": 6004,
-      "mom": null,
-      "commit": 7500,
-      "status": "active"
+      "mtd": 6036.68,
+      "last_month": 6836.54,
+      "mrc": 6005.50,
+      "mom_pct": -11.7
     },
-    "Grupo Bimbo": {
+    {
+      "name": "Grupo Bimbo (USA)",
       "user_id": "a2da2a31-3377-473b-8184-ed201e422c6d",
-      "user_id_canada": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
-      "mtd": 110,
-      "lastMonth": 3402,
-      "mrc": 1874,
-      "mom": null,
-      "commit": 7500,
-      "status": "at_risk",
-      "notes": "Combined USA + Canada"
+      "mtd": 1734.81,
+      "last_month": 8724.83,
+      "mrc": 1620.45,
+      "mom_pct": -80.1
     },
-    "iFaxApp": {
+    {
+      "name": "Grupo Bimbo (Canada)",
+      "user_id": "462a3df9-f7ec-4bcb-aa62-4f63e8529567",
+      "mtd": 262.93,
+      "last_month": 574.76,
+      "mrc": 254.00,
+      "mom_pct": -54.3
+    },
+    {
+      "name": "iFaxApp",
       "user_id": "a13411e0-1850-4778-8c09-2048d2945105",
-      "mtd": 697,
-      "lastMonth": 21619,
-      "mrc": 4057,
-      "mom": null,
-      "commit": 7500,
-      "status": "active"
+      "mtd": 5008.13,
+      "last_month": 26242.14,
+      "mrc": 3918.70,
+      "mom_pct": -80.9
     },
-    "IVR Technologies": {
+    {
+      "name": "IVR Technologies",
       "user_id": "db941093-691f-4c8e-ac7a-a0f6a69555df",
-      "mtd": 2062,
-      "lastMonth": 63915,
-      "mrc": 1704,
-      "mom": null,
-      "commit": 45000,
-      "status": "active"
+      "mtd": 4480.52,
+      "last_month": 66986.44,
+      "mrc": 1702.08,
+      "mom_pct": -93.3
     },
-    "Mango Voice": {
+    {
+      "name": "Jobble",
+      "user_id": "edc2b628-61e2-4b1d-81f8-687f60719fde",
+      "mtd": 1508.10,
+      "last_month": 46893.39,
+      "mrc": 2.75,
+      "mom_pct": -96.8
+    },
+    {
+      "name": "Mango Voice",
       "user_id": "36462c59-72e9-43f6-812c-89477b80b6b9",
-      "mtd": 897,
-      "lastMonth": 27816,
-      "mrc": 1572,
-      "mom": null,
-      "commit": 20000,
-      "status": "active"
+      "mtd": 2602.20,
+      "last_month": 29320.21,
+      "mrc": 1569.03,
+      "mom_pct": -91.1
     },
-    "Callloom": {
-      "user_id": null,
-      "mtd": 262,
-      "lastMonth": 8128,
-      "mrc": null,
-      "mom": null,
-      "commit": 10000,
-      "status": "at_risk"
+    {
+      "name": "Redo",
+      "user_id": "7a0503f9-ead1-4d35-9795-c6359798e722",
+      "mtd": 5950.43,
+      "last_month": 52965.11,
+      "mrc": 3512.60,
+      "mom_pct": -88.8
     },
-    "GetScaled": {
-      "user_id": null,
-      "mtd": 237,
-      "lastMonth": 7360,
-      "mrc": null,
-      "mom": null,
-      "commit": 40000,
-      "status": "at_risk"
+    {
+      "name": "RetellAI",
+      "user_id": "b2726e8d-d955-420a-bcf8-497231821daa",
+      "mtd": 6097.94,
+      "last_month": 22205.63,
+      "mrc": 6205.45,
+      "mom_pct": -72.5
     },
-    "Simplii": {
+    {
+      "name": "42Chat",
+      "user_id": "d0444236-00f6-4212-a01f-201f543b8eb1",
+      "mtd": 574.26,
+      "last_month": 13401.24,
+      "mrc": 475.95,
+      "mom_pct": -95.7
+    },
+    {
+      "name": "Screen Magic",
+      "user_id": "38285cf8-6803-4f7a-91be-ec50400b7277",
+      "mtd": 565.43,
+      "last_month": 22419.64,
+      "mrc": 117.00,
+      "mom_pct": -97.5
+    },
+    {
+      "name": "Callloom",
       "user_id": null,
       "mtd": null,
-      "lastMonth": null,
+      "last_month": null,
       "mrc": null,
-      "mom": null,
-      "status": "no_user_id"
+      "mom_pct": null
     },
-    "Jovee": {
+    {
+      "name": "Chiirp",
       "user_id": null,
-      "mtd": 170,
-      "lastMonth": 5274,
+      "mtd": null,
+      "last_month": null,
       "mrc": null,
-      "mom": null,
-      "commit": 10000,
-      "status": "at_risk"
+      "mom_pct": null
     },
-    "Booksy": {
+    {
+      "name": "GetScaled",
       "user_id": null,
-      "mtd": 3548,
-      "lastMonth": 109982,
+      "mtd": null,
+      "last_month": null,
       "mrc": null,
-      "mom": null,
-      "commit": 90000,
-      "status": "active"
+      "mom_pct": null
     },
-    "Stella Automotive": {
+    {
+      "name": "Palate Connect",
       "user_id": null,
-      "mtd": 583,
-      "lastMonth": 18058,
+      "mtd": null,
+      "last_month": null,
       "mrc": null,
-      "mom": null,
-      "commit": 6000,
-      "status": "active"
+      "mom_pct": null
+    },
+    {
+      "name": "Simplii",
+      "user_id": null,
+      "mtd": null,
+      "last_month": null,
+      "mrc": null,
+      "mom_pct": null
     }
+  ],
+  "totals": {
+    "mtd": 35547.24,
+    "last_month": 303298.92,
+    "mrc": 25760.53
   },
-  "summary": {
-    "totalMTD": 14323,
-    "totalLastMonth": 438911,
-    "customersWithData": 19,
-    "customersTotal": 21,
-    "topSpender": "Booksy",
-    "topSpenderMTD": 3548,
-    "atRisk": ["Jobble", "Automentor", "GetScaled", "Callloom", "Jovee", "Grupo Bimbo"],
-    "monthStart": "2026-04-01"
-  }
+  "notes": "MTD is April 1-2, 2026 only. MoM% compares partial month to full month - expect negative values early in month."
 }
