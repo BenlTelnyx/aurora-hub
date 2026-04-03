@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-04-02 11:07 MDT
+// Auto-generated from Zendesk - 2026-04-03 07:04 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
   { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "pending", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
@@ -27,7 +27,6 @@ const allTickets: Ticket[] = [
   { customer: "Simplii", id: "2730508", subject: "Queued Messaging", status: "hold", created: "2026-03-05", url: "https://telnyx.zendesk.com/agent/tickets/2730508" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
-  { customer: "RetellAI", id: "2777005", subject: "Benl, we are seeing an issue with RTP/audio originating from", status: "pending", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2777005" },
 ]
 
 const customers = [
