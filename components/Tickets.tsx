@@ -9,10 +9,10 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-04-04 07:08 MDT
+// Auto-generated from Zendesk - 2026-04-04 11:03 MDT
 const allTickets: Ticket[] = [
+  { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "open", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
   { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
-  { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "hold", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
   { customer: "Screen Magic", id: "2791421", subject: "I initiated a text-enablement request for the number 1516327", status: "open", created: "2026-04-02", url: "https://telnyx.zendesk.com/agent/tickets/2791421" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
