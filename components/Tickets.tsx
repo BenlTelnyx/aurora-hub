@@ -9,7 +9,7 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-04-03 15:01 MDT
+// Auto-generated from Zendesk - 2026-04-03 19:02 MDT
 const allTickets: Ticket[] = [
   { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "open", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
   { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
@@ -23,8 +23,8 @@ const allTickets: Ticket[] = [
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
   { customer: "Mango Voice", id: "2072112", subject: "4154610700", status: "pending", created: "2025-03-06", url: "https://telnyx.zendesk.com/agent/tickets/2072112" },
   { customer: "Mango Voice", id: "2029444", subject: "There is a pending NNID request we would like to be approved", status: "open", created: "2025-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2029444" },
+  { customer: "Simplii", id: "2794565", subject: "Conversation with Nate Sargent", status: "open", created: "2026-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2794565" },
   { customer: "Simplii", id: "2794418", subject: "Messages Getting Flagged As Spam", status: "open", created: "2026-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2794418" },
-  { customer: "Simplii", id: "2794565", subject: "Conversation with Nate Sargent", status: "new", created: "2026-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2794565" },
   { customer: "Simplii", id: "2730508", subject: "Queued Messaging", status: "hold", created: "2026-03-05", url: "https://telnyx.zendesk.com/agent/tickets/2730508" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
   { customer: "Simplii", id: "2079429", subject: "Numbers Not Fully Ported", status: "pending", created: "2025-03-11", url: "https://telnyx.zendesk.com/agent/tickets/2079429" },
