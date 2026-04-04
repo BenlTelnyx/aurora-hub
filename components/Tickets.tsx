@@ -9,21 +9,20 @@ interface Ticket {
   url: string
 }
 
-// Auto-generated from Zendesk - 2026-04-03 22:09 MDT
+// Auto-generated from Zendesk - 2026-04-04 07:08 MDT
 const allTickets: Ticket[] = [
-  { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "open", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
   { customer: "CareCo", id: "2775665", subject: "User is experiencing an issue when trying to place an outbou", status: "open", created: "2026-03-26", url: "https://telnyx.zendesk.com/agent/tickets/2775665" },
+  { customer: "CareCo", id: "2788983", subject: "User keeps getting a \"destination out of order\" error messag", status: "hold", created: "2026-04-01", url: "https://telnyx.zendesk.com/agent/tickets/2788983" },
   { customer: "CareCo", id: "2707690", subject: "Missing call recording:e454ab02-0e86-11f1-9a01-02420aef30a0", status: "open", created: "2026-02-23", url: "https://telnyx.zendesk.com/agent/tickets/2707690" },
-  { customer: "Screen Magic", id: "2791421", subject: "I initiated a text-enablement request for the number 1516327", status: "hold", created: "2026-04-02", url: "https://telnyx.zendesk.com/agent/tickets/2791421" },
+  { customer: "Screen Magic", id: "2791421", subject: "I initiated a text-enablement request for the number 1516327", status: "open", created: "2026-04-02", url: "https://telnyx.zendesk.com/agent/tickets/2791421" },
   { customer: "Screen Magic", id: "2670353", subject: "We have a customer reporting that messages are being deliver", status: "open", created: "2026-02-04", url: "https://telnyx.zendesk.com/agent/tickets/2670353" },
-  { customer: "Mango Voice", id: "2786719", subject: "Carolina Aesthetic Dentistry is running into an issue where ", status: "open", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786719" },
   { customer: "Mango Voice", id: "2763657", subject: "Team! Do you see PON 485cfb67-905e-4d29-bc01-389e81b1484d in", status: "open", created: "2026-03-20", url: "https://telnyx.zendesk.com/agent/tickets/2763657" },
+  { customer: "Mango Voice", id: "2786719", subject: "Carolina Aesthetic Dentistry is running into an issue where ", status: "pending", created: "2026-03-31", url: "https://telnyx.zendesk.com/agent/tickets/2786719" },
   { customer: "Mango Voice", id: "2242342", subject: "406) 587-9700(tel:406)587-9700)* hi team, we have a campaign", status: "pending", created: "2025-06-26", url: "https://telnyx.zendesk.com/agent/tickets/2242342" },
   { customer: "Mango Voice", id: "2140178", subject: "Campaign CNW7TU8 assignment failed for tn 7404802452", status: "pending", created: "2025-04-21", url: "https://telnyx.zendesk.com/agent/tickets/2140178" },
   { customer: "Mango Voice", id: "2113956", subject: "We are having issues with campaign assignment to number *(74", status: "pending", created: "2025-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2113956" },
   { customer: "Mango Voice", id: "2072112", subject: "4154610700", status: "pending", created: "2025-03-06", url: "https://telnyx.zendesk.com/agent/tickets/2072112" },
   { customer: "Mango Voice", id: "2029444", subject: "There is a pending NNID request we would like to be approved", status: "open", created: "2025-02-10", url: "https://telnyx.zendesk.com/agent/tickets/2029444" },
-  { customer: "Simplii", id: "2794565", subject: "Conversation with Nate Sargent", status: "open", created: "2026-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2794565" },
   { customer: "Simplii", id: "2794418", subject: "Messages Getting Flagged As Spam", status: "open", created: "2026-04-03", url: "https://telnyx.zendesk.com/agent/tickets/2794418" },
   { customer: "Simplii", id: "2730508", subject: "Queued Messaging", status: "hold", created: "2026-03-05", url: "https://telnyx.zendesk.com/agent/tickets/2730508" },
   { customer: "Simplii", id: "2179033", subject: "Port Out SMS Portion of a DID", status: "open", created: "2025-05-14", url: "https://telnyx.zendesk.com/agent/tickets/2179033" },
